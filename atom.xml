@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://uppez.github.io/wzwenzhang</id>
-    <title>Gridea</title>
-    <updated>2019-09-01T21:23:38.923Z</updated>
+    <title>教书的先生</title>
+    <updated>2019-09-03T15:50:47.012Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://uppez.github.io/wzwenzhang"/>
     <link rel="self" href="https://uppez.github.io/wzwenzhang/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>越努力越幸运</subtitle>
     <logo>https://uppez.github.io/wzwenzhang/images/avatar.png</logo>
     <icon>https://uppez.github.io/wzwenzhang/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, 教书的先生</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://uppez.github.io/wzwenzhang/post/hello-gridea</id>
