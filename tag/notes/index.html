@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    教程 | 王荣胜
+    笔记 | 王荣胜
 </title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico?v=1582100404142">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -98,61 +98,286 @@
                     
     <div class="i-card">
         <b>标签：#
-        教程</b>
+        笔记</b>
     </div>
     
         
             <article class="post i-card">
                 <h2 class="post-title">
-                    <a href="https://Wangrongsheng.github.io/post/vo2GSBChP/">
-                        基于Gridea+Github建立自己的博客
+                    <a href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+                        Markdown基础语法
                     </a>
                 </h2>
                 <div class="post-info">
-                    <time class="post-time">2020-02-18</time>
+                    <time class="post-time">2020-02-19</time>
                     
-                        <a href="https://Wangrongsheng.github.io/tag/teach/" class="post-tag i-tag
-                            i-tag-banana">
-            #教程
+                        <a href="https://Wangrongsheng.github.io/tag/notes/" class="post-tag i-tag
+                            i-tag-other_3">
+            #笔记
         </a>
                         
                 </div>
                 <div class="post-article">
                     
-                        <a href="https://Wangrongsheng.github.io/post/vo2GSBChP/" class="post-feature-image" style="background-image:url(https://s2.ax1x.com/2020/02/18/3kzKtH.png) ">
+                        <a href="https://Wangrongsheng.github.io/post/UWPsajVaD/" class="post-feature-image" style="background-image:url(https://s2.ax1x.com/2020/02/19/3EhGi8.png) ">
                         </a>
                         
                             <div class="post-content">
                                 
                                         <div class="post-content-content">
-                                            
-前言
-我首先给出所有的用到的链接：
+                                            Markdown简介
+Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
+由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。
+Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。
+Markdown基础语法
+作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。
+标题
+使用#，表示1-6级标题。
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
 
-Gridea官网
-Gridea下载
-Github
-Gridea常见问题解决
+引用
+普通引用
+&amp;gt; 引用文本!
 
-安装
-安装博客
-安装指导文档
-部署指导文档
-安装指导视频
- 
-安装评论插件
-出于新手安装评论功能，我给出一个特别好的安装Gittalk文章：一款超好用的第三方评论插件-Gittalk
+效果：
 
-之后将在Github申请到的内容都按照对应位置填写到上述Gridea客户端的Gittalk评论配置中。
-自定义域名
-除了官方的默认username.github.io域名，我们也可以自己建立自己的域名，这里是一篇配置文章：为你的hexo博客配置个性域名，这里有些不同的是前期的准备域名、域名解析都是一样的，后面我们只需要把我们的域名写在Gridea客户端的文件里面就可以了。
+引用文本！
 
-特别要注意：填写好之后要去Github博客仓库把域名写好！
+嵌套引用
+&amp;gt; 第一层
+&amp;gt;&amp;gt; 第二层
+
+效果：
+
+第一层
+
+第二层
+
+
+表格
+| 字段1 | 字段2 | 字段3 |
+| :-- | :--: | --: |
+| A1 | B1 | C1 |
+| A2 | B2 | C2 |
+
+效果：
+
+
+
+字段1
+字段2
+字段3
+
+
+
+
+A1
+B1
+C1
+
+
+A2
+B2
+C2
+
+
+
+代码
+行内
+AAA`BBB`CCC
+
+效果：
+AAABBBCCC
+区块
+4个空格
+在每行前面加上4个空格
+    text = &amp;quot;Hello, world!&amp;quot;
+    print(text)
+
+效果：
+text = &amp;quot;Hello, world!&amp;quot;
+print(text)
+
+3个 `
+```text
+text = &amp;quot;Hello, world!&amp;quot;
+print(text)
+\```
+
+
+上述中的“\”是转义使用的！
+
+效果：
+    text = &amp;quot;Hello, world!&amp;quot;
+    print(text)
+
+字体样式
+斜体,粗体,粗斜体
+*text* 或 _text_ 斜体
+
+**text** 或 __text__ 粗体
+
+***text*** 或 ___text___ 粗斜体
+
+效果
+text 斜体
+text 粗体
+text 粗斜体
+上标,下标
+上标
+益达&amp;lt;sup&amp;gt;TM&amp;lt;/sup&amp;gt;
+
+效果：
+益达TM
+下标
+X&amp;lt;sub&amp;gt;i&amp;lt;/sub&amp;gt;
+
+H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O  CO&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;
+
+效果:
+Xi
+H2O  CO2
+下划线
+&amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
+
+效果：
+下划线
+删除线
+~~删除线~~
+
+效果：
+删除线
+列表
+无序列表
+使用*、+、或-标记无序列表，下面仅以-作为示例，
+- 第一项
+- 第二项
+- 第三项
+
+
+注: 标记后面最少有一个 空格 或 制表符。
+
+效果：
+
+第一项
+第二项
+第三项
+
+有序列表
+有序列表的标记方式是将上述的符号换成数字,并辅以.
+1. 第一项   
+2. 第二项    
+3. 第三项
+
+效果：
+
+第一项
+第二项
+第三项
+
+任务列表
+用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代
+- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- [x] Nulla lobortis egestas semper
+- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
+- [ ] Vestibulum convallis sit amet nisi a tincidunt
+    - [x] In hac habitasse platea dictumst
+    - [x] In scelerisque nibh non dolor mollis congue sed et metus
+    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
+    - [ ] Praesent sed risus massa
+- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
+
+效果：
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit
+ Nulla lobortis egestas semper
+ Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
+ Vestibulum convallis sit amet nisi a tincidunt
+
+ In hac habitasse platea dictumst
+ In scelerisque nibh non dolor mollis congue sed et metus
+ Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
+ Praesent sed risus massa
+
+
+ Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+ Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
+
+嵌套列表
+- aaa
+    - bbb
+
+效果：
+
+aaa
+
+bbb
+
+
+
+分割线
+分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例
+---
+
+效果：
+
+链接
+普通链接
+行内式
+[example](http://www.example.com/ &amp;quot;title&amp;quot;)
+
+效果：
+example
+鼠标悬停在链接上可以看到&amp;quot;title&amp;quot;字样
+参考式
+当一个页面里多次调用相同链接时，这种方法更适用:
+[example][索引]
+
+[索引]: http://www.example.com/ &amp;quot;title&amp;quot;
+
+注意: [索引]: http://www.example.com/ &amp;quot;title&amp;quot;可以写在任意地方，通常习惯于放在markdown本页文档最下方
+效果：
+example
+
+鼠标悬停在链接上可以看到&amp;quot;title&amp;quot;字样
+
+自动链接
+当识别到HTML、FTP、Email地址时候会自动转为超链接
+图片
+行内式
+添加图片的形式和链接相似，只需在链接的基础上前方加一个!
+![alt](图片地址 &amp;quot;title&amp;quot;)
+
+效果：
+
+
+鼠标悬停在图标上可以看到&amp;quot;我的博客头像&amp;quot;字样
+
+参考式
+当一个页面里多次调用相同图片时，这种方法更适用:
+![alt][索引]
+
+[索引]: 图片地址 &amp;quot;title&amp;quot;
+
+注意: [索引]: 图片地址 &amp;quot;title&amp;quot;可以写在任意地方，通常习惯于放在markdown本页文档最下方
+效果：
+
+
+鼠标悬停在图标上可以看到&amp;quot;我的博客头像&amp;quot;字样
+
+转义
+\转义的内容
 
 
                                         </div>
                                         
-                                            <a class="btn btn-text" href="https://Wangrongsheng.github.io/post/vo2GSBChP/">Read More ~</a>
+                                            <a class="btn btn-text" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">Read More ~</a>
                             </div>
                 </div>
             </article>
