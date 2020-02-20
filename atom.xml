@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-02-19T08:21:39.257Z</updated>
+    <updated>2020-02-20T08:19:43.317Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -16,6 +16,256 @@
         <link href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
         </link>
         <updated>2020-02-19T08:15:22.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="markdown简介">Markdown简介</h1>
+<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
+<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
+<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
+<h1 id="markdown基础语法">Markdown基础语法</h1>
+<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
+<h2 id="标题">标题</h2>
+<p>使用#，表示1-6级标题。</p>
+<pre><code class="language-text"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<h2 id="引用">引用</h2>
+<h3 id="普通引用">普通引用</h3>
+<pre><code class="language-text">&gt; 引用文本!
+</code></pre>
+<p>效果：</p>
+<blockquote>
+<p>引用文本！</p>
+</blockquote>
+<h3 id="嵌套引用">嵌套引用</h3>
+<pre><code class="language-text">&gt; 第一层
+&gt;&gt; 第二层
+</code></pre>
+<p>效果：</p>
+<blockquote>
+<p>第一层</p>
+<blockquote>
+<p>第二层</p>
+</blockquote>
+</blockquote>
+<h2 id="表格">表格</h2>
+<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
+| :-- | :--: | --: |
+| A1 | B1 | C1 |
+| A2 | B2 | C2 |
+</code></pre>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段1</th>
+<th style="text-align:center">字段2</th>
+<th style="text-align:right">字段3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A1</td>
+<td style="text-align:center">B1</td>
+<td style="text-align:right">C1</td>
+</tr>
+<tr>
+<td style="text-align:left">A2</td>
+<td style="text-align:center">B2</td>
+<td style="text-align:right">C2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="代码">代码</h2>
+<h3 id="行内">行内</h3>
+<pre><code class="language-text">AAA`BBB`CCC
+</code></pre>
+<p>效果：</p>
+<p>AAA<code>BBB</code>CCC</p>
+<h3 id="区块">区块</h3>
+<h4 id="4个空格">4个空格</h4>
+<p>在每行前面加上4个空格</p>
+<pre><code class="language-text">    text = &quot;Hello, world!&quot;
+    print(text)
+</code></pre>
+<p>效果：</p>
+<pre><code class="language-text">text = &quot;Hello, world!&quot;
+print(text)
+</code></pre>
+<h4 id="3个">3个 `</h4>
+<pre><code class="language-text">```text
+text = &quot;Hello, world!&quot;
+print(text)
+\```
+</code></pre>
+<blockquote>
+<p>上述中的“\”是转义使用的！</p>
+</blockquote>
+<p>效果：</p>
+<pre><code class="language-text">    text = &quot;Hello, world!&quot;
+    print(text)
+</code></pre>
+<h2 id="字体样式">字体样式</h2>
+<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
+<pre><code class="language-text">*text* 或 _text_ 斜体
+
+**text** 或 __text__ 粗体
+
+***text*** 或 ___text___ 粗斜体
+</code></pre>
+<p>效果</p>
+<p><em>text</em> 斜体</p>
+<p><strong>text</strong> 粗体</p>
+<p><em><strong>text</strong></em> 粗斜体</p>
+<h3 id="上标下标">上标,下标</h3>
+<h4 id="上标">上标</h4>
+<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
+</code></pre>
+<p>效果：</p>
+<p>益达<sup>TM</sup></p>
+<h4 id="下标">下标</h4>
+<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
+
+H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
+</code></pre>
+<p>效果:</p>
+<p>X<sub>i</sub></p>
+<p>H<sub>2</sub>O  CO<sub>2</sub></p>
+<h3 id="下划线">下划线</h3>
+<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
+</code></pre>
+<p>效果：</p>
+<p><u>下划线</u></p>
+<h3 id="删除线">删除线</h3>
+<pre><code class="language-text">~~删除线~~
+</code></pre>
+<p>效果：</p>
+<p><s>删除线</s></p>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
+<pre><code class="language-text">- 第一项
+- 第二项
+- 第三项
+</code></pre>
+<blockquote>
+<p>注: 标记后面最少有一个 空格 或 制表符。</p>
+</blockquote>
+<p>效果：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<h3 id="有序列表">有序列表</h3>
+<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
+<pre><code class="language-text">1. 第一项   
+2. 第二项    
+3. 第三项
+</code></pre>
+<p>效果：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h3 id="任务列表">任务列表</h3>
+<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
+<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- [x] Nulla lobortis egestas semper
+- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
+- [ ] Vestibulum convallis sit amet nisi a tincidunt
+    - [x] In hac habitasse platea dictumst
+    - [x] In scelerisque nibh non dolor mollis congue sed et metus
+    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
+    - [ ] Praesent sed risus massa
+- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
+</code></pre>
+<p>效果：</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-703352"><label class="task-list-item-label" for="task-item-703352"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1951199"><label class="task-list-item-label" for="task-item-1951199"> Nulla lobortis egestas semper</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9613973"><label class="task-list-item-label" for="task-item-9613973"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4551078"><label class="task-list-item-label" for="task-item-4551078"> Vestibulum convallis sit amet nisi a tincidunt</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4821538"><label class="task-list-item-label" for="task-item-4821538"> In hac habitasse platea dictumst</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8256097"><label class="task-list-item-label" for="task-item-8256097"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-571499"><label class="task-list-item-label" for="task-item-571499"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3916818"><label class="task-list-item-label" for="task-item-3916818"> Praesent sed risus massa</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2132897"><label class="task-list-item-label" for="task-item-2132897"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4681533"><label class="task-list-item-label" for="task-item-4681533"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
+</ul>
+<h3 id="嵌套列表">嵌套列表</h3>
+<pre><code class="language-text">- aaa
+    - bbb
+</code></pre>
+<p>效果：</p>
+<ul>
+<li>aaa
+<ul>
+<li>bbb</li>
+</ul>
+</li>
+</ul>
+<h2 id="分割线">分割线</h2>
+<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
+<pre><code class="language-text">---
+</code></pre>
+<p>效果：</p>
+<hr>
+<h2 id="链接">链接</h2>
+<h3 id="普通链接">普通链接</h3>
+<h4 id="行内式">行内式</h4>
+<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
+</code></pre>
+<p>效果：</p>
+<p><a href="http://www.example.com/" title="title">example</a></p>
+<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
+<h4 id="参考式">参考式</h4>
+<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
+<pre><code class="language-text">[example][索引]
+
+[索引]: http://www.example.com/ &quot;title&quot;
+</code></pre>
+<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
+<p>效果：</p>
+<p><a href="http://www.example.com/" title="title">example</a></p>
+<blockquote>
+<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
+</blockquote>
+<h3 id="自动链接">自动链接</h3>
+<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
+<h2 id="图片">图片</h2>
+<h3 id="行内式-2">行内式</h3>
+<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
+<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
+</code></pre>
+<p>效果：</p>
+<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
+<blockquote>
+<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
+</blockquote>
+<h3 id="参考式-2">参考式</h3>
+<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
+<pre><code class="language-text">![alt][索引]
+
+[索引]: 图片地址 &quot;title&quot;
+</code></pre>
+<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
+<p>效果：</p>
+<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
+<blockquote>
+<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
+</blockquote>
+<h2 id="转义">转义</h2>
+<pre><code class="language-text">\转义的内容
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[基于Gridea+Github建立自己的博客]]></title>
@@ -23,5 +273,30 @@
         <link href="https://Wangrongsheng.github.io/post/vo2GSBChP/">
         </link>
         <updated>2020-02-18T13:00:52.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="前言">前言</h1>
+<p>我首先给出所有的用到的链接：</p>
+<ol>
+<li><a href="https://gridea.dev/">Gridea官网</a></li>
+<li><a href="https://github.com/getgridea/gridea/releases/">Gridea下载</a></li>
+<li><a href="https://github.com">Github</a></li>
+<li><a href="https://gridea.dev/faq/">Gridea常见问题解决</a></li>
+</ol>
+<h1 id="安装">安装</h1>
+<h2 id="安装博客">安装博客</h2>
+<h3 id="安装指导文档">安装指导文档</h3>
+<p><a href="https://gridea.dev/gridea-start/">部署指导文档</a></p>
+<h3 id="安装指导视频">安装指导视频</h3>
+<iframe src="//player.bilibili.com/player.html?aid=54011033&cid=94483079&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="600" height="400"> </iframe>
+<h2 id="安装评论插件">安装评论插件</h2>
+<p>出于新手安装评论功能，我给出一个特别好的安装Gittalk文章：<a href="https://www.jianshu.com/p/4242bb065550">一款超好用的第三方评论插件-Gittalk</a><br>
+<img src="https://Wangrongsheng.github.io/post-images/1582032054523.png" alt="" loading="lazy"><br>
+之后将在Github申请到的内容都按照对应位置填写到上述<code>Gridea客户端</code>的<code>Gittalk评论配置</code>中。</p>
+<h2 id="自定义域名">自定义域名</h2>
+<p>除了官方的默认<code>username.github.io</code>域名，我们也可以自己建立自己的域名，这里是一篇配置文章：<a href="https://www.jianshu.com/p/23b9e095c7c9">为你的hexo博客配置个性域名</a>，这里有些不同的是前期的准备域名、域名解析都是一样的，后面我们只需要把我们的域名写在<code>Gridea客户端</code>的文件里面就可以了。</p>
+<blockquote>
+<p>特别要注意：填写好之后要去<code>Github博客仓库</code>把<code>域名</code>写好！</p>
+</blockquote>
+]]></content>
     </entry>
 </feed>

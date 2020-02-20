@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    王荣胜
+    友链 | 王荣胜
 </title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico?v=1582186765471">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,6 +19,14 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -101,45 +109,75 @@
     });
 </script>
 
-            
-
-    <div class="archives-container main-container">
-        <ul class="timeline">
-            
-                <li>
-                    <h3 class="year">
-                        2020
-                    </h3>
-                    <ul class="year-wrapper">
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            友链
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2020-02-20</time>
+                            
+                        </div>
                         
-                            
-                                <li>
-                                    <span class="date">2020-02-19</span>
-                                    <a class="title" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
-                                        <span>Markdown基础语法</span>
-                                    </a>
-                                </li>
+                                <div class="post-content">
+                                    <a href="https://sqdxwz.com" name="wzz" logo="https://s2.ax1x.com/2019/12/23/l9FdHA.md.jpg">
+<a href="https://sqdxwz.com" name="ncc" logo="https://s2.ax1x.com/2019/12/23/l9FdHA.md.jpg">
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
                                 
-                                    
-                            
-                                <li>
-                                    <span class="date">2020-02-18</span>
-                                    <a class="title" href="https://Wangrongsheng.github.io/post/vo2GSBChP/">
-                                        <span>基于Gridea+Github建立自己的博客</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                    </ul>
-
-                </li>
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://Wangrongsheng.github.io/images/avatar.png?v=1582186765471)">
+        </div>
+        <h1 class="id_card-title">
+            王荣胜
+        </h1>
+        <h2 class="id_card-description">
+            可以允许不完美，但不能不做
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/Wangrongsheng" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
                 
-        </ul>
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                <a href="https://www.weibo.com/5847555382/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-weibo"></i></a>
+                                
+                                    <!-- facebook -->
+                                    
+
+        </div>
     </div>
+    
+                                    
 
-                
+                </div>
 
-                    <div class="site-footer">
+
+
+
+            </div>
+
+
+            <div class="site-footer">
   Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a> | 
   <a class="rss" href="https://Wangrongsheng.github.io/atom.xml" target="_blank">RSS</a>
 </div>
@@ -148,7 +186,35 @@
   hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'ec1e13f2f6dd514ba306',
+            clientSecret: 'e75d6b66caf5de546ff9e514718ecb8067bab30b',
+            repo: 'Wangrogsheng-GrideaBlog-comment',
+            owner: 'Wangrongsheng',
+            admin: ['Wangrongsheng'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>
