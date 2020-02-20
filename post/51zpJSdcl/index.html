@@ -1,22 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Wangrongsheng.github.io</id>
-    <title>王荣胜</title>
-    <updated>2020-02-20T12:24:29.814Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Wangrongsheng.github.io"/>
-    <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
-    <subtitle>可以允许不完美，但不能不做</subtitle>
-    <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
-    <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 王荣胜</rights>
-    <entry>
-        <title type="html"><![CDATA[Latex基础语法]]></title>
-        <id>https://Wangrongsheng.github.io/post/51zpJSdcl/</id>
-        <link href="https://Wangrongsheng.github.io/post/51zpJSdcl/">
-        </link>
-        <updated>2020-02-20T12:04:50.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Latex基础语法 | 王荣胜
+</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico?v=1582200634653">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://Wangrongsheng.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://Wangrongsheng.github.io">
+                <img class="avatar" src="https://Wangrongsheng.github.io/images/avatar.png?v=1582200634653" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    王荣胜
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="https://Wangrongsheng.github.io/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="https://Wangrongsheng.github.io/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="https://Wangrongsheng.github.io/post/图廊" class="menu">
+                                    图廊
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="https://Wangrongsheng.github.io/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Latex基础语法
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2020-02-20</time>
+                            
+                                <a href="https://Wangrongsheng.github.io/tag/notes/" class="post-tag i-tag
+                            i-tag-other_2">
+                            #笔记
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://s2.ax1x.com/2020/02/20/3mAtYR.png')"></div>
+                            
+                                <div class="post-content">
+                                    <!-- more -->
 <h1 id="latex简介">Latex简介</h1>
 <p>LaTeX是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80年代初期开发。</p>
 <p>利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。</p>
@@ -1349,296 +1462,197 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p>参考维基百科的<a href="https://zh.wikipedia.org/wiki/Help:%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">数学公式教程</a></p>
 <p>参考<a href="https://www.zybuluo.com/codeep/note/163962#%E4%B8%83%E4%BA%A4%E6%8D%A2%E5%9B%BE%E8%A1%A8%E4%BD%BF%E7%94%A8%E5%8F%82%E8%80%83">Cmd Markdown 公式指导手册</a></p>
 <p>本文为 MathJax 在 Markdown 环境下的语法指引。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Markdown基础语法]]></title>
-        <id>https://Wangrongsheng.github.io/post/UWPsajVaD/</id>
-        <link href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
-        </link>
-        <updated>2020-02-19T08:15:22.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h1 id="markdown简介">Markdown简介</h1>
-<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
-<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
-<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
-<h1 id="markdown基础语法">Markdown基础语法</h1>
-<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
-<h2 id="标题">标题</h2>
-<p>使用#，表示1-6级标题。</p>
-<pre><code class="language-text"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-<h2 id="引用">引用</h2>
-<h3 id="普通引用">普通引用</h3>
-<pre><code class="language-text">&gt; 引用文本!
-</code></pre>
-<p>效果：</p>
-<blockquote>
-<p>引用文本！</p>
-</blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<pre><code class="language-text">&gt; 第一层
-&gt;&gt; 第二层
-</code></pre>
-<p>效果：</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-</blockquote>
-</blockquote>
-<h2 id="表格">表格</h2>
-<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
-| :-- | :--: | --: |
-| A1 | B1 | C1 |
-| A2 | B2 | C2 |
-</code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字段1</th>
-<th style="text-align:center">字段2</th>
-<th style="text-align:right">字段3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">A1</td>
-<td style="text-align:center">B1</td>
-<td style="text-align:right">C1</td>
-</tr>
-<tr>
-<td style="text-align:left">A2</td>
-<td style="text-align:center">B2</td>
-<td style="text-align:right">C2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码">代码</h2>
-<h3 id="行内">行内</h3>
-<pre><code class="language-text">AAA`BBB`CCC
-</code></pre>
-<p>效果：</p>
-<p>AAA<code>BBB</code>CCC</p>
-<h3 id="区块">区块</h3>
-<h4 id="4个空格">4个空格</h4>
-<p>在每行前面加上4个空格</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<p>效果：</p>
-<pre><code class="language-text">text = &quot;Hello, world!&quot;
-print(text)
-</code></pre>
-<h4 id="3个">3个 `</h4>
-<pre><code class="language-text">```text
-text = &quot;Hello, world!&quot;
-print(text)
-\```
-</code></pre>
-<blockquote>
-<p>上述中的“\”是转义使用的！</p>
-</blockquote>
-<p>效果：</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<h2 id="字体样式">字体样式</h2>
-<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
-<pre><code class="language-text">*text* 或 _text_ 斜体
 
-**text** 或 __text__ 粗体
-
-***text*** 或 ___text___ 粗斜体
-</code></pre>
-<p>效果</p>
-<p><em>text</em> 斜体</p>
-<p><strong>text</strong> 粗体</p>
-<p><em><strong>text</strong></em> 粗斜体</p>
-<h3 id="上标下标">上标,下标</h3>
-<h4 id="上标">上标</h4>
-<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
-</code></pre>
-<p>效果：</p>
-<p>益达<sup>TM</sup></p>
-<h4 id="下标">下标</h4>
-<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
-
-H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
-</code></pre>
-<p>效果:</p>
-<p>X<sub>i</sub></p>
-<p>H<sub>2</sub>O  CO<sub>2</sub></p>
-<h3 id="下划线">下划线</h3>
-<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre>
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h3 id="删除线">删除线</h3>
-<pre><code class="language-text">~~删除线~~
-</code></pre>
-<p>效果：</p>
-<p><s>删除线</s></p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
-<pre><code class="language-text">- 第一项
-- 第二项
-- 第三项
-</code></pre>
-<blockquote>
-<p>注: 标记后面最少有一个 空格 或 制表符。</p>
-</blockquote>
-<p>效果：</p>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+                                <h3 class="post-title">
+                                    Markdown基础语法
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#latex%E7%AE%80%E4%BB%8B">Latex简介</a></li>
+<li><a href="#latex%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80">Latex语法基础</a>
 <ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
-<pre><code class="language-text">1. 第一项   
-2. 第二项    
-3. 第三项
-</code></pre>
-<p>效果：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h3 id="任务列表">任务列表</h3>
-<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
-<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [x] Nulla lobortis egestas semper
-- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    - [x] In hac habitasse platea dictumst
-    - [x] In scelerisque nibh non dolor mollis congue sed et metus
-    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
-    - [ ] Praesent sed risus massa
-- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
-- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</code></pre>
-<p>效果：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8310914"><label class="task-list-item-label" for="task-item-8310914"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9939644"><label class="task-list-item-label" for="task-item-9939644"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8754168"><label class="task-list-item-label" for="task-item-8754168"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1311015"><label class="task-list-item-label" for="task-item-1311015"> Vestibulum convallis sit amet nisi a tincidunt</label>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9338343"><label class="task-list-item-label" for="task-item-9338343"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5018264"><label class="task-list-item-label" for="task-item-5018264"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9264547"><label class="task-list-item-label" for="task-item-9264547"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3732964"><label class="task-list-item-label" for="task-item-3732964"> Praesent sed risus massa</label></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E5%85%AC%E5%BC%8F">如何插入公式</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0-%E7%AC%A6%E5%8F%B7%E5%8F%8A%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6">函数、符号及特殊字符</a>
+<ul>
+<li><a href="#%E5%A3%B0%E8%B0%83-%E5%8F%98%E9%9F%B3%E7%AC%A6%E5%8F%B7">声调 / 变音符号</a></li>
+<li><a href="#%E6%A0%87%E5%87%86%E5%87%BD%E6%95%B0">标准函数</a></li>
+<li><a href="#%E7%95%8C%E9%99%90%E6%9E%81%E9%99%90">界限，极限</a></li>
+<li><a href="#%E6%8A%95%E5%B0%84">投射</a></li>
+<li><a href="#%E5%BE%AE%E5%88%86%E5%8F%8A%E5%AF%BC%E6%95%B0">微分及导数</a></li>
+<li><a href="#%E7%B1%BB%E5%AD%97%E6%AF%8D%E7%AC%A6%E5%8F%B7%E5%8F%8A%E5%B8%B8%E6%95%B0">类字母符号及常数</a></li>
+<li><a href="#%E6%A8%A1%E8%BF%90%E7%AE%97">模运算</a></li>
+<li><a href="#%E6%A0%B9%E5%8F%B7">根号</a></li>
+<li><a href="#%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</a></li>
+<li><a href="#%E9%9B%86%E5%90%88">集合</a></li>
+<li><a href="#%E5%85%B3%E7%B3%BB%E7%AC%A6%E5%8F%B7">关系符号</a></li>
+<li><a href="#%E5%87%A0%E4%BD%95%E7%AC%A6%E5%8F%B7">几何符号</a></li>
+<li><a href="#%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7">逻辑符号</a></li>
+<li><a href="#%E7%AE%AD%E5%A4%B4">箭头</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7">特殊符号</a></li>
+<li><a href="#%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a></li>
 </ul>
 </li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7654709"><label class="task-list-item-label" for="task-item-7654709"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4455611"><label class="task-list-item-label" for="task-item-4455611"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
-</ul>
-<h3 id="嵌套列表">嵌套列表</h3>
-<pre><code class="language-text">- aaa
-    - bbb
-</code></pre>
-<p>效果：</p>
+<li><a href="#%E4%B8%8A%E6%A0%87-%E4%B8%8B%E6%A0%87%E5%8F%8A%E7%A7%AF%E5%88%86%E7%AD%89">上标、下标及积分等</a></li>
+<li><a href="#%E5%88%86%E6%95%B0">分数</a></li>
+<li><a href="#%E7%9F%A9%E9%98%B5-%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E6%96%B9%E7%A8%8B%E7%BB%84">矩阵、条件表达式、方程组</a>
 <ul>
-<li>aaa
-<ul>
-<li>bbb</li>
+<li><a href="#%E6%97%A0%E6%A1%86%E7%9F%A9%E9%98%B5">无框矩阵</a></li>
+<li><a href="#%E6%9C%89%E6%A1%86%E7%9F%A9%E9%98%B5">有框矩阵</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F">条件表达式</a></li>
+<li><a href="#%E5%A4%9A%E8%A1%8C%E7%AD%89%E5%BC%8F-%E5%90%8C%E4%BD%99%E5%BC%8F">多行等式、同余式</a></li>
+<li><a href="#%E6%96%B9%E7%A8%8B%E7%BB%84">方程组</a></li>
 </ul>
 </li>
+<li><a href="#%E6%95%B0%E7%BB%84%E4%B8%8E%E8%A1%A8%E6%A0%BC">数组与表格</a>
+<ul>
+<li><a href="#%E5%B5%8C%E5%A5%97%E6%95%B0%E7%BB%84%E6%88%96%E8%A1%A8%E6%A0%BC">嵌套数组或表格</a></li>
+<li><a href="#%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E5%B8%A6%E5%88%86%E5%89%B2%E7%AC%A6%E5%8F%B7%E7%9A%84%E7%9F%A9%E9%98%B5">用数组实现带分割符号的矩阵</a></li>
 </ul>
-<h2 id="分割线">分割线</h2>
-<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
-<pre><code class="language-text">---
-</code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="链接">链接</h2>
-<h3 id="普通链接">普通链接</h3>
-<h4 id="行内式">行内式</h4>
-<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-<h4 id="参考式">参考式</h4>
-<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
-<pre><code class="language-text">[example][索引]
+</li>
+<li><a href="#%E5%AD%97%E4%BD%93">字体</a>
+<ul>
+<li><a href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D">希腊字母</a></li>
+<li><a href="#%E5%B8%8C%E4%BC%AF%E6%9D%A5%E7%AC%A6%E5%8F%B7">希伯来符号</a></li>
+<li><a href="#%E9%83%A8%E5%88%86%E5%AD%97%E4%BD%93%E7%9A%84%E7%AE%80%E7%A7%B0">部分字体的简称</a></li>
+<li><a href="#%E6%89%80%E6%9C%89%E5%AD%97%E4%BD%93">所有字体</a>
+<ul>
+<li><a href="#%E9%BB%91%E6%9D%BF%E6%8A%A5%E7%B2%97%E4%BD%93">黑板报粗体</a></li>
+<li><a href="#%E7%B2%97%E4%BD%93">粗体</a></li>
+<li><a href="#%E7%B2%97%E4%BD%93%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D">粗体希腊字母</a></li>
+<li><a href="#%E6%96%9C%E4%BD%93%E6%8B%89%E4%B8%81%E5%AD%97%E6%AF%8D%E9%BB%98%E8%AE%A4">斜体（拉丁字母默认）</a></li>
+<li><a href="#%E6%96%9C%E4%BD%93%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E9%BB%98%E8%AE%A4">斜体希腊字母（小写字母默认）</a></li>
+<li><a href="#%E7%BD%97%E9%A9%AC%E4%BD%93">罗马体</a></li>
+<li><a href="#%E6%97%A0%E8%A1%AC%E7%BA%BF%E4%BD%93">无衬线体</a></li>
+<li><a href="#%E6%97%A0%E8%A1%AC%E7%BA%BF%E4%BD%93%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E4%BB%85%E5%A4%A7%E5%86%99">无衬线体希腊字母（仅大写）</a></li>
+<li><a href="#%E6%89%8B%E5%86%99%E4%BD%93-%E8%8A%B1%E4%BD%93">手写体 / 花体</a></li>
+<li><a href="#fraktur-%E4%BD%93">Fraktur 体</a></li>
+<li><a href="#%E5%B0%8F%E5%9E%8B%E6%89%8B%E5%86%99%E4%BD%93">小型手写体</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B7%B7%E5%90%88%E5%AD%97%E4%BD%93">混合字体</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8A%E6%96%87%E6%9C%AC">注释文本</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8B%AC%E5%8F%B7">括号</a></li>
+<li><a href="#%E7%A9%BA%E6%A0%BC">空格</a>
+<ul>
+<li><a href="#2-%E4%B8%AA-quad-%E7%A9%BA%E6%A0%BC">2 个 quad 空格</a></li>
+<li><a href="#quad-%E7%A9%BA%E6%A0%BC">quad 空格</a></li>
+<li><a href="#%E5%A4%A7%E7%A9%BA%E6%A0%BC">大空格</a></li>
+<li><a href="#%E4%B8%AD%E7%AD%89%E7%A9%BA%E6%A0%BC">中等空格</a></li>
+<li><a href="#%E5%B0%8F%E7%A9%BA%E6%A0%BC">小空格</a></li>
+<li><a href="#%E6%B2%A1%E6%9C%89%E7%A9%BA%E6%A0%BC">没有空格</a></li>
+<li><a href="#%E7%B4%A7%E8%B4%B4">紧贴</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A2%9C%E8%89%B2">颜色</a>
+<ul>
+<li><a href="#cmd-markdown-%E5%85%AC%E5%BC%8F%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C">Cmd Markdown 公式指导手册</a></li>
+<li><a href="#%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%99%E7%A8%8B%E9%87%8C%E6%98%AF%E8%BF%99%E6%A0%B7%E5%86%99%E7%9A%84">维基百科的数学公式教程里是这样写的：</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5">外部链接</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
 
-[索引]: http://www.example.com/ &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<blockquote>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-</blockquote>
-<h3 id="自动链接">自动链接</h3>
-<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
-<h2 id="图片">图片</h2>
-<h3 id="行内式-2">行内式</h3>
-<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
-<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h3 id="参考式-2">参考式</h3>
-<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
-<pre><code class="language-text">![alt][索引]
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
 
-[索引]: 图片地址 &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h2 id="转义">转义</h2>
-<pre><code class="language-text">\转义的内容
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[基于Gridea+Github建立自己的博客]]></title>
-        <id>https://Wangrongsheng.github.io/post/vo2GSBChP/</id>
-        <link href="https://Wangrongsheng.github.io/post/vo2GSBChP/">
-        </link>
-        <updated>2020-02-18T13:00:52.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h1 id="前言">前言</h1>
-<p>我首先给出所有的用到的链接：</p>
-<ol>
-<li><a href="https://gridea.dev/">Gridea官网</a></li>
-<li><a href="https://github.com/getgridea/gridea/releases/">Gridea下载</a></li>
-<li><a href="https://github.com">Github</a></li>
-<li><a href="https://gridea.dev/faq/">Gridea常见问题解决</a></li>
-</ol>
-<h1 id="安装">安装</h1>
-<h2 id="安装博客">安装博客</h2>
-<h3 id="安装指导文档">安装指导文档</h3>
-<p><a href="https://gridea.dev/gridea-start/">部署指导文档</a></p>
-<h3 id="安装指导视频">安装指导视频</h3>
-<iframe src="//player.bilibili.com/player.html?aid=54011033&cid=94483079&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="600" height="400"> </iframe>
-<h2 id="安装评论插件">安装评论插件</h2>
-<p>出于新手安装评论功能，我给出一个特别好的安装Gittalk文章：<a href="https://www.jianshu.com/p/4242bb065550">一款超好用的第三方评论插件-Gittalk</a><br>
-<img src="https://Wangrongsheng.github.io/post-images/1582032054523.png" alt="" loading="lazy"><br>
-之后将在Github申请到的内容都按照对应位置填写到上述<code>Gridea客户端</code>的<code>Gittalk评论配置</code>中。</p>
-<h2 id="自定义域名">自定义域名</h2>
-<p>除了官方的默认<code>username.github.io</code>域名，我们也可以自己建立自己的域名，这里是一篇配置文章：<a href="https://www.jianshu.com/p/23b9e095c7c9">为你的hexo博客配置个性域名</a>，这里有些不同的是前期的准备域名、域名解析都是一样的，后面我们只需要把我们的域名写在<code>Gridea客户端</code>的文件里面就可以了。</p>
-<blockquote>
-<p>特别要注意：填写好之后要去<code>Github博客仓库</code>把<code>域名</code>写好！</p>
-</blockquote>
-]]></content>
-    </entry>
-</feed>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a> | 
+  <a class="rss" href="https://Wangrongsheng.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'ec1e13f2f6dd514ba306',
+            clientSecret: 'e75d6b66caf5de546ff9e514718ecb8067bab30b',
+            repo: 'Wangrogsheng-GrideaBlog-comment',
+            owner: 'Wangrongsheng',
+            admin: ['Wangrongsheng'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>
