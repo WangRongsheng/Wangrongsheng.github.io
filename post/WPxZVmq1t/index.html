@@ -1,0 +1,663 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>基于Mkdocs+Github建立自己的项目文档 - 王荣胜</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="基于Mkdocs+Github建立自己的项目文档 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+Mkdocs-material介绍
+
+符合google material ui规范的静态文档网站生成器，使用markdown进行文档书写。
+
+mkdocs
+
+python编写的markdown解释器、编译器，带有本地cli工具；
+自带基于..." />
+  <meta property="og:title" content="基于Mkdocs+Github建立自己的项目文档 - 王荣胜">
+  <meta property="og:description" content="
+Mkdocs-material介绍
+
+符合google material ui规范的静态文档网站生成器，使用markdown进行文档书写。
+
+mkdocs
+
+python编写的markdown解释器、编译器，带有本地cli工具；
+自带基于..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/WPxZVmq1t/" />
+  <meta property="og:image" content="https://s2.ax1x.com/2020/02/21/3uLMBq.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="基于Mkdocs+Github建立自己的项目文档 - 王荣胜">
+  <meta name="twitter:description" content="
+Mkdocs-material介绍
+
+符合google material ui规范的静态文档网站生成器，使用markdown进行文档书写。
+
+mkdocs
+
+python编写的markdown解释器、编译器，带有本地cli工具；
+自带基于...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/WPxZVmq1t/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          基于Mkdocs+Github建立自己的项目文档
+        </h1>
+        
+          <img src="https://s2.ax1x.com/2020/02/21/3uLMBq.png" alt="基于Mkdocs+Github建立自己的项目文档" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-02-21 · 7 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/teach/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              教程
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h1 id="mkdocs-material介绍">Mkdocs-material介绍</h1>
+<blockquote>
+<p>符合google material ui规范的静态文档网站生成器，使用markdown进行文档书写。</p>
+</blockquote>
+<h2 id="mkdocs">mkdocs</h2>
+<ul>
+<li>python编写的markdown解释器、编译器，带有本地cli工具；</li>
+<li>自带基于Tornado的小型http服务，用于本地调试；</li>
+<li>内置一键式发布至GitHub Pages；</li>
+<li>内置mkdocs风格、readthedocs风格的主题，并支持自定义主题；</li>
+<li>支持调用python模块实现语法及渲染的扩展；</li>
+</ul>
+<h2 id="mkdocs-material">mkdocs-material</h2>
+<ul>
+<li>python模块，符合google material ui规范的mkdocs自定义主题；</li>
+<li>针对特定语法、功能做了渲染优化；</li>
+<li>根据客户端浏览器页面尺寸自动缩放，对PC、移动设备都友好；</li>
+<li>丰富的页面配色，多达19种主体配色和16种悬停链接文字配色；</li>
+<li>支持中文搜索；</li>
+<li>支持统计功能，如百度统计，谷歌统计；</li>
+</ul>
+<h1 id="安装">安装</h1>
+<h2 id="命令安装">命令安装</h2>
+<p>打开<code>命令行</code>并运行命令：</p>
+<pre><code>pip install mkdocs mkdocs-material
+</code></pre>
+<p>若下载慢，可更换安装源为豆瓣：</p>
+<pre><code>pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/ mkdocs mkdocs-material
+</code></pre>
+<p>这里放出一个我的环境配置：</p>
+<ul>
+<li>python环境: 3.6.6</li>
+<li>python包环境：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">包名</th>
+<th style="text-align:center">模块名</th>
+<th style="text-align:center">版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">mkdocs</td>
+<td style="text-align:center">mkdocs</td>
+<td style="text-align:center">1.0.4</td>
+</tr>
+<tr>
+<td style="text-align:center">mkdocs-material</td>
+<td style="text-align:center">material</td>
+<td style="text-align:center">3.0.6</td>
+</tr>
+<tr>
+<td style="text-align:center">Markdown</td>
+<td style="text-align:center">markdown</td>
+<td style="text-align:center">3.0.1</td>
+</tr>
+<tr>
+<td style="text-align:center">pymdown-extensions</td>
+<td style="text-align:center">pymdownx</td>
+<td style="text-align:center">6.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="初始化项目">初始化项目</h2>
+<pre><code>mkdocs new my-project
+</code></pre>
+<blockquote>
+<p>命令中的<code>my-project</code>为生成的文件包的名称，可以修改为自己想要的。</p>
+</blockquote>
+<p>会生成my-project目录，进入该目录里，可以看到默认放置了一些文件，包括<code>mkdocs.yml</code>，这是主配置文件。</p>
+<h2 id="修改样式">修改样式</h2>
+<p>通过上一步我们生成了一个<code>.yml</code>文件，也就是我们的配置文件，接下来就是按照自己的想法配置啦。</p>
+<blockquote>
+<p>注意要修改的东西的<code>代码</code>全部放在<code>.yml</code>文件就可以，会自动解析的。</p>
+</blockquote>
+<h3 id="修改主题">修改主题</h3>
+<p>Mkdocs生成后会有一个自带的主题，大概是这个样子的：<a href="http://docs.sqdxwz.com/python-small-examples/">主题参考网站</a> ，但是如果你不喜欢，你可以修改成另外一个：<a href="http://docs.sqdxwz.com/ds_python/">第二种主题参考网站</a> 。</p>
+<p>第二种主题在<code>mkdocs.yml</code>里添加配置：</p>
+<pre><code>theme:
+  name: material
+</code></pre>
+<h3 id="添加扩展">添加扩展</h3>
+<p>在<code>mkdocs.yml</code>里添加配置：</p>
+<pre><code>markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+</code></pre>
+<h3 id="添加百度统计">添加百度统计</h3>
+<ol>
+<li>在<a href="https://tongji.baidu.com/web/welcome/login">百度统计</a>里创建添加站点，确定后会看到javascript代码，复制代码；</li>
+<li>在docs目录下新建js目录，并在<code>docs/js</code>目录里放置<code>baidu-tongji.js</code>，将复制的代码粘贴进来；</li>
+<li>最后在<code>mkdocs.yml</code>里新增如下配置:</li>
+</ol>
+<pre><code>extra_javascript:
+    - 'js/baidu-tongji.js'
+</code></pre>
+<h3 id="修改配色">修改配色</h3>
+<p>mkdocs-material支持google material ui规范定义的19种主体配色和16种鼠标悬停超链接文字配色。</p>
+<p>在<code>mkdocs.yml</code>里添加配置:</p>
+<pre><code>extra:
+  palette:
+    primary: 'Blue Grey'
+    accent: 'Pink'
+</code></pre>
+<blockquote>
+<p>代码后面的颜色可以修改为自己喜欢的！</p>
+</blockquote>
+<h3 id="添加中文搜索">添加中文搜索</h3>
+<p>虽然search功能(lunr.js)暂不直接支持中文，但测试发现设置为日语后，中文和英文搜索都可以使用。</p>
+<pre><code>extra:
+  search:
+    language: 'jp'
+</code></pre>
+<p>另外，搜索对话框的显示文字，默认为英文，可以设置为中文。例如&quot;search&quot;改为中文后就叫&quot;搜索&quot;。</p>
+<pre><code>theme:
+  language: 'zh'
+</code></pre>
+<h3 id="添加页面">添加页面</h3>
+<p>在<code>my-project/docs/</code>里放置<code>.md</code>文件，可以自行组织目录结构。</p>
+<p>然后在<code>mkdocs.yml</code>里添加，比如这样:</p>
+<pre><code>nav:
+  - 介绍: index.md
+  - 安装:
+      - 本地环境搭建: install/local.md
+      - 发布至GitHub Pages: install/github-pages.md
+      - 发布至自己的HTTP Server: install/http-server.md
+  - 语法:
+      - 语法总览: syntax/main.md
+      - 标题: syntax/headline.md
+      - 段落: syntax/paragraph.md
+</code></pre>
+<ul>
+<li>上面的index.md就是放置在my-project/docs/index.md。</li>
+<li>上面的local.md就是放置在my-project/docs/install/local.md。</li>
+</ul>
+<blockquote>
+<p>注意：由于是yaml格式，因此首先要符合yaml的语法要求，<strong>docs下需要一个index.md，作为站点首页</strong>，文档层次结构虽然可以很多层，但最佳实践是<strong>控制在2层</strong>内，最多不要超过3层，否则展示会不够友好。</p>
+</blockquote>
+<h3 id="主题范例">主题范例</h3>
+<p>这里我给出一个我的主题内容搭配，可以直接使用：</p>
+<pre><code>site_name: AI学习
+site_author: 王荣胜
+repo_url: https://github.com/WangRongsheng
+site_url: https://github.com/WangRongsheng
+site_description: 越努力越幸运
+
+theme:
+  language: 'zh'
+  feature:
+    tabs: true
+  name: 'material'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+    font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+    include_search_page: false
+    search_index_only: true
+
+extra:
+  search:
+    language: 'zh'
+  social:
+    - type: 'github'
+      link: 'https://github.com/WangRongsheng'
+
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+extra_css:
+  - '_static/extra.css'
+
+
+nav:
+    - 介绍:
+       - 介绍: index.md
+       - 关于: about.md
+       - 信息: tj.md
+    - 机器学习: 
+       - 1. K-最近邻算法: ai/knn.md
+       - 2. K-均值算法: ai/k-means.md
+       - 3. 基于矩阵分解的推荐系统: ai/mf.md
+       - 4. 基于用户的协同过滤: ai/usercf.md
+       - 5. 基于项目的协同过滤: ai/itemcf.md
+       - 6. 朴素贝叶斯分类: ai/psbys.md
+       - 7. 贝叶斯个性化排序: ai/bpr.md
+       - 8. 决策树: ai/jcs.md
+       - 9. 随机森林: ai/sjsl.md
+    
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+    
+
+    
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+</code></pre>
+<h2 id="运行">运行</h2>
+<p>在my-project目录里执行：</p>
+<pre><code>mkdocs serve
+</code></pre>
+<p>通过浏览器访问本地ip的8000端口（比如http://127.0.0.1:8000/）</p>
+<blockquote>
+<p>注意一定要在<code>my-project</code>目录执行！</p>
+</blockquote>
+<h2 id="发布">发布</h2>
+<h3 id="发布到github-pages">发布到GitHub pages</h3>
+<p>通过<code>mkdocs gh-deploy</code>这行命令自动编译出html并发布至GitHub pages，步骤如下：</p>
+<h4 id="初始化repo">初始化repo</h4>
+<ol>
+<li>在github上创建一个repo，名字叫my-project（可以是其他名，这里先假设叫my-project），创建repo时候选择初始化带有README.md；</li>
+<li>将repo同步到本地，使用git clone；</li>
+</ol>
+<h4 id="导入项目">导入项目</h4>
+<ol>
+<li>将mkdocs根目录（即my-project目录）下的所有东西移到刚刚git clone下来的git目录下；</li>
+<li>然后可以将最早创建的mkdocs根目录（即my-project目录）删除了；</li>
+</ol>
+<h4 id="发布-2">发布</h4>
+<p>在本地git目录下执行：</p>
+<pre><code>mkdocs gh-deploy
+</code></pre>
+<h3 id="发布到个人http-server">发布到个人HTTP Server</h3>
+<p>通过<code>mkdocs build</code>这行命令编译出html并手动同步至http server的根目录：</p>
+<h4 id="生成站点文件">生成站点文件</h4>
+<p>在git目录下执行命令：</p>
+<pre><code>mkdocs build
+</code></pre>
+<p>命令执行完毕后可以看到site目录。</p>
+<h4 id="发布至http-server">发布至http server</h4>
+<p>将site目录里的所有东西拷贝到http server的根目录下。</p>
+<h1 id="最佳实践">最佳实践</h1>
+<p>如果你想要写好一份项目或者其他的文档，你不可避免的要去学习使用<code>Markdown</code> ，这里推荐你去多多练习下：</p>
+<ol>
+<li><a href="https://www.mdeditor.com/">Markdown在线编译器</a></li>
+<li><a href="https://sqdxwz.top/post/UWPsajVaD/">Markdown基础语法</a></li>
+</ol>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script type="application/javascript">
+
+  var gitalk = new Gitalk({
+    clientID: 'ec1e13f2f6dd514ba306',
+    clientSecret: 'e75d6b66caf5de546ff9e514718ecb8067bab30b',
+    repo: 'Wangrogsheng-GrideaBlog-comment',
+    owner: 'Wangrongsheng',
+    admin: ['Wangrongsheng'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+        
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#mkdocs-material%E4%BB%8B%E7%BB%8D">Mkdocs-material介绍</a>
+<ul>
+<li><a href="#mkdocs">mkdocs</a></li>
+<li><a href="#mkdocs-material">mkdocs-material</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85">命令安装</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE">初始化项目</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F">修改样式</a>
+<ul>
+<li><a href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98">修改主题</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E6%89%A9%E5%B1%95">添加扩展</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1">添加百度统计</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E8%89%B2">修改配色</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%90%9C%E7%B4%A2">添加中文搜索</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E9%A1%B5%E9%9D%A2">添加页面</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98%E8%8C%83%E4%BE%8B">主题范例</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%90%E8%A1%8C">运行</a></li>
+<li><a href="#%E5%8F%91%E5%B8%83">发布</a>
+<ul>
+<li><a href="#%E5%8F%91%E5%B8%83%E5%88%B0github-pages">发布到GitHub pages</a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo">初始化repo</a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE">导入项目</a></li>
+<li><a href="#%E5%8F%91%E5%B8%83-2">发布</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%91%E5%B8%83%E5%88%B0%E4%B8%AA%E4%BA%BAhttp-server">发布到个人HTTP Server</a>
+<ul>
+<li><a href="#%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9%E6%96%87%E4%BB%B6">生成站点文件</a></li>
+<li><a href="#%E5%8F%91%E5%B8%83%E8%87%B3http-server">发布至http server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
+</html>

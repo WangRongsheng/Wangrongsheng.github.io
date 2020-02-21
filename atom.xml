@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-02-20T13:45:18.889Z</updated>
+    <updated>2020-02-21T12:44:35.311Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,316 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[基于Mkdocs+Github建立自己的项目文档]]></title>
+        <id>https://Wangrongsheng.github.io/post/WPxZVmq1t/</id>
+        <link href="https://Wangrongsheng.github.io/post/WPxZVmq1t/">
+        </link>
+        <updated>2020-02-21T12:40:46.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="mkdocs-material介绍">Mkdocs-material介绍</h1>
+<blockquote>
+<p>符合google material ui规范的静态文档网站生成器，使用markdown进行文档书写。</p>
+</blockquote>
+<h2 id="mkdocs">mkdocs</h2>
+<ul>
+<li>python编写的markdown解释器、编译器，带有本地cli工具；</li>
+<li>自带基于Tornado的小型http服务，用于本地调试；</li>
+<li>内置一键式发布至GitHub Pages；</li>
+<li>内置mkdocs风格、readthedocs风格的主题，并支持自定义主题；</li>
+<li>支持调用python模块实现语法及渲染的扩展；</li>
+</ul>
+<h2 id="mkdocs-material">mkdocs-material</h2>
+<ul>
+<li>python模块，符合google material ui规范的mkdocs自定义主题；</li>
+<li>针对特定语法、功能做了渲染优化；</li>
+<li>根据客户端浏览器页面尺寸自动缩放，对PC、移动设备都友好；</li>
+<li>丰富的页面配色，多达19种主体配色和16种悬停链接文字配色；</li>
+<li>支持中文搜索；</li>
+<li>支持统计功能，如百度统计，谷歌统计；</li>
+</ul>
+<h1 id="安装">安装</h1>
+<h2 id="命令安装">命令安装</h2>
+<p>打开<code>命令行</code>并运行命令：</p>
+<pre><code>pip install mkdocs mkdocs-material
+</code></pre>
+<p>若下载慢，可更换安装源为豆瓣：</p>
+<pre><code>pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/ mkdocs mkdocs-material
+</code></pre>
+<p>这里放出一个我的环境配置：</p>
+<ul>
+<li>python环境: 3.6.6</li>
+<li>python包环境：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">包名</th>
+<th style="text-align:center">模块名</th>
+<th style="text-align:center">版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">mkdocs</td>
+<td style="text-align:center">mkdocs</td>
+<td style="text-align:center">1.0.4</td>
+</tr>
+<tr>
+<td style="text-align:center">mkdocs-material</td>
+<td style="text-align:center">material</td>
+<td style="text-align:center">3.0.6</td>
+</tr>
+<tr>
+<td style="text-align:center">Markdown</td>
+<td style="text-align:center">markdown</td>
+<td style="text-align:center">3.0.1</td>
+</tr>
+<tr>
+<td style="text-align:center">pymdown-extensions</td>
+<td style="text-align:center">pymdownx</td>
+<td style="text-align:center">6.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="初始化项目">初始化项目</h2>
+<pre><code>mkdocs new my-project
+</code></pre>
+<blockquote>
+<p>命令中的<code>my-project</code>为生成的文件包的名称，可以修改为自己想要的。</p>
+</blockquote>
+<p>会生成my-project目录，进入该目录里，可以看到默认放置了一些文件，包括<code>mkdocs.yml</code>，这是主配置文件。</p>
+<h2 id="修改样式">修改样式</h2>
+<p>通过上一步我们生成了一个<code>.yml</code>文件，也就是我们的配置文件，接下来就是按照自己的想法配置啦。</p>
+<blockquote>
+<p>注意要修改的东西的<code>代码</code>全部放在<code>.yml</code>文件就可以，会自动解析的。</p>
+</blockquote>
+<h3 id="修改主题">修改主题</h3>
+<p>Mkdocs生成后会有一个自带的主题，大概是这个样子的：<a href="http://docs.sqdxwz.com/python-small-examples/">主题参考网站</a> ，但是如果你不喜欢，你可以修改成另外一个：<a href="http://docs.sqdxwz.com/ds_python/">第二种主题参考网站</a> 。</p>
+<p>第二种主题在<code>mkdocs.yml</code>里添加配置：</p>
+<pre><code>theme:
+  name: material
+</code></pre>
+<h3 id="添加扩展">添加扩展</h3>
+<p>在<code>mkdocs.yml</code>里添加配置：</p>
+<pre><code>markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+</code></pre>
+<h3 id="添加百度统计">添加百度统计</h3>
+<ol>
+<li>在<a href="https://tongji.baidu.com/web/welcome/login">百度统计</a>里创建添加站点，确定后会看到javascript代码，复制代码；</li>
+<li>在docs目录下新建js目录，并在<code>docs/js</code>目录里放置<code>baidu-tongji.js</code>，将复制的代码粘贴进来；</li>
+<li>最后在<code>mkdocs.yml</code>里新增如下配置:</li>
+</ol>
+<pre><code>extra_javascript:
+    - 'js/baidu-tongji.js'
+</code></pre>
+<h3 id="修改配色">修改配色</h3>
+<p>mkdocs-material支持google material ui规范定义的19种主体配色和16种鼠标悬停超链接文字配色。</p>
+<p>在<code>mkdocs.yml</code>里添加配置:</p>
+<pre><code>extra:
+  palette:
+    primary: 'Blue Grey'
+    accent: 'Pink'
+</code></pre>
+<blockquote>
+<p>代码后面的颜色可以修改为自己喜欢的！</p>
+</blockquote>
+<h3 id="添加中文搜索">添加中文搜索</h3>
+<p>虽然search功能(lunr.js)暂不直接支持中文，但测试发现设置为日语后，中文和英文搜索都可以使用。</p>
+<pre><code>extra:
+  search:
+    language: 'jp'
+</code></pre>
+<p>另外，搜索对话框的显示文字，默认为英文，可以设置为中文。例如&quot;search&quot;改为中文后就叫&quot;搜索&quot;。</p>
+<pre><code>theme:
+  language: 'zh'
+</code></pre>
+<h3 id="添加页面">添加页面</h3>
+<p>在<code>my-project/docs/</code>里放置<code>.md</code>文件，可以自行组织目录结构。</p>
+<p>然后在<code>mkdocs.yml</code>里添加，比如这样:</p>
+<pre><code>nav:
+  - 介绍: index.md
+  - 安装:
+      - 本地环境搭建: install/local.md
+      - 发布至GitHub Pages: install/github-pages.md
+      - 发布至自己的HTTP Server: install/http-server.md
+  - 语法:
+      - 语法总览: syntax/main.md
+      - 标题: syntax/headline.md
+      - 段落: syntax/paragraph.md
+</code></pre>
+<ul>
+<li>上面的index.md就是放置在my-project/docs/index.md。</li>
+<li>上面的local.md就是放置在my-project/docs/install/local.md。</li>
+</ul>
+<blockquote>
+<p>注意：由于是yaml格式，因此首先要符合yaml的语法要求，<strong>docs下需要一个index.md，作为站点首页</strong>，文档层次结构虽然可以很多层，但最佳实践是<strong>控制在2层</strong>内，最多不要超过3层，否则展示会不够友好。</p>
+</blockquote>
+<h3 id="主题范例">主题范例</h3>
+<p>这里我给出一个我的主题内容搭配，可以直接使用：</p>
+<pre><code>site_name: AI学习
+site_author: 王荣胜
+repo_url: https://github.com/WangRongsheng
+site_url: https://github.com/WangRongsheng
+site_description: 越努力越幸运
+
+theme:
+  language: 'zh'
+  feature:
+    tabs: true
+  name: 'material'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+    font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+    include_search_page: false
+    search_index_only: true
+
+extra:
+  search:
+    language: 'zh'
+  social:
+    - type: 'github'
+      link: 'https://github.com/WangRongsheng'
+
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+extra_css:
+  - '_static/extra.css'
+
+
+nav:
+    - 介绍:
+       - 介绍: index.md
+       - 关于: about.md
+       - 信息: tj.md
+    - 机器学习: 
+       - 1. K-最近邻算法: ai/knn.md
+       - 2. K-均值算法: ai/k-means.md
+       - 3. 基于矩阵分解的推荐系统: ai/mf.md
+       - 4. 基于用户的协同过滤: ai/usercf.md
+       - 5. 基于项目的协同过滤: ai/itemcf.md
+       - 6. 朴素贝叶斯分类: ai/psbys.md
+       - 7. 贝叶斯个性化排序: ai/bpr.md
+       - 8. 决策树: ai/jcs.md
+       - 9. 随机森林: ai/sjsl.md
+    
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+    
+
+    
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+</code></pre>
+<h2 id="运行">运行</h2>
+<p>在my-project目录里执行：</p>
+<pre><code>mkdocs serve
+</code></pre>
+<p>通过浏览器访问本地ip的8000端口（比如http://127.0.0.1:8000/）</p>
+<blockquote>
+<p>注意一定要在<code>my-project</code>目录执行！</p>
+</blockquote>
+<h2 id="发布">发布</h2>
+<h3 id="发布到github-pages">发布到GitHub pages</h3>
+<p>通过<code>mkdocs gh-deploy</code>这行命令自动编译出html并发布至GitHub pages，步骤如下：</p>
+<h4 id="初始化repo">初始化repo</h4>
+<ol>
+<li>在github上创建一个repo，名字叫my-project（可以是其他名，这里先假设叫my-project），创建repo时候选择初始化带有README.md；</li>
+<li>将repo同步到本地，使用git clone；</li>
+</ol>
+<h4 id="导入项目">导入项目</h4>
+<ol>
+<li>将mkdocs根目录（即my-project目录）下的所有东西移到刚刚git clone下来的git目录下；</li>
+<li>然后可以将最早创建的mkdocs根目录（即my-project目录）删除了；</li>
+</ol>
+<h4 id="发布-2">发布</h4>
+<p>在本地git目录下执行：</p>
+<pre><code>mkdocs gh-deploy
+</code></pre>
+<h3 id="发布到个人http-server">发布到个人HTTP Server</h3>
+<p>通过<code>mkdocs build</code>这行命令编译出html并手动同步至http server的根目录：</p>
+<h4 id="生成站点文件">生成站点文件</h4>
+<p>在git目录下执行命令：</p>
+<pre><code>mkdocs build
+</code></pre>
+<p>命令执行完毕后可以看到site目录。</p>
+<h4 id="发布至http-server">发布至http server</h4>
+<p>将site目录里的所有东西拷贝到http server的根目录下。</p>
+<h1 id="最佳实践">最佳实践</h1>
+<p>如果你想要写好一份项目或者其他的文档，你不可避免的要去学习使用<code>Markdown</code> ，这里推荐你去多多练习下：</p>
+<ol>
+<li><a href="https://www.mdeditor.com/">Markdown在线编译器</a></li>
+<li><a href="https://sqdxwz.top/post/UWPsajVaD/">Markdown基础语法</a></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Latex基础语法]]></title>
         <id>https://Wangrongsheng.github.io/post/51zpJSdcl/</id>
@@ -1528,19 +1838,19 @@ H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
 </code></pre>
 <p>效果：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8059673"><label class="task-list-item-label" for="task-item-8059673"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4027901"><label class="task-list-item-label" for="task-item-4027901"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2995202"><label class="task-list-item-label" for="task-item-2995202"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3085359"><label class="task-list-item-label" for="task-item-3085359"> Vestibulum convallis sit amet nisi a tincidunt</label>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9806337"><label class="task-list-item-label" for="task-item-9806337"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6406702"><label class="task-list-item-label" for="task-item-6406702"> Nulla lobortis egestas semper</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5490461"><label class="task-list-item-label" for="task-item-5490461"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1208907"><label class="task-list-item-label" for="task-item-1208907"> Vestibulum convallis sit amet nisi a tincidunt</label>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9568113"><label class="task-list-item-label" for="task-item-9568113"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7014492"><label class="task-list-item-label" for="task-item-7014492"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3852869"><label class="task-list-item-label" for="task-item-3852869"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8078004"><label class="task-list-item-label" for="task-item-8078004"> Praesent sed risus massa</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5745862"><label class="task-list-item-label" for="task-item-5745862"> In hac habitasse platea dictumst</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8460855"><label class="task-list-item-label" for="task-item-8460855"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5477283"><label class="task-list-item-label" for="task-item-5477283"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7916777"><label class="task-list-item-label" for="task-item-7916777"> Praesent sed risus massa</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3069835"><label class="task-list-item-label" for="task-item-3069835"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4783422"><label class="task-list-item-label" for="task-item-4783422"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1853397"><label class="task-list-item-label" for="task-item-1853397"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2607992"><label class="task-list-item-label" for="task-item-2607992"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
 </ul>
 <h3 id="嵌套列表">嵌套列表</h3>
 <pre><code class="language-text">- aaa
