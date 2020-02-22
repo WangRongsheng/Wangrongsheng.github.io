@@ -111,10 +111,10 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 <h1 id="安装">安装</h1>
 <h2 id="命令安装">命令安装</h2>
 <p>打开<code>命令行</code>并运行命令：</p>
-<pre><code>pip install mkdocs mkdocs-material
+<pre><code class="language-html">pip install mkdocs mkdocs-material
 </code></pre>
 <p>若下载慢，可更换安装源为豆瓣：</p>
-<pre><code>pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/ mkdocs mkdocs-material
+<pre><code class="language-html">pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/ mkdocs mkdocs-material
 </code></pre>
 <p>这里放出一个我的环境配置：</p>
 <ul>
@@ -153,7 +153,7 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 </tbody>
 </table>
 <h2 id="初始化项目">初始化项目</h2>
-<pre><code>mkdocs new my-project
+<pre><code class="language-html">mkdocs new my-project
 </code></pre>
 <blockquote>
 <p>命令中的<code>my-project</code>为生成的文件包的名称，可以修改为自己想要的。</p>
@@ -167,12 +167,12 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 <h3 id="修改主题">修改主题</h3>
 <p>Mkdocs生成后会有一个自带的主题，大概是这个样子的：<a href="http://docs.sqdxwz.com/python-small-examples/">主题参考网站</a> ，但是如果你不喜欢，你可以修改成另外一个：<a href="http://docs.sqdxwz.com/ds_python/">第二种主题参考网站</a> 。</p>
 <p>第二种主题在<code>mkdocs.yml</code>里添加配置：</p>
-<pre><code>theme:
+<pre><code class="language-html">theme:
   name: material
 </code></pre>
 <h3 id="添加扩展">添加扩展</h3>
 <p>在<code>mkdocs.yml</code>里添加配置：</p>
-<pre><code>markdown_extensions:
+<pre><code class="language-html">markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: false
@@ -204,13 +204,13 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 <li>在docs目录下新建js目录，并在<code>docs/js</code>目录里放置<code>baidu-tongji.js</code>，将复制的代码粘贴进来；</li>
 <li>最后在<code>mkdocs.yml</code>里新增如下配置:</li>
 </ol>
-<pre><code>extra_javascript:
+<pre><code class="language-html">extra_javascript:
     - 'js/baidu-tongji.js'
 </code></pre>
 <h3 id="修改配色">修改配色</h3>
 <p>mkdocs-material支持google material ui规范定义的19种主体配色和16种鼠标悬停超链接文字配色。</p>
 <p>在<code>mkdocs.yml</code>里添加配置:</p>
-<pre><code>extra:
+<pre><code class="language-html">extra:
   palette:
     primary: 'Blue Grey'
     accent: 'Pink'
@@ -220,18 +220,18 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 </blockquote>
 <h3 id="添加中文搜索">添加中文搜索</h3>
 <p>虽然search功能(lunr.js)暂不直接支持中文，但测试发现设置为日语后，中文和英文搜索都可以使用。</p>
-<pre><code>extra:
+<pre><code class="language-html">extra:
   search:
     language: 'jp'
 </code></pre>
 <p>另外，搜索对话框的显示文字，默认为英文，可以设置为中文。例如&quot;search&quot;改为中文后就叫&quot;搜索&quot;。</p>
-<pre><code>theme:
+<pre><code class="language-html">theme:
   language: 'zh'
 </code></pre>
 <h3 id="添加页面">添加页面</h3>
 <p>在<code>my-project/docs/</code>里放置<code>.md</code>文件，可以自行组织目录结构。</p>
 <p>然后在<code>mkdocs.yml</code>里添加，比如这样:</p>
-<pre><code>nav:
+<pre><code class="language-html">nav:
   - 介绍: index.md
   - 安装:
       - 本地环境搭建: install/local.md
@@ -251,7 +251,7 @@ python编写的markdown解释器、编译器，带有本地cli工具；
 </blockquote>
 <h3 id="主题范例">主题范例</h3>
 <p>这里我给出一个我的主题内容搭配，可以直接使用：</p>
-<pre><code>site_name: AI学习
+<pre><code class="language-html">site_name: AI学习
 site_author: 王荣胜
 repo_url: https://github.com/WangRongsheng
 site_url: https://github.com/WangRongsheng
@@ -350,7 +350,7 @@ markdown_extensions:
 </code></pre>
 <h2 id="运行">运行</h2>
 <p>在my-project目录里执行：</p>
-<pre><code>mkdocs serve
+<pre><code class="language-html">mkdocs serve
 </code></pre>
 <p>通过浏览器访问本地ip的8000端口（比如http://127.0.0.1:8000/）</p>
 <blockquote>
@@ -371,13 +371,13 @@ markdown_extensions:
 </ol>
 <h4 id="发布-2">发布</h4>
 <p>在本地git目录下执行：</p>
-<pre><code>mkdocs gh-deploy
+<pre><code class="language-html">mkdocs gh-deploy
 </code></pre>
 <h3 id="发布到个人http-server">发布到个人HTTP Server</h3>
 <p>通过<code>mkdocs build</code>这行命令编译出html并手动同步至http server的根目录：</p>
 <h4 id="生成站点文件">生成站点文件</h4>
 <p>在git目录下执行命令：</p>
-<pre><code>mkdocs build
+<pre><code class="language-html">mkdocs build
 </code></pre>
 <p>命令执行完毕后可以看到site目录。</p>
 <h4 id="发布至http-server">发布至http server</h4>
