@@ -1,0 +1,601 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>垃圾代码书写准则 - 王荣胜</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="垃圾代码书写准则 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+准则
+💩 以一种代码已经被混淆的方式命名变量
+如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。
+Good 👍🏻
+let a = 42;
+
+Bad 👎🏻
+let age = 42;
+
+💩 变量/函数混合命名风格
+..." />
+  <meta property="og:title" content="垃圾代码书写准则 - 王荣胜">
+  <meta property="og:description" content="
+准则
+💩 以一种代码已经被混淆的方式命名变量
+如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。
+Good 👍🏻
+let a = 42;
+
+Bad 👎🏻
+let age = 42;
+
+💩 变量/函数混合命名风格
+..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/YuQg-AeUx/" />
+  <meta property="og:image" content="https://s2.ax1x.com/2020/02/27/3w3smD.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="垃圾代码书写准则 - 王荣胜">
+  <meta name="twitter:description" content="
+准则
+💩 以一种代码已经被混淆的方式命名变量
+如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。
+Good 👍🏻
+let a = 42;
+
+Bad 👎🏻
+let age = 42;
+
+💩 变量/函数混合命名风格
+...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/YuQg-AeUx/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          垃圾代码书写准则
+        </h1>
+        
+          <img src="https://s2.ax1x.com/2020/02/27/3w3smD.png" alt="垃圾代码书写准则" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-02-27 · 5 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/kphXAxKJn/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              拓展
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h2 id="准则">准则</h2>
+<h3 id="以一种代码已经被混淆的方式命名变量">💩 以一种代码已经被混淆的方式命名变量</h3>
+<p>如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">let a = 42;
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">let age = 42;
+</code></pre>
+<h3 id="变量函数混合命名风格">💩 变量/函数混合命名风格</h3>
+<p>为不同庆祝一下。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">let wWidth = 640;
+let w_height = 480;
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">let windowWidth = 640;
+let windowHeight = 480;
+</code></pre>
+<h3 id="不要写注释">💩 不要写注释</h3>
+<p>反正没人会读你的代码。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">const cdr = 700;
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<p>更多时候，评论应该包含一些“为什么”，而不是一些“是什么”。如果“什么”在代码中不清楚，那么代码可能太混乱了。</p>
+<pre><code class="language-javascript">// 700ms的数量是根据UX A/B测试结果进行经验计算的。
+// @查看: &lt;详细解释700的一个链接&gt;
+const callbackDebounceRate = 700;
+</code></pre>
+<h3 id="使用母语写注释">💩 使用母语写注释</h3>
+<p>如果您违反了“无注释”原则，那么至少尝试用一种不同于您用来编写代码的语言来编写注释。如果你的母语是英语，你可能会违反这个原则。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">// Закриваємо модальне віконечко при виникненні помилки.
+toggleModal(false);
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">// 隐藏错误弹窗
+toggleModal(false);
+</code></pre>
+<h3 id="尽可能混合不同的格式">💩 尽可能混合不同的格式</h3>
+<p>为不同庆祝一下。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">let i = ['tomato', 'onion', 'mushrooms'];
+let d = [ &quot;ketchup&quot;, &quot;mayonnaise&quot; ];
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">let ingredients = ['tomato', 'onion', 'mushrooms'];
+let dressings = ['ketchup', 'mayonnaise'];
+</code></pre>
+<h3 id="尽可能把代码写成一行">💩 尽可能把代码写成一行</h3>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">document.location.search.replace(/(^\?)/,'').split('&amp;').reduce(function(o,n){n=n.split('=');o[n[0]]=n[1];return o},{})
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">document.location.search
+  .replace(/(^\?)/, '')
+  .split('&amp;')
+  .reduce((searchParams, keyValuePair) =&gt; {
+    keyValuePair = keyValuePair.split('=');
+    searchParams[keyValuePair[0]] = keyValuePair[1];
+    return searchParams;
+  },
+  {}
+)
+</code></pre>
+<h3 id="不要处理错误">💩 不要处理错误</h3>
+<p>无论何时发现错误，都没有必要让任何人知道它。没有日志，没有错误弹框。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">try {
+  // 意料之外的情况。
+} catch (error) {
+  // tss... 🤫
+}
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">try {
+  // 意料之外的情况。
+} catch (error) {
+  setErrorMessage(error.message);
+  // and/or
+  logError(error);
+}
+</code></pre>
+<h3 id="广泛使用全局变量">💩 广泛使用全局变量</h3>
+<p>全球化的原则。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">let x = 5;
+
+function square() {
+  x = x ** 2;
+}
+
+square(); // 现在x是25
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">let x = 5;
+
+function square(num) {
+  return num ** 2;
+}
+
+x = square(x); // 现在x是25
+</code></pre>
+<h3 id="创建你不会使用的变量">💩 创建你不会使用的变量</h3>
+<p>以防万一。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">function sum(a, b, c) {
+  const timeout = 1300;
+  const result = a + b;
+  return a + b;
+}
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">function sum(a, b) {
+  return a + b;
+}
+</code></pre>
+<h3 id="如果语言允许不要指定类型和或不执行类型检查">💩 如果语言允许，不要指定类型和/或不执行类型检查。</h3>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">function sum(a, b) {
+  return a + b;
+}
+
+// 在这里享受没有注释的快乐
+const guessWhat = sum([], {}); // -&gt; &quot;[object Object]&quot;
+const guessWhatAgain = sum({}, []); // -&gt; 0
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">function sum(a: number, b: number): ?number {
+  // 当我们在JS中不做置换和/或流类型检查时，覆盖这种情况。
+  if (typeof a !== 'number' &amp;&amp; typeof b !== 'number') {
+    return undefined;
+  }
+  return a + b;
+}
+
+// 这个应该在转换/编译期间失败。
+const guessWhat = sum([], {}); // -&gt; undefined
+</code></pre>
+<h3 id="你应该有不能到达的代码">💩 你应该有不能到达的代码</h3>
+<p>这是你的 &quot;Plan B&quot;.</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">function square(num) {
+  if (typeof num === 'undefined') {
+    return undefined;
+  }
+  else {
+    return num ** 2;
+  }
+  return null; // 这就是我的&quot;Plan B&quot;.
+}
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">function square(num) {
+  if (typeof num === 'undefined') {
+    return undefined;
+  }
+  return num ** 2;
+}
+</code></pre>
+<h3 id="三角法则">💩 三角法则</h3>
+<p>就像鸟巢，鸟巢，鸟巢。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">function someFunction() {
+  if (condition1) {
+    if (condition2) {
+      asyncFunction(params, (result) =&gt; {
+        if (result) {
+          for (;;) {
+            if (condition3) {
+            }
+          }
+        }
+      })
+    }
+  }
+}
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">async function someFunction() {
+  if (!condition1 || !condition2) {
+    return;
+  }
+  
+  const result = await asyncFunction(params);
+  if (!result) {
+    return;
+  }
+  
+  for (;;) {
+    if (condition3) {
+    }
+  }
+}
+</code></pre>
+<h3 id="混合缩进">💩 混合缩进</h3>
+<p>避免缩进，因为它们会使复杂的代码在编辑器中占用更多的空间。如果你不喜欢回避他们，那就和他们捣乱。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code class="language-javascript">const fruits = ['apple',
+  'orange', 'grape', 'pineapple'];
+  const toppings = ['syrup', 'cream', 
+                    'jam', 
+                    'chocolate'];
+const desserts = [];
+fruits.forEach(fruit =&gt; {
+toppings.forEach(topping =&gt; {
+    desserts.push([
+fruit,topping]);
+    });})
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code class="language-javascript">const fruits = ['apple', 'orange', 'grape', 'pineapple'];
+const toppings = ['syrup', 'cream', 'jam', 'chocolate'];
+const desserts = [];
+
+fruits.forEach(fruit =&gt; {
+  toppings.forEach(topping =&gt; {
+    desserts.push([fruit, topping]); 
+  });
+})
+</code></pre>
+<h3 id="不要锁住你的依赖项">💩 不要锁住你的依赖项</h3>
+<p>以非受控方式更新每个新安装的依赖项。为什么坚持使用过去的版本，让我们使用最先进的库版本。</p>
+<p><em>Good 👍🏻</em></p>
+<pre><code>$ ls -la
+
+package.json
+</code></pre>
+<p><em>Bad 👎🏻</em></p>
+<pre><code>$ ls -la
+
+package.json
+package-lock.json
+</code></pre>
+<h3 id="函数长的比短的好">💩 函数长的比短的好</h3>
+<p>不要把程序逻辑分成可读的部分。如果IDE的搜索停止，而您无法找到所需的文件或函数，该怎么办?</p>
+<ul>
+<li>一个文件中10000行代码是OK的。</li>
+<li>一个函数体1000行代码是OK的。</li>
+<li>处理许多服务(第三方和内部，也有一些工具、数据库手写ORM和jQuery滑块)在一个' service.js ' ?这是OK的。</li>
+</ul>
+<h3 id="不要测试你的代码">💩 不要测试你的代码</h3>
+<p>这是重复的并且不需要的工作。</p>
+<h3 id="避免代码风格统一">💩 避免代码风格统一</h3>
+<p>编写您想要的代码，特别是在一个团队中有多个开发人员的情况下。这是一个“自由”的原则。</p>
+<h3 id="构建新项目不需要-readme-文档">💩 构建新项目不需要 README 文档</h3>
+<p>一开始我们就应该保持。</p>
+<h3 id="保存不必要的代码">💩 保存不必要的代码</h3>
+<p>不要删除不用的代码，最多是注释掉。</p>
+<h2 id="参考">参考</h2>
+<figure data-type="image" tabindex="1"><a href="https://github.com/trekhleb/state-of-the-art-shitcode"><img src="https://img.shields.io/static/v1?label=State-of-the-art&amp;message=Shitcode&amp;color=7B5804" alt="State-of-the-art Shitcode" loading="lazy"></a></figure>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+<script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'vFnT8eIWOfsoXTsNr4Wt17mk-gzGzoHsz',
+    appKey: 'v2Df6KRpK46Ug3Ay4cM0ey5x',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: false,
+    recordIP: false,
+  })
+</script>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%87%86%E5%88%99">准则</a>
+<ul>
+<li><a href="#%E4%BB%A5%E4%B8%80%E7%A7%8D%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E8%A2%AB%E6%B7%B7%E6%B7%86%E7%9A%84%E6%96%B9%E5%BC%8F%E5%91%BD%E5%90%8D%E5%8F%98%E9%87%8F">💩 以一种代码已经被混淆的方式命名变量</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E6%B7%B7%E5%90%88%E5%91%BD%E5%90%8D%E9%A3%8E%E6%A0%BC">💩 变量/函数混合命名风格</a></li>
+<li><a href="#%E4%B8%8D%E8%A6%81%E5%86%99%E6%B3%A8%E9%87%8A">💩 不要写注释</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%AF%8D%E8%AF%AD%E5%86%99%E6%B3%A8%E9%87%8A">💩 使用母语写注释</a></li>
+<li><a href="#%E5%B0%BD%E5%8F%AF%E8%83%BD%E6%B7%B7%E5%90%88%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%BC%E5%BC%8F">💩 尽可能混合不同的格式</a></li>
+<li><a href="#%E5%B0%BD%E5%8F%AF%E8%83%BD%E6%8A%8A%E4%BB%A3%E7%A0%81%E5%86%99%E6%88%90%E4%B8%80%E8%A1%8C">💩 尽可能把代码写成一行</a></li>
+<li><a href="#%E4%B8%8D%E8%A6%81%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF">💩 不要处理错误</a></li>
+<li><a href="#%E5%B9%BF%E6%B3%9B%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">💩 广泛使用全局变量</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%BD%A0%E4%B8%8D%E4%BC%9A%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F">💩 创建你不会使用的变量</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E8%AF%AD%E8%A8%80%E5%85%81%E8%AE%B8%E4%B8%8D%E8%A6%81%E6%8C%87%E5%AE%9A%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%88%96%E4%B8%8D%E6%89%A7%E8%A1%8C%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5">💩 如果语言允许，不要指定类型和/或不执行类型检查。</a></li>
+<li><a href="#%E4%BD%A0%E5%BA%94%E8%AF%A5%E6%9C%89%E4%B8%8D%E8%83%BD%E5%88%B0%E8%BE%BE%E7%9A%84%E4%BB%A3%E7%A0%81">💩 你应该有不能到达的代码</a></li>
+<li><a href="#%E4%B8%89%E8%A7%92%E6%B3%95%E5%88%99">💩 三角法则</a></li>
+<li><a href="#%E6%B7%B7%E5%90%88%E7%BC%A9%E8%BF%9B">💩 混合缩进</a></li>
+<li><a href="#%E4%B8%8D%E8%A6%81%E9%94%81%E4%BD%8F%E4%BD%A0%E7%9A%84%E4%BE%9D%E8%B5%96%E9%A1%B9">💩 不要锁住你的依赖项</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E9%95%BF%E7%9A%84%E6%AF%94%E7%9F%AD%E7%9A%84%E5%A5%BD">💩 函数长的比短的好</a></li>
+<li><a href="#%E4%B8%8D%E8%A6%81%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81">💩 不要测试你的代码</a></li>
+<li><a href="#%E9%81%BF%E5%85%8D%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E7%BB%9F%E4%B8%80">💩 避免代码风格统一</a></li>
+<li><a href="#%E6%9E%84%E5%BB%BA%E6%96%B0%E9%A1%B9%E7%9B%AE%E4%B8%8D%E9%9C%80%E8%A6%81-readme-%E6%96%87%E6%A1%A3">💩 构建新项目不需要 README 文档</a></li>
+<li><a href="#%E4%BF%9D%E5%AD%98%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E4%BB%A3%E7%A0%81">💩 保存不必要的代码</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
+</html>
