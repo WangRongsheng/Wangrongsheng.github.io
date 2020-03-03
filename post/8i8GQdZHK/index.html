@@ -1,0 +1,818 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>HTML基础语法 - 王荣胜</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="HTML基础语法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+HTML简介
+HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字..." />
+  <meta property="og:title" content="HTML基础语法 - 王荣胜">
+  <meta property="og:description" content="
+HTML简介
+HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/8i8GQdZHK/" />
+  <meta property="og:image" content="https://s2.ax1x.com/2020/03/03/34vr7Q.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="HTML基础语法 - 王荣胜">
+  <meta name="twitter:description" content="
+HTML简介
+HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/8i8GQdZHK/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          HTML基础语法
+        </h1>
+        
+          <img src="https://s2.ax1x.com/2020/03/03/34vr7Q.png" alt="HTML基础语法" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-03-03 · 21 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/notes/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              笔记
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h1 id="html简介">HTML简介</h1>
+<p>HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
+<h1 id="html基础语法">HTML基础语法</h1>
+<h2 id="全局架构标签">全局架构标签</h2>
+<blockquote>
+<p>每一个html页面必须包含以下一段内容，可以称为全局架构标签</p>
+</blockquote>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt; &lt;!-- 声明这个html页面使用的版本，这样写代表是H5最新版本 --&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;  &lt;!-- 告诉浏览器使用的是utf-8字符集 --&gt;
+      &lt;title&gt;我的网站&lt;/title&gt;   &lt;!-- 这里用来编写网站的标题，显示在浏览器选项卡的位置 --&gt;
+  &lt;/head&gt;
+  &lt;body&gt;    &lt;!-- 只有body标签里面的内容，才能真正显示在浏览器的窗口中 --&gt;
+    &lt;h1&gt;我的第一个标签&lt;/h1&gt;
+    
+    &lt;p&gt;我的第一个段落&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>html标签和元素的说法</strong>：</p>
+<ul>
+<li>
+<p>标签：html、head、meta、title、body、h1、p等等我们都称为html的标签，简称标签即可。</p>
+</li>
+<li>
+<p>元素：一对标签所表示的东西，我们称为元素。</p>
+</li>
+</ul>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;     &lt;!-- 这里是注释：meta为半闭合标签，并使用utf8字符集 --&gt;
+        &lt;title&gt;这是我的标题：首次学习HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;
+            首次学习PHP，这是HTML基础语法部分！！
+        &lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="标题">标题</h2>
+<blockquote>
+<p>标题就是我们通常理解的文档里面的标题，html里面的标题分为：h1、h2、h3、h4、h5、h6</p>
+</blockquote>
+<p>写法：</p>
+<pre><code class="language-html">&lt;h1&gt;最大的标题&lt;/h1&gt;
+&lt;h2&gt;标题二&lt;/h2&gt;
+&lt;h3&gt;标题三&lt;/h3&gt;
+&lt;h4&gt;标题四&lt;/h4&gt;
+&lt;h5&gt;标题五&lt;/h5&gt;
+&lt;h6&gt;标题六&lt;/h6&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;标题--HTML基础语法学习&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;我是一个h1标题&lt;/h1&gt;
+        &lt;h2&gt;我是一个h2标题&lt;/h2&gt;
+        &lt;h3&gt;我是一个h3标题&lt;/h3&gt;
+        &lt;h4&gt;我是一个h4标题&lt;/h4&gt;
+        &lt;h5&gt;我是一个h5标题&lt;/h5&gt;
+        &lt;h6&gt;我是一个h6标题&lt;/h6&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="段落">段落</h2>
+<blockquote>
+<p>段落表示一段普通的文字，类似文章中的一个段落</p>
+</blockquote>
+<p>写法：</p>
+<pre><code class="language-html">&lt;p&gt;
+    近日，西安女车主坐在66万买的奔驰车引擎盖上无奈维权引发各界密切关注。除了车本身的质量问题，该车主还质疑4S店诱其贷款收取的“金融服务费”存在欺诈。贷款买车究竟有哪些渠道？“金融服务费”是不是合理收费？贷款买车会遭遇哪些套路？消费者提前防范别踩坑里？北京青年报记者就这些问题采访了众多专业人士。
+    据了解，汽车金融业务包括三种较为常见的模式。第一种为银行车贷，消费者向申请住房按揭一样向银行申请贷款，按照一定利率按月还款；第二种为信用卡分期，指持卡人同意支付首付款的情况下，向银行申请用其信用卡在银行指定的经销商购买家用汽车，经银行核准后，将审批通过金额平均分成若干期，由持卡人在约定期限内按月还款，并支付一定手续费。第三种模式为消费者向汽车金融公司申请贷款。也是西安奔驰维权事件中女车主选择的方式。第四种是近年来新兴的汽车融资租赁，即通过“以租代购、分期付款”的方式购车。
+&lt;/p&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;meta charset=&quot;utf8&quot; /&gt;
+    &lt;head&gt;
+        &lt;title&gt;段落--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;毛主席介绍&lt;/h1&gt;
+        &lt;p&gt;
+    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;近日，西安女车主坐在66万买的奔驰车引擎盖上无奈维权引发各界密切关注。除了车本身的质量问题，该车主还质疑4S店诱其贷款收取的“金融服务费”存在欺诈。贷款买车究竟有哪些渠道？“金融服务费”是不是合理收费？贷款买车会遭遇哪些套路？消费者提前防范别踩坑里？北京青年报记者就这些问题采访了众多专业人士。 
+        &lt;/p&gt;
+        &lt;p&gt;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;据了解，汽车金融业务包括三种较为常见的模式。第一种为银行车贷，消费者向申请住房按揭一样向银行申请贷款，按照一定利率按月还款；第二种为信用卡分期，指持卡人同意支付首付款的情况下，向银行申请用其信用卡在银行指定的经销商购买家用汽车，经银行核准后，将审批通过金额平均分成若干期，由持卡人在约定期限内按月还款，并支付一定手续费。第三种模式为消费者向汽车金融公司申请贷款。也是西安奔驰维权事件中女车主选择的方式。第四种是近年来新兴的汽车融资租赁，即通过“以租代购、分期付款”的方式购车。
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="文本">文本</h2>
+<p>HTML文本格式化标签（常用）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标签</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;em&gt;</code></td>
+<td style="text-align:left">定义着重文字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;i&gt;</code></td>
+<td style="text-align:left">定义斜体字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;small&gt;</code></td>
+<td style="text-align:left">定义小号字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;strong&gt;</code></td>
+<td style="text-align:left">定义加重语气</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;sub&gt;</code></td>
+<td style="text-align:left">定义下标字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;sup&gt;</code></td>
+<td style="text-align:left">定义上标字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;ins&gt;</code></td>
+<td style="text-align:left">定义插入字</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;del&gt;</code></td>
+<td style="text-align:left">定义删除字</td>
+</tr>
+</tbody>
+</table>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;文本--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;b&gt;PHP是世界上最美的语言！！！&lt;/b&gt; &lt;!-- b标签，用于加粗字体 --&gt;
+        &lt;b&gt;PHP&lt;/b&gt;是世界上最美的语言！！！ &lt;!-- b标签，仅对PHP加粗 --&gt;
+        &lt;em&gt;PHP&lt;/em&gt;是世界上最美的语言！！！&lt;br&gt;
+        &lt;i&gt;PHP&lt;/i&gt;是世界上最美的语言！！！&lt;br&gt;  &lt;!-- i标签，斜体 --&gt;
+        &lt;strong&gt;PHP&lt;/strong&gt;是世界上最美的语言！！！&lt;br&gt;    &lt;!-- strong标签，类似加粗 --&gt;
+        &lt;sub&gt;PHP&lt;/sub&gt;是世界上最美的语言！！！&lt;br&gt;  &lt;!-- sub标签，下沉 --&gt;
+        &lt;sup&gt;PHP&lt;/sup&gt;是世界上最美的语言！！！&lt;br&gt;  &lt;!-- sup标签，上浮 --&gt;
+        &lt;ins&gt;PHP&lt;/ins&gt;是世界上最美的语言！！！&lt;br&gt;  &lt;!-- ins标签，下滑线  --&gt;
+        &lt;del&gt;PHP&lt;/del&gt;是世界上最美的语言！！！&lt;br&gt;  &lt;!-- del标签，文本划线删除 --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="属性">属性</h2>
+<blockquote>
+<p>每一个标签都会拥有一堆属性，来描述这个标签的一些功能。</p>
+</blockquote>
+<p>所有标签共有的属性：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">class</td>
+<td style="text-align:left">为html元素定义一个或多个类名(classname)（类名从样式文件引入）</td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">定义元素的唯一id</td>
+</tr>
+<tr>
+<td style="text-align:left">style</td>
+<td style="text-align:left">规定元素的行内样式</td>
+</tr>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">描述了元素的额外信息（作为工具条使用）</td>
+</tr>
+</tbody>
+</table>
+<p>标签自己的属性，比如下面的a标签和img标签：</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.baidu.com&quot;&gt;我是一个超链接，鼠标点击即可跳转到一个网址&lt;/a&gt;
+&lt;img src=&quot;haha.jpg&quot; width=&quot;100px&quot; /&gt;
+</code></pre>
+<p>写法：</p>
+<pre><code class="language-html">&lt;h1 id=&quot;wwely1&quot; class=&quot;duoge&quot; style=&quot;color: red&quot; title=&quot;鼠标放上来可以显示的&quot;&gt;标题一&lt;/h1&gt;
+&lt;p id=&quot;wely1&quot; class=&quot;duoge&quot; style=&quot;color: red&quot; title=&quot;鼠标放上来可以显示的&quot;&gt;段落一&lt;/p&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;属性--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 id=&quot;kim&quot; class=&quot;K&quot; style=&quot;color: red&quot; title=&quot;这是鼠标提示&quot;&gt;英文名&lt;/h1&gt;   &lt;!-- h1添加属性 --&gt;
+        &lt;h1 id=&quot;kin&quot; class=&quot;Ki&quot; style=&quot;color: green;font-size: 50px;&quot; &gt;英文名&lt;/h1&gt;
+        &lt;a href=&quot;http://www.baidu.com&quot;&gt;这是一个超链接，点我即可跳转&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="链接">链接</h2>
+<blockquote>
+<p>链接，是给任何的html元素添加链接，可以被点击，跳转到某个地址。</p>
+</blockquote>
+<p>写法：</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;点击即可跳转百度&lt;/a&gt;
+</code></pre>
+<p>用法：</p>
+<p>在任何元素上面，想让用户点击，即可跳转到某个页面，就可以使用。</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.youku.com&quot;&gt;&lt;h1&gt;跳转优酷视频&lt;/h1&gt;&lt;/a&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;链接--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;点击我可以打开百度页面&lt;/a&gt; &lt;!--target标签表示在新的标签页打开 --&gt;
+        &lt;a href=&quot;http://www.jd.com&quot; target=&quot;_blank&quot;&gt;&lt;h1&gt;点击跳转京东&lt;h1&gt;&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="图片">图片</h2>
+<blockquote>
+<p>在网页中显示一张图片</p>
+</blockquote>
+<p>写法：</p>
+<pre><code class="language-html">&lt;img src=&quot;haha.jpg&quot; title=&quot;图片的标题&quot; alt=&quot;图片的属性&quot; width=&quot;100px&quot; height=&quot;100px&quot; /&gt;
+</code></pre>
+<p><strong>绝对路径和相对路径</strong>：</p>
+<ul>
+<li>绝对路径是指一个完整的可以从开头找到这个图片的路径</li>
+<li>相对路径是指相对于当前的页面所在的路径</li>
+</ul>
+<p>绝对路径的写法：</p>
+<pre><code class="language-html">&lt;img sr=&quot;C:\Users\Administrator\Pictures\timg.jpg&quot; /&gt;
+</code></pre>
+<p>相对路径的写法：</p>
+<pre><code class="language-html">&lt;img src=&quot;haha.jpg&quot; /&gt;   &lt;!--当前目录--&gt;
+&lt;img src=&quot;./haha.jpg&quot; /&gt; &lt;!-- 当前目录 --&gt;
+&lt;img src=&quot;../haha.jpg&quot; /&gt; &lt;!-- 上一级目录 --&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;图片--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href=&quot;http://www.baidu.com&quot;&gt;&lt;img src=&quot;C:\Users\Administrator\Pictures\timg.jpg&quot;  width=&quot;1000px&quot; height=&quot;1000px&quot; title=&quot;这是gitlab的Logo&quot; alt=&quot;gitlab&quot;/&gt;&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="列表">列表</h2>
+<p>无序列表（常用）</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;第一个列表内容&lt;/li&gt;
+    &lt;li&gt;第二个列表内容&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>有序列表（用的少）</p>
+<pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;第一个列表内容&lt;/li&gt;
+    &lt;li&gt;第二个列表内容&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>自定义列表（不怎么用）</p>
+<pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;编程语言&lt;/dt&gt;
+    &lt;dd&gt;- PHP&lt;/dd&gt;
+    &lt;dd&gt;- Java&lt;/dd&gt;
+    &lt;dd&gt;- C++&lt;/dd&gt;
+    &lt;dt&gt;操作系统&lt;/dt&gt;
+    &lt;dd&gt;- Linux&lt;/dd&gt;
+    &lt;dd&gt;- windows&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;列表--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul&gt;    &lt;!-- 无序列表 --&gt;
+            &lt;li&gt;Linux跟我学&lt;/li&gt;
+            &lt;li&gt;老男孩教育&lt;/li&gt;
+            &lt;li&gt;千峰教育&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ol&gt;  &lt;!-- 有序列表 --&gt;
+           &lt;li&gt;Linux跟我学&lt;/li&gt;
+            &lt;li&gt;老男孩教育&lt;/li&gt;
+            &lt;li&gt;千峰教育&lt;/li&gt;
+        &lt;/ol&gt;
+         &lt;dl&gt;   &lt;!-- 自定义列表 --&gt;
+            &lt;dt&gt;操作系统&lt;/dt&gt;
+            &lt;dd&gt;- Linux&lt;/dd&gt;
+            &lt;dd&gt;- Windows&lt;/dd&gt;
+         &lt;/dl&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="表格">表格</h2>
+<p>写法：</p>
+<pre><code class="language-html">&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;头部一&lt;/th&gt;
+        &lt;th&gt;头部二&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;第一行，第一列&lt;/td&gt;
+        &lt;td&gt;第一行，第二列&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;第二行，第一列&lt;/td&gt;
+        &lt;td&gt;第二行，第二列&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>用法：</p>
+<ul>
+<li>需要以表格显示的内容</li>
+<li>可以用来布局页面（现在不用了，用div来进行布局）</li>
+</ul>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;表格--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+            &lt;tr&gt;&lt;th&gt;标题&lt;/th&gt;&lt;th&gt;标题&lt;/th&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;第一行，第一列&lt;/td&gt;&lt;td&gt;第一行，第二列&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;第二行，第一列&lt;/td&gt;&lt;td&gt;第二行，第二列&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="区块">区块</h2>
+<ul>
+<li>块级元素：div是指一块内容的标签，div不显示任何东西，用来包含其他标签，称之为一块内容，需要配合CSS样式来进行页面布局。 h1、p、ul、table都是块级元素，会以新行来开始。</li>
+<li>内联元素：span标签用来包裹文字。b、id、a、img通常不会以新行开始。</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;区块--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;这是一个div&lt;/div&gt;
+        &lt;div&gt;
+            这是第二个div
+            &lt;a&gt;66666&lt;/a&gt;   &lt;!-- 这里a标签不是块级元素，不会在新行开始--&gt;
+        &lt;/div&gt;
+        &lt;p&gt; &lt;!-- p标签为块级元素，会在新行开始--&gt;
+            这是一个段落
+        &lt;/p&gt;
+        &lt;p&gt;
+            这是第二个段落
+        &lt;/p&gt;
+        &lt;span&gt;内联元素&lt;/span&gt;
+        &lt;span&gt;内联元素222&lt;/span&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="布局">布局</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot;/&gt;
+        &lt;title&gt; 布局--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="表单">表单</h2>
+<blockquote>
+<p>表单是用来在网页上显示给用户输入的标签，然后提交给后台服务器进行处理。</p>
+</blockquote>
+<p>定义：</p>
+<pre><code class="language-html">&lt;form action=&quot;xxx.php&quot; method=&quot;post&quot;&gt;
+    
+&lt;/form&gt;
+</code></pre>
+<p>表单元素：</p>
+<p>多数情况下被用到的表单标签是输入标签（<code>&lt;input&gt;</code>），输入类型是由类型属性（<code>type</code>）进行定义的，常用的输入类型如下：</p>
+<ul>
+<li>文本</li>
+</ul>
+<pre><code class="language-html">&lt;form &gt;
+    &lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;Kim&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li>密码</li>
+</ul>
+<pre><code class="language-html">&lt;form&gt;
+    Password: &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li>单选按钮（Radio Buttons）</li>
+</ul>
+<pre><code class="language-html">&lt;form&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot;&gt;Male&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;Female
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li>多选按钮（Checkboxes）</li>
+</ul>
+<pre><code class="language-html">&lt;form&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot;&gt;I have a bike&lt;br&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot;&gt;I have a car 
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li>提交按钮（Submit Button）</li>
+</ul>
+<pre><code class="language-html">&lt;form name=&quot;input&quot; action=&quot;html_form_action.php&quot; method=&quot;get&quot;&gt;
+    Username: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<p>练习：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;表单--HTML语法基础&lt;/title&gt;
+        &lt;form action=&quot;xxx.php&quot; method=&quot;post&quot; id=&quot;11&quot; name=&quot;login&quot;&gt;
+            &lt;label&gt;用户名：&lt;label&gt;&lt;input type=&quot;text&quot; value=&quot;kim&quot; name=&quot;username&quot; /&gt;&lt;br&gt;
+            &lt;label&gt;密码：&lt;/label&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;请输入密码&quot; /&gt;&lt;br&gt;
+            
+            &lt;label&gt;备注：&lt;/label&gt;
+            &lt;textarea name=&quot;intro&quot; placeholder=&quot;输入简介&quot;&gt; &lt;/textarea&gt;&lt;br /&gt;
+            
+            &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;1&quot;&gt;男
+            &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;0&quot;&gt;女&lt;br /&gt;
+            &lt;h1&gt;选择题&lt;/h1&gt;
+            &lt;p&gt;1、下面哪个城市是孙中山的故乡&lt;/p&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;area&quot; value=&quot;city&quot;&gt;天津&lt;br /&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;area&quot; value=&quot;city&quot;&gt;上海&lt;br /&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;area&quot; value=&quot;city&quot;&gt;中山&lt;br /&gt;
+            
+            &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="框架">框架</h2>
+<p>框架（iframe）</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;title&gt;框架--HTML基础语法&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;iframe src=&quot;http://www.baidu.com&quot; width=&quot;500px&quot; height=&quot;1000px&quot;&gt;&lt;/iframe&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="头部">头部</h2>
+<p>完整的头部标签：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf8&quot; /&gt;
+        &lt;base href=&quot;http://www.runoob.com/images/&quot; target=&quot;_link&quot;&gt;  &lt;!-- 页面中 所有的链接的默认地址--&gt;
+        &lt;title&gt;头部--HTML基础语法&lt;/title&gt;
+        &lt;meta name=&quot;keywords&quot; content=&quot;PHP学习之路&quot;&gt;  &lt;!--  这个是做seo优化的时候用的 --&gt;
+        &lt;meta name=&quot;description&quot; content=&quot;改变世界的PHP&quot;&gt;    &lt;!--  这个是做seo优化的时候用的 --&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;  &lt;!-- 刷新跳转页面 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.csss&quot;&gt;  &lt;!-- 引入css样式 --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        文档内容......
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+<script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'vFnT8eIWOfsoXTsNr4Wt17mk-gzGzoHsz',
+    appKey: 'v2Df6KRpK46Ug3Ay4cM0ey5x',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: false,
+    recordIP: false,
+  })
+</script>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#html%E7%AE%80%E4%BB%8B">HTML简介</a></li>
+<li><a href="#html%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">HTML基础语法</a>
+<ul>
+<li><a href="#%E5%85%A8%E5%B1%80%E6%9E%B6%E6%9E%84%E6%A0%87%E7%AD%BE">全局架构标签</a></li>
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+<li><a href="#%E6%AE%B5%E8%90%BD">段落</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC">文本</a></li>
+<li><a href="#%E5%B1%9E%E6%80%A7">属性</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5">链接</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#%E5%8C%BA%E5%9D%97">区块</a></li>
+<li><a href="#%E5%B8%83%E5%B1%80">布局</a></li>
+<li><a href="#%E8%A1%A8%E5%8D%95">表单</a></li>
+<li><a href="#%E6%A1%86%E6%9E%B6">框架</a></li>
+<li><a href="#%E5%A4%B4%E9%83%A8">头部</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
+</html>
