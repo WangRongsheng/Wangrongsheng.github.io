@@ -1,0 +1,1172 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Vim基本使用方法 - 王荣胜</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Vim基本使用方法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+Vim简介
+Vim 是什么？
+Vim是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数UNIX系统和Apple OS X一起，它被包含为“vi”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树..." />
+  <meta property="og:title" content="Vim基本使用方法 - 王荣胜">
+  <meta property="og:description" content="
+Vim简介
+Vim 是什么？
+Vim是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数UNIX系统和Apple OS X一起，它被包含为“vi”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/lj6l5vjd8/" />
+  <meta property="og:image" content="https://s2.ax1x.com/2020/03/07/3jJ09s.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Vim基本使用方法 - 王荣胜">
+  <meta name="twitter:description" content="
+Vim简介
+Vim 是什么？
+Vim是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数UNIX系统和Apple OS X一起，它被包含为“vi”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/lj6l5vjd8/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Vim基本使用方法
+        </h1>
+        
+          <img src="https://s2.ax1x.com/2020/03/07/3jJ09s.png" alt="Vim基本使用方法" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-03-07 · 12 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/notes/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              笔记
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h1 id="vim简介">Vim简介</h1>
+<h2 id="vim-是什么">Vim 是什么？</h2>
+<p><code>Vim</code>是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数<code>UNIX系统</code>和<code>Apple OS X</code>一起，它被包含为“<code>vi</code>”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树；广泛的插件系统；支持数百种编程语言和文件格式；强大的搜索和替换；与许多工具集成。</p>
+<p><code>Vim</code>是<code>Vi IMproved</code>，是编辑器Vi的一个加强版，一个极其强大并符合IT工程师（程序员、运维）习惯的编辑器。如果你是一名职业的SE，那么一定在寻找一款出色的能够自由定制、满足灵活编辑功能的编辑器。那么答案，就是<code>vim</code>或者<code>Emacs</code>。<code>vim</code>最大特色是完全使用键盘命令进行编辑，脱离了鼠标操作虽然使得入门变得困难，但上手之后键盘的各种巧妙组合操作却能带来极为大幅的效率提升。<br>
+ <br>
+在<code>Linux系统</code>中，RHEL和CentOS的配置文件是<code>/etc/vimrc</code>，Debian和Ubuntu的配置文件是<code>/usr/share/vim/vimrc</code>。</p>
+<p><strong>那么vimRC中的RC是什么意思？</strong></p>
+<p>一般在运行某个软件、环境或工具之初，要初始执行的一些命令，称为Run Commands，即RC。根据Wikipedia.org的记载，RC缩写的用法源自MIT的相容分时操作系统（Compatible Time-Sharing System，CTSS），有兴趣的话请自行了解。</p>
+<h2 id="为什么要学-vim">为什么要学 Vim ？</h2>
+<p>作为一个程序员，不管是前端还是后端，工作中基本上都要跟<code>服务器</code>打交道，现在服务器里面运行的操作系统基本上都是 <code>Linux</code>，当你远程跟服务器通信的时候，基本上都要通过<code>终端</code>来跟服务器建立连接，当你要修改服务器的某个配置文件的时候，在一个黑漆漆的终端里，你能用的几乎只有 <code>Vim</code>，所以不会 <code>Vim</code> 的话，你就没办法工作；</p>
+<h1 id="vim三种基本模式">vim三种基本模式</h1>
+<p>基本上vi/vim可以分为三种状态，分别是普通模式、插入模式和命令模式，各模式的功能区分如下：</p>
+<ol>
+<li>普通模式</li>
+</ol>
+<blockquote>
+<p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段。</p>
+</blockquote>
+<ol>
+<li>插入模式</li>
+</ol>
+<blockquote>
+<p>只有在插入下，才可以做文字输入、删除，按「ESC」键可回到普通模式。可以按i、I、a、A、o、O、r、R即可。其中i和I表示插入（Insert），r和R表示替换（replace）。</p>
+</blockquote>
+<ol start="3">
+<li>命令模式</li>
+</ol>
+<blockquote>
+<p>将文件保存或退出vim，也可以设置编辑环境，如寻找字符串、列出行号等……可以按“:”、“/”、“?”。其中“:”表示输入vim命令，“/”表示后面输入要向下搜索的字符串，“?”表示后面输入要向上搜索字符串。</p>
+</blockquote>
+<p>其实，可以把普通模式理解为常态，进入其它任何一种模式，需要某种特殊方式，而从其它特殊模式回到普通模式，就按「ESC」键即可。</p>
+<h1 id="vim最常用的配置">vim最常用的配置</h1>
+<p>为了使以下参数永久有效，那你可以把以下参数写进<code>/etc/vimrc</code>配置文件里，当然，有一些参数已经存在配置文件中了。</p>
+<h2 id="颜色设置">颜色设置</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">syntax on</td>
+<td style="text-align:left">开启代码高亮</td>
+</tr>
+<tr>
+<td style="text-align:left">syntax off</td>
+<td style="text-align:left">关闭代码高亮</td>
+</tr>
+<tr>
+<td style="text-align:left">syntax enable</td>
+<td style="text-align:left">开启代码高亮</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="搜索设置">搜索设置</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">set hlsearch</td>
+<td style="text-align:left">开启搜索高亮</td>
+</tr>
+<tr>
+<td style="text-align:left">set nohlsearch</td>
+<td style="text-align:left">关闭搜索高亮</td>
+</tr>
+<tr>
+<td style="text-align:left">set incsearch</td>
+<td style="text-align:left">输入搜索字符串的同时进行搜索</td>
+</tr>
+<tr>
+<td style="text-align:left">set ignorecase</td>
+<td style="text-align:left">搜索时忽略大小写</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="用户界面">用户界面</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">set ruler</td>
+<td style="text-align:left">开启光标位置提示</td>
+</tr>
+<tr>
+<td style="text-align:left">set number</td>
+<td style="text-align:left">显示行号</td>
+</tr>
+<tr>
+<td style="text-align:left">set nonu</td>
+<td style="text-align:left">不显示行号</td>
+</tr>
+<tr>
+<td style="text-align:left">set cmdheight=1</td>
+<td style="text-align:left">命令部分高度为1</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="编辑辅助配置">编辑辅助配置</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">set autoindent</td>
+<td style="text-align:left">自动缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">set noautoindent</td>
+<td style="text-align:left">不自动缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">set smartindent</td>
+<td style="text-align:left">智能缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">set autoread</td>
+<td style="text-align:left">当文件在外部被改变时，vim自动更新载入</td>
+</tr>
+<tr>
+<td style="text-align:left">set showmatch</td>
+<td style="text-align:left">显示匹配的括号</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用的状态切换按键">常用的状态切换按键</h1>
+<h2 id="普通模式-插入模式">普通模式 → 插入模式</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">i   小写字母i</td>
+<td style="text-align:left">在光标位置插入</td>
+</tr>
+<tr>
+<td style="text-align:left">a  小写字母a</td>
+<td style="text-align:left">在光标的下一个位置插入</td>
+</tr>
+<tr>
+<td style="text-align:left">I   大写字母I</td>
+<td style="text-align:left">在光标所在行的第一个非空格处插入</td>
+</tr>
+<tr>
+<td style="text-align:left">A  大写字母A</td>
+<td style="text-align:left">在光标所在行的最后一个字符处插入</td>
+</tr>
+<tr>
+<td style="text-align:left">o  小写字母o</td>
+<td style="text-align:left">在光标所在行的下一行处插入新行</td>
+</tr>
+<tr>
+<td style="text-align:left">O  大写字母O</td>
+<td style="text-align:left">在光标所在行的上一行处插入新航</td>
+</tr>
+<tr>
+<td style="text-align:left">r   小写字母r</td>
+<td style="text-align:left">替换光标所在处的字符一次</td>
+</tr>
+<tr>
+<td style="text-align:left">R  大写字母R</td>
+<td style="text-align:left">持续替换光标所在处的字符，直到按下「ESC」键</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="普通模式-命令模式">普通模式 → 命令模式</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:w</td>
+<td style="text-align:left">保存文件</td>
+</tr>
+<tr>
+<td style="text-align:left">:w!</td>
+<td style="text-align:left">强制保存文件（前提是用户有修改文件访问权限的权限）</td>
+</tr>
+<tr>
+<td style="text-align:left">:q</td>
+<td style="text-align:left">退出缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">:q!</td>
+<td style="text-align:left">强制退出缓冲区而不保存</td>
+</tr>
+<tr>
+<td style="text-align:left">:wq</td>
+<td style="text-align:left">保存文件并退出缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">:wq!</td>
+<td style="text-align:left">强制保存文件并退出缓冲区（前提是用户有修改文件访问权限的权限）</td>
+</tr>
+<tr>
+<td style="text-align:left">:w [filename]</td>
+<td style="text-align:left">另存为名为filename文件</td>
+</tr>
+<tr>
+<td style="text-align:left">:r [filename]</td>
+<td style="text-align:left">将另外一个文件读入到正在编辑的文件</td>
+</tr>
+<tr>
+<td style="text-align:left">:n1,n2 w [filename]</td>
+<td style="text-align:left">将n1行到n2行的数据另存为名为filename文件</td>
+</tr>
+<tr>
+<td style="text-align:left">:x</td>
+<td style="text-align:left">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align:left">ZZ</td>
+<td style="text-align:left">保存并退出</td>
+</tr>
+<tr>
+<td style="text-align:left">ZQ</td>
+<td style="text-align:left">不保存退出</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="插入模式-视图模式">插入模式 → 视图模式</h2>
+<p>按下「<code>ESC</code>」键</p>
+<h2 id="命令模式-视图模式">命令模式 → 视图模式</h2>
+<p>按下「<code>ESC</code>」键</p>
+<h1 id="常用的光标移动按键">常用的光标移动按键</h1>
+<h2 id="光标字符操作">光标字符操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">h</td>
+<td style="text-align:left">向左箭头键(←) 光标向左移动一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">l</td>
+<td style="text-align:left">向右箭头键(→) 光标向右移动一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">j</td>
+<td style="text-align:left">向下箭头键(↓) 光标向下移动一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">k</td>
+<td style="text-align:left">向上箭头键(↑) 光标向上移动一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">光标移动到行尾（End），注意要按「Shift」键</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:left">光标移动到行首（Home）</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">光标移动到行首第一个非空白字符（Home），注意要按「Shift」键</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="光标词操作">光标词操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">w</td>
+<td style="text-align:left">光标移动到后一词的词首</td>
+</tr>
+<tr>
+<td style="text-align:left">W</td>
+<td style="text-align:left">光标移动到后一词的词首且忽略标点符号</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">光标移动到后一词的词尾</td>
+</tr>
+<tr>
+<td style="text-align:left">E</td>
+<td style="text-align:left">光标移动到后一词的词尾且忽略标点符号</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:left">光标移动到前一词的词首</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:left">光标移动到前一词的词首且忽略标点符号</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="光标行操作">光标行操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G</td>
+<td style="text-align:left">光标移动到文件的最后一行的第一个非空白字符</td>
+</tr>
+<tr>
+<td style="text-align:left">nG/ngg</td>
+<td style="text-align:left">光标移动到文件的第n行，相当于”:n”</td>
+</tr>
+<tr>
+<td style="text-align:left">gg</td>
+<td style="text-align:left">光标移动到文件的第1行的第一个非空白字符</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="光标页操作">光标页操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Ctrl + f</td>
+<td style="text-align:left">向下翻页（Pagedown）</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + b</td>
+<td style="text-align:left">向上翻页（Pageup）</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + d</td>
+<td style="text-align:left">向下翻半页</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + u</td>
+<td style="text-align:left">向上翻半页</td>
+</tr>
+<tr>
+<td style="text-align:left">「H」</td>
+<td style="text-align:left">光标移动到目前显示页的第一行</td>
+</tr>
+<tr>
+<td style="text-align:left">「M」</td>
+<td style="text-align:left">光标移动到目前显示页的中间行</td>
+</tr>
+<tr>
+<td style="text-align:left">「L」</td>
+<td style="text-align:left">光标移动到目前显示页的最后一行</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="光标自由操作">光标自由操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Ctrl + o</td>
+<td style="text-align:left">回到光标的上一位置</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用编辑操作按键">常用编辑操作按键</h1>
+<h2 id="删除操作delete">删除操作（delete）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">dd</td>
+<td style="text-align:left">删除光标所在行</td>
+</tr>
+<tr>
+<td style="text-align:left">ndd</td>
+<td style="text-align:left">删除从光标所在行开始，向下的n行</td>
+</tr>
+<tr>
+<td style="text-align:left">d1G</td>
+<td style="text-align:left">删除从光标所在行开始，到第一行的所有行</td>
+</tr>
+<tr>
+<td style="text-align:left">dG</td>
+<td style="text-align:left">删除从光标所在行开始，到最后一行的所有行</td>
+</tr>
+<tr>
+<td style="text-align:left">d$</td>
+<td style="text-align:left">删除从光标所在位置，到行尾的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:left">d0</td>
+<td style="text-align:left">删除从光标所在位置，到行首的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">每按一次，删除光标所在位置的“后面”一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">nx</td>
+<td style="text-align:left">删除光标所在位置的“后面”n个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">X</td>
+<td style="text-align:left">大写的X，每按一次，删除光标所在位置的“前面”一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">nX</td>
+<td style="text-align:left">删除光标所在位置的“前面”n个字符</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="复制操作yank">复制操作（yank）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">yy</td>
+<td style="text-align:left">复制光标所在行</td>
+</tr>
+<tr>
+<td style="text-align:left">nyy</td>
+<td style="text-align:left">复制从光标所在行开始，向下的n行</td>
+</tr>
+<tr>
+<td style="text-align:left">y1G</td>
+<td style="text-align:left">复制从光标所在行开始，到第一行的所有行</td>
+</tr>
+<tr>
+<td style="text-align:left">yG</td>
+<td style="text-align:left">复制从光标所在行开始，到最后一行的所有行</td>
+</tr>
+<tr>
+<td style="text-align:left">y$</td>
+<td style="text-align:left">复制从光标所在位置，到行尾的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:left">y0</td>
+<td style="text-align:left">复制从光标所在位置，到行首的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:left">J</td>
+<td style="text-align:left">将光标所在行与下一行合并成一行</td>
+</tr>
+<tr>
+<td style="text-align:left">yw</td>
+<td style="text-align:left">复制当前光标所在的字母到该单词的最后一个字母</td>
+</tr>
+<tr>
+<td style="text-align:left">yaw</td>
+<td style="text-align:left">复制当前光标所在的单词</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="粘贴操作paste">粘贴操作（paste）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">p  小写字母p</td>
+<td style="text-align:left">粘贴剪贴板中的数据，从光标所在行的下一行开始</td>
+</tr>
+<tr>
+<td style="text-align:left">P  大写字母P</td>
+<td style="text-align:left">粘贴剪贴板中的数据，从光标所在行的上一行开始~</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="撤销与重做操作undo">撤销与重做操作（undo）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">u</td>
+<td style="text-align:left">撤销上一个操作</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="重复操作">重复操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">重复上一操作</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="替换操作replace">替换操作（replace）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">r</td>
+<td style="text-align:left">替换光标所在处字符</td>
+</tr>
+<tr>
+<td style="text-align:left">R</td>
+<td style="text-align:left">进入替换模式，直至按ESC退出</td>
+</tr>
+<tr>
+<td style="text-align:left">cc</td>
+<td style="text-align:left">替换光标所在行</td>
+</tr>
+<tr>
+<td style="text-align:left">cw</td>
+<td style="text-align:left">替换光标所在的英文单词</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">转换大小写</td>
+</tr>
+<tr>
+<td style="text-align:left">:n1,n2s/old/new/g</td>
+<td style="text-align:left">从n1到n2行将old替换成new，g表示全部替换</td>
+</tr>
+<tr>
+<td style="text-align:left">:1,$s/old/new/g</td>
+<td style="text-align:left">将整个文件的old替换成new</td>
+</tr>
+<tr>
+<td style="text-align:left">:1,$s/old/new/gc</td>
+<td style="text-align:left">c表示确认</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="排版操作">排版操作</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:le</td>
+<td style="text-align:left">光标所在行左对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">:ri</td>
+<td style="text-align:left">光标所在行右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">:ce</td>
+<td style="text-align:left">光标所在行居中</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="查看历史">查看历史</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:history</td>
+<td style="text-align:left">显示最近在vim里面输入的历史</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用的搜索快捷键">常用的搜索快捷键</h1>
+<h2 id="搜索字符串">搜索字符串</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/string</td>
+<td style="text-align:left">向下搜索字符串“string”</td>
+</tr>
+<tr>
+<td style="text-align:left">?string</td>
+<td style="text-align:left">向上搜索字符串“string”</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="重复上次搜索">重复上次搜索</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">n</td>
+<td style="text-align:left">根据上次搜索条件找到下一个匹配的字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">N</td>
+<td style="text-align:left">根据上次搜索条件找到上一个匹配的字符串</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用多缓冲区操作按键">常用多缓冲区操作按键</h1>
+<h2 id="单一缓冲区打开多个文件">单一缓冲区打开多个文件</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:files</td>
+<td style="text-align:left">显示目前打开了哪些文件</td>
+</tr>
+<tr>
+<td style="text-align:left">:n</td>
+<td style="text-align:left">切换到下一个缓冲区内容</td>
+</tr>
+<tr>
+<td style="text-align:left">:N</td>
+<td style="text-align:left">切换到上一个缓冲区内容</td>
+</tr>
+<tr>
+<td style="text-align:left">:2n</td>
+<td style="text-align:left">切换到下下个缓冲区内容</td>
+</tr>
+<tr>
+<td style="text-align:left">:bn</td>
+<td style="text-align:left">下一个缓冲区内容（buffer next）</td>
+</tr>
+<tr>
+<td style="text-align:left">:bp</td>
+<td style="text-align:left">上一个缓冲区内容（buffer previous）</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="多个缓冲区打开多个文件">多个缓冲区打开多个文件</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:sp [filename]</td>
+<td style="text-align:left">打开一个新的缓冲区，如果有filename则内容为该文件，否则为当前文件</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w n</td>
+<td style="text-align:left">新建一个缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w q</td>
+<td style="text-align:left">退出光标所在的缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w j</td>
+<td style="text-align:left">光标移动到下一缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w k</td>
+<td style="text-align:left">光标移动到上一缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w l</td>
+<td style="text-align:left">光标移动到右一缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w h</td>
+<td style="text-align:left">光标移动到左一缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w v</td>
+<td style="text-align:left">左右切割窗口新建缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w s</td>
+<td style="text-align:left">上下切割窗口新建缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl+w o</td>
+<td style="text-align:left">使光标所在缓冲区最大化，其他缓冲区隐藏</td>
+</tr>
+</tbody>
+</table>
+<h1 id="关于加密">关于加密</h1>
+<h2 id="加密文本文件">加密文本文件</h2>
+<p>当你用vim打开或新建一个文件时，如果加上-x参数，即：</p>
+<blockquote>
+<p># <strong>vim -x test.txt</strong>  --打开你要加密的文本文件</p>
+<p>那么vim会提示你：</p>
+<p><strong>Enter entryption key:</strong></p>
+<p>当你输入了密码后，vim会提示你重复输入以确认：</p>
+<p><strong>Enter same key again:</strong></p>
+<p>当你在设置密码的时候，是以*来显示的，非明文。打开文件之后，:wq保存退出，密码才生效。<br>
+当下次有人（包括你自己）打开该文件的时候，vim就会提示：</p>
+<p><strong>Enter encryption key:</strong></p>
+<p>这时你只要输入你之前所设置的密码就可以了。如果你输入的密码是错误的，vim并不会提示你密码错误，而是显示一堆无意义的垃圾代码。</p>
+</blockquote>
+<p></p>
+<h2 id="解除加密与重设密码">解除加密与重设密码</h2>
+<p>打开你已经加密的文件，然后输入：</p>
+<blockquote>
+<p># <strong>vim test.txt</strong>   --打开加密文件之后，输入下面内容</p>
+<p><strong>:set key=</strong></p>
+</blockquote>
+<p>这样，你的密码就被设置为空了，今后进入就不再需要输入密码了。而如果你向重设密码的话，你可以输入：</p>
+<blockquote>
+<p><strong>:X</strong></p>
+</blockquote>
+<p>注意是个大写字母X。这时vim会提示你，只要反复输入两次新的密码就可以了：</p>
+<blockquote>
+<p>Enter entryption key: *****</p>
+<p>Enter sanme key again: *****</p>
+</blockquote>
+<p>如果是清除密码，连续敲两次键盘就可以了</p>
+<p><strong>注意</strong>：</p>
+<p>加密、解除密码、重设密码之后，一定要保存之后才能生效。<br>
+如果密码输入错误，vim不会拒绝访问者编辑文件。在这种显示乱码的情况下编辑文件并保存，整个文件就会变得混乱不堪，无法辨识。今后即使使用正确的密码打开文件，也看不到正确的文档了。</p>
+<h1 id="参考">参考</h1>
+<ol>
+<li><a href="https://www.runoob.com/linux/linux-vim.html">Linux vi/vim|菜鸟教程</a></li>
+<li><a href="https://blog.csdn.net/wjkdtl/article/details/7956350?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">Vim命令&amp;笔记</a></li>
+</ol>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+<script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'vFnT8eIWOfsoXTsNr4Wt17mk-gzGzoHsz',
+    appKey: 'v2Df6KRpK46Ug3Ay4cM0ey5x',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: false,
+    recordIP: false,
+  })
+</script>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#vim%E7%AE%80%E4%BB%8B">Vim简介</a>
+<ul>
+<li><a href="#vim-%E6%98%AF%E4%BB%80%E4%B9%88">Vim 是什么？</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6-vim">为什么要学 Vim ？</a></li>
+</ul>
+</li>
+<li><a href="#vim%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%BC%8F">vim三种基本模式</a></li>
+<li><a href="#vim%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E9%85%8D%E7%BD%AE">vim最常用的配置</a>
+<ul>
+<li><a href="#%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE">颜色设置</a></li>
+<li><a href="#%E6%90%9C%E7%B4%A2%E8%AE%BE%E7%BD%AE">搜索设置</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2">用户界面</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91%E8%BE%85%E5%8A%A9%E9%85%8D%E7%BD%AE">编辑辅助配置</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E6%8C%89%E9%94%AE">常用的状态切换按键</a>
+<ul>
+<li><a href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F-%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F">普通模式 → 插入模式</a></li>
+<li><a href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F">普通模式 → 命令模式</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F-%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F">插入模式 → 视图模式</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F-%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F">命令模式 → 视图模式</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8%E6%8C%89%E9%94%AE">常用的光标移动按键</a>
+<ul>
+<li><a href="#%E5%85%89%E6%A0%87%E5%AD%97%E7%AC%A6%E6%93%8D%E4%BD%9C">光标字符操作</a></li>
+<li><a href="#%E5%85%89%E6%A0%87%E8%AF%8D%E6%93%8D%E4%BD%9C">光标词操作</a></li>
+<li><a href="#%E5%85%89%E6%A0%87%E8%A1%8C%E6%93%8D%E4%BD%9C">光标行操作</a></li>
+<li><a href="#%E5%85%89%E6%A0%87%E9%A1%B5%E6%93%8D%E4%BD%9C">光标页操作</a></li>
+<li><a href="#%E5%85%89%E6%A0%87%E8%87%AA%E7%94%B1%E6%93%8D%E4%BD%9C">光标自由操作</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%BC%96%E8%BE%91%E6%93%8D%E4%BD%9C%E6%8C%89%E9%94%AE">常用编辑操作按键</a>
+<ul>
+<li><a href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9Cdelete">删除操作（delete）</a></li>
+<li><a href="#%E5%A4%8D%E5%88%B6%E6%93%8D%E4%BD%9Cyank">复制操作（yank）</a></li>
+<li><a href="#%E7%B2%98%E8%B4%B4%E6%93%8D%E4%BD%9Cpaste">粘贴操作（paste）</a></li>
+<li><a href="#%E6%92%A4%E9%94%80%E4%B8%8E%E9%87%8D%E5%81%9A%E6%93%8D%E4%BD%9Cundo">撤销与重做操作（undo）</a></li>
+<li><a href="#%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C">重复操作</a></li>
+<li><a href="#%E6%9B%BF%E6%8D%A2%E6%93%8D%E4%BD%9Creplace">替换操作（replace）</a></li>
+<li><a href="#%E6%8E%92%E7%89%88%E6%93%8D%E4%BD%9C">排版操作</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2">查看历史</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%90%9C%E7%B4%A2%E5%BF%AB%E6%8D%B7%E9%94%AE">常用的搜索快捷键</a>
+<ul>
+<li><a href="#%E6%90%9C%E7%B4%A2%E5%AD%97%E7%AC%A6%E4%B8%B2">搜索字符串</a></li>
+<li><a href="#%E9%87%8D%E5%A4%8D%E4%B8%8A%E6%AC%A1%E6%90%9C%E7%B4%A2">重复上次搜索</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E5%A4%9A%E7%BC%93%E5%86%B2%E5%8C%BA%E6%93%8D%E4%BD%9C%E6%8C%89%E9%94%AE">常用多缓冲区操作按键</a>
+<ul>
+<li><a href="#%E5%8D%95%E4%B8%80%E7%BC%93%E5%86%B2%E5%8C%BA%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6">单一缓冲区打开多个文件</a></li>
+<li><a href="#%E5%A4%9A%E4%B8%AA%E7%BC%93%E5%86%B2%E5%8C%BA%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6">多个缓冲区打开多个文件</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%AF%86">关于加密</a>
+<ul>
+<li><a href="#%E5%8A%A0%E5%AF%86%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6">加密文本文件</a></li>
+<li><a href="#%E8%A7%A3%E9%99%A4%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%87%8D%E8%AE%BE%E5%AF%86%E7%A0%81">解除加密与重设密码</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
+</html>
