@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-03-14T13:08:32.973Z</updated>
+    <updated>2020-03-15T08:23:27.950Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[什么是博士？]]></title>
+        <id>https://Wangrongsheng.github.io/post/QItHcA_x2/</id>
+        <link href="https://Wangrongsheng.github.io/post/QItHcA_x2/">
+        </link>
+        <updated>2020-03-15T08:21:47.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Windows10下Linux子系统安装docker]]></title>
         <id>https://Wangrongsheng.github.io/post/ACUm1Inji/</id>
@@ -72,12 +79,5 @@
         <link href="https://Wangrongsheng.github.io/post/lj6l5vjd8/">
         </link>
         <updated>2020-03-07T12:16:05.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Github库名命名规范]]></title>
-        <id>https://Wangrongsheng.github.io/post/fqNMmScvt/</id>
-        <link href="https://Wangrongsheng.github.io/post/fqNMmScvt/">
-        </link>
-        <updated>2020-03-05T09:21:32.000Z</updated>
     </entry>
 </feed>
