@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-03-18T10:18:25.466Z</updated>
+    <updated>2020-03-19T15:40:24.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[北京智源大会之旅]]></title>
+        <id>https://Wangrongsheng.github.io/post/lpnQUc2Bj/</id>
+        <link href="https://Wangrongsheng.github.io/post/lpnQUc2Bj/">
+        </link>
+        <updated>2020-03-19T15:36:22.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python为什么成为人工智能的首选语言？]]></title>
+        <id>https://Wangrongsheng.github.io/post/sWGpijx_J/</id>
+        <link href="https://Wangrongsheng.github.io/post/sWGpijx_J/">
+        </link>
+        <updated>2020-03-19T15:30:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[国内开源镜像汇总]]></title>
+        <id>https://Wangrongsheng.github.io/post/5mN6ImO5v/</id>
+        <link href="https://Wangrongsheng.github.io/post/5mN6ImO5v/">
+        </link>
+        <updated>2020-03-19T15:24:18.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github高级搜索]]></title>
+        <id>https://Wangrongsheng.github.io/post/DLFfKvF_p/</id>
+        <link href="https://Wangrongsheng.github.io/post/DLFfKvF_p/">
+        </link>
+        <updated>2020-03-19T15:20:38.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Github界面简介]]></title>
         <id>https://Wangrongsheng.github.io/post/A5LBCRXBu/</id>
@@ -51,33 +79,5 @@
         <link href="https://Wangrongsheng.github.io/post/V56Ke3xWB/">
         </link>
         <updated>2020-03-13T01:22:40.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[深度学习图像数据标注-Labelme]]></title>
-        <id>https://Wangrongsheng.github.io/post/BkTcHSj7m/</id>
-        <link href="https://Wangrongsheng.github.io/post/BkTcHSj7m/">
-        </link>
-        <updated>2020-03-11T11:13:43.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如果你将要面临地震...]]></title>
-        <id>https://Wangrongsheng.github.io/post/FaE9wIDmO/</id>
-        <link href="https://Wangrongsheng.github.io/post/FaE9wIDmO/">
-        </link>
-        <updated>2020-03-10T12:47:06.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[代码注释规则]]></title>
-        <id>https://Wangrongsheng.github.io/post/-cBKkNdSS/</id>
-        <link href="https://Wangrongsheng.github.io/post/-cBKkNdSS/">
-        </link>
-        <updated>2020-03-10T05:42:45.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[让你的博客增加邮件订阅功能 – RSSMailer]]></title>
-        <id>https://Wangrongsheng.github.io/post/iXC_f5HSm/</id>
-        <link href="https://Wangrongsheng.github.io/post/iXC_f5HSm/">
-        </link>
-        <updated>2020-03-09T08:24:41.000Z</updated>
     </entry>
 </feed>
