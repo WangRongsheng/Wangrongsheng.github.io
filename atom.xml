@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-03-19T15:47:45.186Z</updated>
+    <updated>2020-03-20T08:02:48.787Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[基于Plotly的在线作图]]></title>
+        <id>https://Wangrongsheng.github.io/post/EIY23TNFl/</id>
+        <link href="https://Wangrongsheng.github.io/post/EIY23TNFl/">
+        </link>
+        <updated>2020-03-20T07:57:12.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[北京智源大会之旅]]></title>
         <id>https://Wangrongsheng.github.io/post/lpnQUc2Bj/</id>
@@ -72,12 +79,5 @@
         <link href="https://Wangrongsheng.github.io/post/UOmpH-YXf/">
         </link>
         <updated>2020-03-14T12:06:03.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Github学生包申请]]></title>
-        <id>https://Wangrongsheng.github.io/post/V56Ke3xWB/</id>
-        <link href="https://Wangrongsheng.github.io/post/V56Ke3xWB/">
-        </link>
-        <updated>2020-03-13T01:22:40.000Z</updated>
     </entry>
 </feed>
