@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-03-22T03:55:12.081Z</updated>
+    <updated>2020-03-30T08:36:10.845Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[Python内置函数]]></title>
+        <id>https://Wangrongsheng.github.io/post/fzEFtmOy5/</id>
+        <link href="https://Wangrongsheng.github.io/post/fzEFtmOy5/">
+        </link>
+        <updated>2020-03-30T08:33:13.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Win10设置定时程序运行任务]]></title>
         <id>https://Wangrongsheng.github.io/post/xhSGxgIMT/</id>
@@ -72,12 +79,5 @@
         <link href="https://Wangrongsheng.github.io/post/DLFfKvF_p/">
         </link>
         <updated>2020-03-19T15:20:38.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Github界面简介]]></title>
-        <id>https://Wangrongsheng.github.io/post/A5LBCRXBu/</id>
-        <link href="https://Wangrongsheng.github.io/post/A5LBCRXBu/">
-        </link>
-        <updated>2020-03-18T09:55:16.000Z</updated>
     </entry>
 </feed>
