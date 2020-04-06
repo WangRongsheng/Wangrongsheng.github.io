@@ -81,31 +81,17 @@
 </blockquote>
 <h1 id="使用">使用</h1>
 <p>如果你有Git和Github的操作基础，你才能看懂接下来的操作哦：</p>
-<ol>
-<li>
-<p>用`git symbolic-ref`命令将当前工作分支由`master`切换到一个尚不存在的分支`gh-pages` ；<font size="2" face="arial" color="red">【重要】</font></p>
-</li>
-</ol>
+<p>1、<p>用<code>git symbolic-ref</code>命令将当前工作分支由<code>master</code>切换到一个尚不存在的分支<code>gh-pages</code> ；<font size="2" face="arial" color="red">【重要】</font></p></p>
 <pre><code class="language-html">git symbolic-ref HEAD refs/heads/gh-pages
 </code></pre>
-<ol start="2">
-<li>
-<p>上传你的<code>.html</code>或者<code>展示的项目文件</code>到你的github本地文档中；</p>
-</li>
-<li>
-<p>添加到本地</p>
-</li>
-</ol>
+<p>2、上传你的<code>.html</code>或者<code>展示的项目文件</code>到你的github本地文档中；</p>
+<p>3、 添加到本地</p>
 <pre><code class="language-html">git add .
 </code></pre>
-<ol start="4">
-<li>添加描述</li>
-</ol>
+<p>4、添加描述</p>
 <pre><code class="language-html">git commit -m &quot;描述内容&quot;
 </code></pre>
-<ol start="5">
-<li>执行推送命令，在<code>github</code>远程版本库创建分支<code>gh-pages</code>；</li>
-</ol>
+<p>5、 执行推送命令，在<code>github</code>远程版本库创建分支<code>gh-pages</code>；</p>
 <pre><code class="language-html">git push -u origin gh-pages
 </code></pre>
 <p>以后如果再更新文件的话，直接确认在<code>gh-pages</code> 下时，<code>git push</code> 即可~</p>
