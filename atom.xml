@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-06T05:56:29.411Z</updated>
+    <updated>2020-04-06T05:59:47.173Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[利用gh-pages展示项目]]></title>
+        <id>https://Wangrongsheng.github.io/post/-cgYyiYs0/</id>
+        <link href="https://Wangrongsheng.github.io/post/-cgYyiYs0/">
+        </link>
+        <updated>2020-04-06T05:57:22.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[一个短视频播放单页源码]]></title>
         <id>https://Wangrongsheng.github.io/post/pnxF_eUya/</id>
@@ -72,12 +79,5 @@
         <link href="https://Wangrongsheng.github.io/post/6Ss2AWEJy/">
         </link>
         <updated>2020-03-21T02:08:42.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[为Github Pages添加自定义域名]]></title>
-        <id>https://Wangrongsheng.github.io/post/wTw0vWo80/</id>
-        <link href="https://Wangrongsheng.github.io/post/wTw0vWo80/">
-        </link>
-        <updated>2020-03-21T01:57:34.000Z</updated>
     </entry>
 </feed>
