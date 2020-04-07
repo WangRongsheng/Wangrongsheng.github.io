@@ -1,0 +1,446 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>利用百度地图绘制3D轨迹演示 - 王荣胜</title>
+<link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="利用百度地图绘制3D轨迹演示 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+简介
+百度地图很强大，也为开发者提供很好的开发接口。今天用3D地图上路线轨迹可视化的小功能。
+使用
+第一步：申请ak
+ak申请介绍
+
+
+创建的时候选择浏览器端~
+
+第二步：填写ak
+有了 ak 后，复制下面的 hellomap.html ..." />
+  <meta property="og:title" content="利用百度地图绘制3D轨迹演示 - 王荣胜">
+  <meta property="og:description" content="
+简介
+百度地图很强大，也为开发者提供很好的开发接口。今天用3D地图上路线轨迹可视化的小功能。
+使用
+第一步：申请ak
+ak申请介绍
+
+
+创建的时候选择浏览器端~
+
+第二步：填写ak
+有了 ak 后，复制下面的 hellomap.html ..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/4bYTuHx0A/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="利用百度地图绘制3D轨迹演示 - 王荣胜">
+  <meta name="twitter:description" content="
+简介
+百度地图很强大，也为开发者提供很好的开发接口。今天用3D地图上路线轨迹可视化的小功能。
+使用
+第一步：申请ak
+ak申请介绍
+
+
+创建的时候选择浏览器端~
+
+第二步：填写ak
+有了 ak 后，复制下面的 hellomap.html ...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/4bYTuHx0A/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          利用百度地图绘制3D轨迹演示
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-04-07 · 4 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/baidu/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              百度
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/front-end/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              前端
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h1 id="简介">简介</h1>
+<p>百度地图很强大，也为开发者提供很好的开发接口。今天用3D地图上路线轨迹可视化的小功能。</p>
+<h1 id="使用">使用</h1>
+<h2 id="第一步申请ak">第一步：申请ak</h2>
+<p><a href="http://lbsyun.baidu.com/index.php?title=jspopularGL/guide/getkey">ak申请介绍</a></p>
+<img src="https://s1.ax1x.com/2020/04/07/GcJW2q.png" alt="GcJW2q.png" border="0" />
+<blockquote>
+<p>创建的时候选择<code>浏览器端</code>~</p>
+</blockquote>
+<h2 id="第二步填写ak">第二步：填写ak</h2>
+<p>有了 ak 后，复制下面的 <code>hellomap.html</code> 文件到 <code>templates</code> 文件夹里，并在<code>hellomap.html</code> 文件写入你申请的ak</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:&quot;微软雅黑&quot;;}
+	&lt;/style&gt;    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;//api.map.baidu.com/api?type=webgl&amp;v=1.0&amp;ak=（此处填写申请的ak）&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;//api.map.baidu.com/library/TrackAnimation/src/TrackAnimation_min.js&quot;&gt;&lt;/script&gt;
+
+	&lt;title&gt;绘制轨迹&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    // GL版命名空间为BMapGL
+    // 按住鼠标右键，修改倾斜角和角度
+	var bmap = new BMapGL.Map(&quot;allmap&quot;);    // 创建Map实例
+	bmap.centerAndZoom(new BMapGL.Point(116.297611, 40.047363), 17);  // 初始化地图,设置中心点坐标和地图级别
+    bmap.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
+    bmap.setTilt(50);      // 设置地图初始倾斜角
+
+    var path = [{
+        'lng': 116.297611,
+        'lat': 40.047363
+    }, {
+        'lng': 116.302839,
+        'lat': 40.048219
+    }, {
+        'lng': 116.308301,
+        'lat': 40.050566
+    }, {
+        'lng': 116.305732,
+        'lat': 40.054957
+    }, {
+        'lng': 116.304754,
+        'lat': 40.057953
+    }, {
+        'lng': 116.306487,
+        'lat': 40.058312
+    }, {
+        'lng': 116.307223,
+        'lat': 40.056379
+    }];
+
+    var point = [];
+    for (var i = 0; i &lt; path.length; i++) {
+        var poi = new BMapGL.Point(path[i].lng, path[i].lat);
+        point.push(poi);
+        var marker = new BMapGL.Marker(poi); //创建标注
+        bmap.addOverlay(marker); //将标注添加到地图中
+    }
+
+
+    var pl = new BMapGL.Polyline(point,{strokeColor:&quot;blue&quot;, strokeWeight:6, strokeOpacity:0.5});
+
+    var trackAni = new BMapGLLib.TrackAnimation(bmap, pl, {
+        overallView: true, // 动画完成后自动调整视野到总览
+        tilt: 30,          // 轨迹播放的角度，默认为55
+        duration: 20000,   // 动画持续时长，默认为10000，单位ms
+        delay: 3000        // 动画开始的延迟，默认0，单位ms
+    });
+
+    trackAni.start();
+&lt;/script&gt;
+</code></pre>
+<h2 id="第三步flask-部署">第三步：Flask 部署</h2>
+<pre><code class="language-python">from flask import Flask
+from flask import render_template
+
+App = Flask(__name__)
+
+
+@App.route('/')
+def index():
+    return render_template('hellomap.html')
+
+
+if __name__ == &quot;__main__&quot;:
+    App.run(debug=True)
+</code></pre>
+<center><img src="https://s1.ax1x.com/2020/04/07/GcthHU.jpg" alt="GcthHU.jpg" border="0" /></center>
+<h1 id="拓展">拓展</h1>
+<p>如果你想要制作自己的轨迹地图，你就要获取你想要的经纬度，获取的方式为：</p>
+<p><a href="http://api.map.baidu.com/lbsapi/">百度地图API</a> -&gt; <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html">坐标拾取工具</a></p>
+<p>记录下来你的经纬度并且填入到<code>hellomap.html</code> 中就可以了~</p>
+<blockquote>
+<p>提示：<code>hellomap.html</code> 中的 'lng'代表经度；'lat'代表纬度~</p>
+</blockquote>
+<h1 id="错误">错误</h1>
+<p>因为采用<code>Flask</code> 框架部署网页，因此必须要有一定的规范，你的文件夹的格式应该遵循：</p>
+<pre><code class="language-html">.
+├── test.py
+├── templates
+    └── hellomap.html
+</code></pre>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="vlaine-comment"></div>
+<script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: 'vFnT8eIWOfsoXTsNr4Wt17mk-gzGzoHsz',
+    appKey: 'v2Df6KRpK46Ug3Ay4cM0ey5x',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: false,
+    recordIP: false,
+  })
+</script>
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E7%94%B3%E8%AF%B7ak">第一步：申请ak</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%A1%AB%E5%86%99ak">第二步：填写ak</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E6%AD%A5flask-%E9%83%A8%E7%BD%B2">第三步：Flask 部署</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8B%93%E5%B1%95">拓展</a></li>
+<li><a href="#%E9%94%99%E8%AF%AF">错误</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
+</html>
