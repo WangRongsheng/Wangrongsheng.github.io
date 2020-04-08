@@ -390,6 +390,417 @@ package-lock.json
       
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
+
+<!--猫猫音乐-->
+<!--初音未来开始-->
+<div id="audio"class="music">
+<a href="http://ku.oioweb.cn/img/weimusic1.gif" class="highslide" onclick="return hs.expand(this,{slideshowGroup:'images'})"><img src="http://ku.oioweb.cn/img/weimusic1.gif" width="60px" height="60px" id="d" onclick="c();"></a>
+</div>
+<audio id="music"src="//音乐外链"controls="controls"preload="none"hidden></audio>
+<link href="http://ku.oioweb.cn/css/music.css" rel="stylesheet"> 
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://ku.oioweb.cn/js/music.js"type="text/javascript"></script>
+<!--初音未来结束-->
+
+<!--彩带-->
+<script>
+    (function(name, factory) {
+        if (typeof window === "object") {
+            window[name] = factory()
+        }
+    })("Ribbons", function() {
+        var _w = window,
+            _b = document.body,
+            _d = document.documentElement;
+        var random = function() {
+                if (arguments.length === 1) {
+                    if (Array.isArray(arguments[0])) {
+                        var index = Math.round(random(0, arguments[0].length - 1));
+                        return arguments[0][index]
+                    }
+                    return random(0, arguments[0])
+                } else if (arguments.length === 2) {
+                    return Math.random() * (arguments[1] - arguments[0]) + arguments[0]
+                }
+                return 0
+            };
+        var screenInfo = function(e) {
+                var width = Math.max(0, _w.innerWidth || _d.clientWidth || _b.clientWidth || 0),
+                    height = Math.max(0, _w.innerHeight || _d.clientHeight || _b.clientHeight || 0),
+                    scrollx = Math.max(0, _w.pageXOffset || _d.scrollLeft || _b.scrollLeft || 0) - (_d.clientLeft || 0),
+                    scrolly = Math.max(0, _w.pageYOffset || _d.scrollTop || _b.scrollTop || 0) - (_d.clientTop || 0);
+                return {
+                    width: width,
+                    height: height,
+                    ratio: width / height,
+                    centerx: width / 2,
+                    centery: height / 2,
+                    scrollx: scrollx,
+                    scrolly: scrolly
+                }
+            };
+        var mouseInfo = function(e) {
+                var screen = screenInfo(e),
+                    mousex = e ? Math.max(0, e.pageX || e.clientX || 0) : 0,
+                    mousey = e ? Math.max(0, e.pageY || e.clientY || 0) : 0;
+                return {
+                    mousex: mousex,
+                    mousey: mousey,
+                    centerx: mousex - screen.width / 2,
+                    centery: mousey - screen.height / 2
+                }
+            };
+        var Point = function(x, y) {
+                this.x = 0;
+                this.y = 0;
+                this.set(x, y)
+            };
+        Point.prototype = {
+            constructor: Point,
+            set: function(x, y) {
+                this.x = x || 0;
+                this.y = y || 0
+            },
+            copy: function(point) {
+                this.x = point.x || 0;
+                this.y = point.y || 0;
+                return this
+            },
+            multiply: function(x, y) {
+                this.x *= x || 1;
+                this.y *= y || 1;
+                return this
+            },
+            divide: function(x, y) {
+                this.x /= x || 1;
+                this.y /= y || 1;
+                return this
+            },
+            add: function(x, y) {
+                this.x += x || 0;
+                this.y += y || 0;
+                return this
+            },
+            subtract: function(x, y) {
+                this.x -= x || 0;
+                this.y -= y || 0;
+                return this
+            },
+            clampX: function(min, max) {
+                this.x = Math.max(min, Math.min(this.x, max));
+                return this
+            },
+            clampY: function(min, max) {
+                this.y = Math.max(min, Math.min(this.y, max));
+                return this
+            },
+            flipX: function() {
+                this.x *= -1;
+                return this
+            },
+            flipY: function() {
+                this.y *= -1;
+                return this
+            }
+        };
+        var Factory = function(options) {
+                this._canvas = null;
+                this._context = null;
+                this._sto = null;
+                this._width = 0;
+                this._height = 0;
+                this._scroll = 0;
+                this._ribbons = [];
+                this._options = {
+                    colorSaturation: "80%",
+                    colorBrightness: "60%",
+                    colorAlpha: 0.65,
+                    colorCycleSpeed: 6,
+                    verticalPosition: "center",
+                    horizontalSpeed: 150,
+                    ribbonCount: 5,
+                    strokeSize: 5,
+                    parallaxAmount: -0.5,
+                    animateSections: true
+                };
+                this._onDraw = this._onDraw.bind(this);
+                this._onResize = this._onResize.bind(this);
+                this._onScroll = this._onScroll.bind(this);
+                this.setOptions(options);
+                this.init()
+            };
+        Factory.prototype = {
+            constructor: Factory,
+            setOptions: function(options) {
+                if (typeof options === "object") {
+                    for (var key in options) {
+                        if (options.hasOwnProperty(key)) {
+                            this._options[key] = options[key]
+                        }
+                    }
+                }
+            },
+            init: function() {
+                try {
+                    this._canvas = document.createElement("canvas");
+                    this._canvas.style["display"] = "block";
+                    this._canvas.style["position"] = "fixed";
+                    this._canvas.style["margin"] = "0";
+                    this._canvas.style["padding"] = "0";
+                    this._canvas.style["border"] = "0";
+                    this._canvas.style["outline"] = "0";
+                    this._canvas.style["left"] = "0";
+                    this._canvas.style["top"] = "0";
+                    this._canvas.style["width"] = "100%";
+                    this._canvas.style["height"] = "100%";
+                    this._canvas.style["z-index"] = "-1";
+                    this._onResize();
+                    this._context = this._canvas.getContext("2d");
+                    this._context.clearRect(0, 0, this._width, this._height);
+                    this._context.globalAlpha = this._options.colorAlpha;
+                    window.addEventListener("resize", this._onResize);
+                    window.addEventListener("scroll", this._onScroll);
+                    document.body.appendChild(this._canvas)
+                } catch (e) {
+                    console.warn("Canvas Context Error: " + e.toString());
+                    return
+                }
+                this._onDraw()
+            },
+            addRibbon: function() {
+                var dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
+                    stop = 1000,
+                    hide = 200,
+                    min = 0 - hide,
+                    max = this._width + hide,
+                    movex = 0,
+                    movey = 0,
+                    startx = dir === "right" ? min : max,
+                    starty = Math.round(random(0, this._height));
+                if (/^(top|min)$/i.test(this._options.verticalPosition)) {
+                    starty = 0 + hide
+                } else if (/^(middle|center)$/i.test(this._options.verticalPosition)) {
+                    starty = this._height / 2
+                } else if (/^(bottom|max)$/i.test(this._options.verticalPosition)) {
+                    starty = this._height - hide
+                }
+                var ribbon = [],
+                    point1 = new Point(startx, starty),
+                    point2 = new Point(startx, starty),
+                    point3 = null,
+                    color = Math.round(random(0, 360)),
+                    delay = 0;
+                while (true) {
+                    if (stop <= 0) break;
+                    stop--;
+                    movex = Math.round((Math.random() * 1 - 0.2) * this._options.horizontalSpeed);
+                    movey = Math.round((Math.random() * 1 - 0.5) * (this._height * 0.25));
+                    point3 = new Point();
+                    point3.copy(point2);
+                    if (dir === "right") {
+                        point3.add(movex, movey);
+                        if (point2.x >= max) break
+                    } else if (dir === "left") {
+                        point3.subtract(movex, movey);
+                        if (point2.x <= min) break
+                    }
+                    ribbon.push({
+                        point1: new Point(point1.x, point1.y),
+                        point2: new Point(point2.x, point2.y),
+                        point3: point3,
+                        color: color,
+                        delay: delay,
+                        dir: dir,
+                        alpha: 0,
+                        phase: 0
+                    });
+                    point1.copy(point2);
+                    point2.copy(point3);
+                    delay += 4;
+                    color += this._options.colorCycleSpeed
+                }
+                this._ribbons.push(ribbon)
+            },
+            _drawRibbonSection: function(section) {
+                if (section) {
+                    if (section.phase >= 1 && section.alpha <= 0) {
+                        return true
+                    }
+                    if (section.delay <= 0) {
+                        section.phase += 0.02;
+                        section.alpha = Math.sin(section.phase) * 1;
+                        section.alpha = section.alpha <= 0 ? 0 : section.alpha;
+                        section.alpha = section.alpha >= 1 ? 1 : section.alpha;
+                        if (this._options.animateSections) {
+                            var mod = Math.sin(1 + section.phase * Math.PI / 2) * 0.1;
+                            if (section.dir === "right") {
+                                section.point1.add(mod, 0);
+                                section.point2.add(mod, 0);
+                                section.point3.add(mod, 0)
+                            } else {
+                                section.point1.subtract(mod, 0);
+                                section.point2.subtract(mod, 0);
+                                section.point3.subtract(mod, 0)
+                            }
+                            section.point1.add(0, mod);
+                            section.point2.add(0, mod);
+                            section.point3.add(0, mod)
+                        }
+                    } else {
+                        section.delay -= 0.5
+                    }
+                    var s = this._options.colorSaturation,
+                        l = this._options.colorBrightness,
+                        c = "hsla(" + section.color + ", " + s + ", " + l + ", " + section.alpha + " )";
+                    this._context.save();
+                    if (this._options.parallaxAmount !== 0) {
+                        this._context.translate(0, this._scroll * this._options.parallaxAmount)
+                    }
+                    this._context.beginPath();
+                    this._context.moveTo(section.point1.x, section.point1.y);
+                    this._context.lineTo(section.point2.x, section.point2.y);
+                    this._context.lineTo(section.point3.x, section.point3.y);
+                    this._context.fillStyle = c;
+                    this._context.fill();
+                    if (this._options.strokeSize > 0) {
+                        this._context.lineWidth = this._options.strokeSize;
+                        this._context.strokeStyle = c;
+                        this._context.lineCap = "round";
+                        this._context.stroke()
+                    }
+                    this._context.restore()
+                }
+                return false
+            },
+            _onDraw: function() {
+                for (var i = 0, t = this._ribbons.length; i < t; ++i) {
+                    if (!this._ribbons[i]) {
+                        this._ribbons.splice(i, 1)
+                    }
+                }
+                this._context.clearRect(0, 0, this._width, this._height);
+                for (var a = 0; a < this._ribbons.length; ++a) {
+                    var ribbon = this._ribbons[a],
+                        numSections = ribbon.length,
+                        numDone = 0;
+                    for (var b = 0; b < numSections; ++b) {
+                        if (this._drawRibbonSection(ribbon[b])) {
+                            numDone++
+                        }
+                    }
+                    if (numDone >= numSections) {
+                        this._ribbons[a] = null
+                    }
+                }
+                if (this._ribbons.length < this._options.ribbonCount) {
+                    this.addRibbon()
+                }
+                requestAnimationFrame(this._onDraw)
+            },
+            _onResize: function(e) {
+                var screen = screenInfo(e);
+                this._width = screen.width;
+                this._height = screen.height;
+                if (this._canvas) {
+                    this._canvas.width = this._width;
+                    this._canvas.height = this._height;
+                    if (this._context) {
+                        this._context.globalAlpha = this._options.colorAlpha
+                    }
+                }
+            },
+            _onScroll: function(e) {
+                var screen = screenInfo(e);
+                this._scroll = screen.scrolly
+            }
+        };
+        return Factory
+    });
+    new Ribbons({
+        colorSaturation: "60%",
+        colorBrightness: "50%",
+        colorAlpha: 0.5,
+        colorCycleSpeed: 5,
+        verticalPosition: "random",
+        horizontalSpeed: 200,
+        ribbonCount: 3,
+        strokeSize: 0,
+        parallaxAmount: -0.2,
+        animateSections: true
+    });
+</script>
+
+<!--语句特效-->
+<script>  
+jQuery(document).ready(function($) {   
+    $("html,body").click(function(e){   
+        var dfs=[  
+            "您刚才的点击使计生局放开了"+Math.floor(Math.random()*100)+"胎政策。",  
+            "您刚才的点击使黄石超级火山爆发了",  
+            "您刚才的点击使罗辑又换了一个女朋友",  
+            "您刚才的点击使小米公司收购了高通公司",  
+            "您刚才的点击引爆了"+Math.random()*10000+"光年外的一颗恒星",  
+            "您刚才的点击使头发变得乌黑浓密了",  
+            "您刚才的点击使您的波函数坍塌了",   
+            "您刚才的点击使您的银行卡被盗刷了",   
+            "您刚才的点击使普朗克常数扩大了十倍",   
+            "您刚才的点击熄灭了蓝色空间号二号主引擎",   
+            "您刚才的点击创造了一个小宇宙",   
+            "您刚才的点击使宇宙由开放转为闭合",   
+            "您刚才的点击让云天明和关一帆在一起了",  
+            "您刚才的点击使三体第"+Math.floor(Math.random()*100)+"舰队起航了",   
+            "您刚才的点击使第"+Math.floor(Math.random()*10000)+"号宇宙毁灭了",   
+            "您刚才的点击向太阳发射了一颗光粒",   
+            "您刚才的点击导致三体行星撞上他的主星",  
+            "您刚才的点击令人类文明将在"+(new Date()).getFullYear()+"年"+((new Date()).getMonth()+1)+"月"+(new Date()).getUTCDate()+"日23:59:59毁灭",  
+            "您刚才的点击启动了威慑系统",  
+            "您刚才的点击使谢顿计划脱离了正轨",  
+            "您刚才的点击使程心按下了威慑开关",  
+            "您刚才的点击引起了"+Math.random()*10000+"光年外一个行星的爆炸",  
+            "您刚才的点击使宇宙中产生了一些暗物质",  
+            "您刚才的点击引起了所有行星上的地震",  
+            "您刚才的点击使一台诺基亚摔碎了",  
+            "您刚才的点击使360云盘倒闭了",  
+            "您刚才的点击小米发布了MIX概念手机",  
+            "千万不要再次点击鼠标",  
+            "真的千万不要再次点击鼠标"  
+        ];  
+        var n=Math.floor(Math.random() * dfs.length + 1)-1;   //随机获取一条数据  
+        var $i=$("<p/>").text(dfs[n]);      //新建一个b标签，并显示随机的话语  
+        var x=e.pageX,y=e.pageY;            //获取鼠标点击的x，和y  
+        $i.css({                            //为标签赋予css值  
+            "z-index":99999,   
+            "top":y-20,   
+            "left":x,   
+            "position":"absolute",   
+            "color":"#E94F06",  
+            "font-family":"微软雅黑",  
+            "cursor":"default",  
+            "-moz-user-select": "none",  
+            "-webkit-user-select": "none",  
+            "-ms-user-select": "none",  
+            "-khtml-user-select": "none",  
+            "user-select": "none",  
+        });   
+        $("body").append($i);               //在尾部插入  
+        $i.animate( {"top":y-180,"opacity":0}, 1500, function(){$i.remove();});     //动画消除  
+        e.stopPropagation();  
+    });  
+});   
+</script>
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5838b78e042b54695a2d11727e701019";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
   Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a>
 </footer>
     </div>
