@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markdown基础语法 - 王荣胜</title>
+<title>KNN - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -13,31 +13,31 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Markdown基础语法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="KNN - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
   <meta name="description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
-  <meta property="og:title" content="Markdown基础语法 - 王荣胜">
+KNN算法概述
+KNN可以说是最简单的分类算法之一，同时，它也是最常用的分类算法之一，注意KNN算法是有监督学习中的分类算法，它看起来和另一个机器学习算法K-means有点像（K-means是无监督学习算法），但却是有本质区别的。
+KNN..." />
+  <meta property="og:title" content="KNN - 王荣胜">
   <meta property="og:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
+KNN算法概述
+KNN可以说是最简单的分类算法之一，同时，它也是最常用的分类算法之一，注意KNN算法是有监督学习中的分类算法，它看起来和另一个机器学习算法K-means有点像（K-means是无监督学习算法），但却是有本质区别的。
+KNN..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://Wangrongsheng.github.io/post/UWPsajVaD/" />
-  <meta property="og:image" content="https://s2.ax1x.com/2020/02/19/3EhGi8.png">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/SiSIwI3rq/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="Markdown基础语法 - 王荣胜">
+  <meta name="twitter:title" content="KNN - 王荣胜">
   <meta name="twitter:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静...">
+KNN算法概述
+KNN可以说是最简单的分类算法之一，同时，它也是最常用的分类算法之一，注意KNN算法是有监督学习中的分类算法，它看起来和另一个机器学习算法K-means有点像（K-means是无监督学习算法），但却是有本质区别的。
+KNN...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/SiSIwI3rq/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -59,271 +59,133 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          Markdown基础语法
+          KNN
         </h1>
         
-          <img src="https://s2.ax1x.com/2020/02/19/3EhGi8.png" alt="Markdown基础语法" class="block w-full mb-8">
-        
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-02-19 · 5 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-04-10 · 7 min read</div>
           
-            <a href="https://Wangrongsheng.github.io/tag/markdown/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+            <a href="https://Wangrongsheng.github.io/tag/ml/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
               <i class="ri-hashtag"></i>
-              Markdown
+              机器学习
             </a>
           
         </div>
         <div class="markdown mb-8" v-pre>
           <!-- more -->
-<h1 id="markdown简介">Markdown简介</h1>
-<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
-<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
-<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
-<h1 id="markdown基础语法">Markdown基础语法</h1>
-<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
-<h2 id="标题">标题</h2>
-<p>使用#，表示1-6级标题。</p>
-<pre><code class="language-text"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-<h2 id="引用">引用</h2>
-<h3 id="普通引用">普通引用</h3>
-<pre><code class="language-text">&gt; 引用文本!
-</code></pre>
-<p>效果：</p>
+<h1 id="knn算法概述">KNN算法概述</h1>
+<p>KNN可以说是最简单的分类算法之一，同时，它也是最常用的分类算法之一，注意KNN算法是<strong>有监督学习</strong>中的分类算法，它看起来和另一个机器学习算法K-means有点像（K-means是无监督学习算法），但却是有本质区别的。</p>
+<h1 id="knn算法介绍">KNN算法介绍</h1>
+<p>KNN的全称是K Nearest Neighbors，意思是K个最近的邻居，从这个名字我们就能看出一些KNN算法的蛛丝马迹了。K个最近邻居，毫无疑问，K的取值肯定是至关重要的。那么最近的邻居又是怎么回事呢？其实啊，<strong>KNN的原理就是当预测一个新的值x的时候，根据它距离最近的K个点是什么类别来判断x属于哪个类别</strong> 。</p>
+<center><img src="https://s1.ax1x.com/2020/04/10/GI4rTA.png" alt="GI4rTA.png" border="0" /></center>
+<p>图中绿色的点就是我们要预测的那个点，假设K=3。那么KNN算法就会找到与它距离最近的三个点（这里用圆圈把它圈起来了），看看哪种类别多一些，比如这个例子中是蓝色三角形多一些，新来的绿色点就归类到蓝三角了。</p>
+<center><img src="https://s1.ax1x.com/2020/04/10/GI4cfP.png" alt="GI4cfP.png" border="0" /></center>
+<p>但是，<strong>当K=5的时候，判定就变成不一样了</strong> 。这次变成红圆多一些，所以新来的绿点被归类成红圆。从这个例子中，我们就能看得出K的取值是很重要的。</p>
+<p>明白了大概原理后，我们就来说一说细节的东西吧，主要有两个，<strong>K值的选取和点距离的计算</strong> 。</p>
+<h2 id="距离计算">距离计算</h2>
+<p>要度量空间中点距离的话，有许多几种度量方式，比如常见的曼哈顿距离计算，欧式距离计算等等。不过通常KNN算法中使用的是欧式距离，这里只是简单说一下，拿二维平面为例，<strong>二维空间</strong> 两个点的欧式距离计算公式如下：</p>
+<center><img src="https://s1.ax1x.com/2020/04/10/GI5e7d.png" alt="1011838 20181105210120839 1494903025" border="0"></center>
+<p>这个高中应该就有接触到的了，其实就是计算（x1,y1）和（x2,y2）的距离。拓展到多维空间，则公式变成这样：</p>
+<center><img src="https://s1.ax1x.com/2020/04/10/GI5nAA.png" alt="1011838 20181105210113366 1125611006" border="0"></center>
+<p>这样我们就明白了如何计算距离，KNN算法最简单粗暴的就是将预测点与所有点距离进行计算，然后保存并排序，选出前面K个值看看哪些类别比较多。但其实也可以通过一些数据结构来辅助，比如最大堆，这里就不多做介绍，有兴趣可以百度最大堆相关数据结构的知识。</p>
 <blockquote>
-<p>引用文本！</p>
+<p>各种度量方式：https://blog.csdn.net/m0_37075274/article/details/90273692</p>
 </blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<pre><code class="language-text">&gt; 第一层
-&gt;&gt; 第二层
-</code></pre>
-<p>效果：</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-</blockquote>
-</blockquote>
-<h2 id="表格">表格</h2>
-<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
-| :-- | :--: | --: |
-| A1 | B1 | C1 |
-| A2 | B2 | C2 |
-</code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字段1</th>
-<th style="text-align:center">字段2</th>
-<th style="text-align:right">字段3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">A1</td>
-<td style="text-align:center">B1</td>
-<td style="text-align:right">C1</td>
-</tr>
-<tr>
-<td style="text-align:left">A2</td>
-<td style="text-align:center">B2</td>
-<td style="text-align:right">C2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码">代码</h2>
-<h3 id="行内">行内</h3>
-<pre><code class="language-text">AAA`BBB`CCC
-</code></pre>
-<p>效果：</p>
-<p>AAA<code>BBB</code>CCC</p>
-<h3 id="区块">区块</h3>
-<h4 id="4个空格">4个空格</h4>
-<p>在每行前面加上4个空格</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<p>效果：</p>
-<pre><code class="language-text">text = &quot;Hello, world!&quot;
-print(text)
-</code></pre>
-<h4 id="3个">3个 `</h4>
-<pre><code class="language-text">```text
-text = &quot;Hello, world!&quot;
-print(text)
-\```
-</code></pre>
-<blockquote>
-<p>上述中的“\”是转义使用的！</p>
-</blockquote>
-<p>效果：</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<h2 id="字体样式">字体样式</h2>
-<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
-<pre><code class="language-text">*text* 或 _text_ 斜体
+<h2 id="k值选择">K值选择</h2>
+<p>通过上面那张图我们知道K的取值比较重要，那么该如何确定K取多少值好呢？答案是通过交叉验证（将样本数据按照一定比例，拆分出训练用的数据和验证用的数据，比如6：4拆分出部分训练数据和验证数据），从选取一个较小的K值开始，不断增加K的值，然后计算验证集合的方差，最终找到一个比较合适的K值。</p>
+<p>通过交叉验证计算方差后你大致会得到下面这样的图：</p>
+<center><img src="https://s1.ax1x.com/2020/04/10/GIISKS.png" alt="GIISKS.png" border="0" /></center>
+<p>这个图其实很好理解，当你增大k的时候，一般错误率会先降低，因为有周围更多的样本可以借鉴了，分类效果会变好。但注意，和K-means不一样，当K值更大的时候，错误率会更高。这也很好理解，比如说你一共就35个样本，当你K增大到30的时候，KNN基本上就没意义了。</p>
+<p>所以选择K点的时候可以选择一个较大的临界K点，当它继续增大或减小的时候，错误率都会上升，比如图中的K=10。</p>
+<h1 id="代码实现">代码实现</h1>
+<h2 id="python">python</h2>
+<pre><code class="language-python">#引库
+import numpy as np
+import matplotlib.pyplot as plt
+from math import sqrt
+%matplotlib inline
 
-**text** 或 __text__ 粗体
+#原始数据
+data = [[1,0.9],[1,1],[0.1,0.2],[0,0.1]]
+labels = [&quot;A&quot;,&quot;A&quot;,&quot;B&quot;,&quot;B&quot;]
+test_data = [[0.1,0.3]]
 
-***text*** 或 ___text___ 粗斜体
-</code></pre>
-<p>效果</p>
-<p><em>text</em> 斜体</p>
-<p><strong>text</strong> 粗体</p>
-<p><em><strong>text</strong></em> 粗斜体</p>
-<h3 id="上标下标">上标,下标</h3>
-<h4 id="上标">上标</h4>
-<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
-</code></pre>
-<p>效果：</p>
-<p>益达<sup>TM</sup></p>
-<h4 id="下标">下标</h4>
-<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
+#绘制原始数据散点图
+print(&quot;===============================数据准备================================&quot;)
+print(&quot;原始数据图像绘制...&quot;)
+for i in range(len(data)):
+    plt.scatter(data[i][0],data[i][1],color = &quot;b&quot;)
+plt.scatter(test_data[0][0],test_data[0][1],color='r')
+plt.show()
 
-H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
-</code></pre>
-<p>效果:</p>
-<p>X<sub>i</sub></p>
-<p>H<sub>2</sub>O  CO<sub>2</sub></p>
-<h3 id="下划线">下划线</h3>
-<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre>
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h3 id="删除线">删除线</h3>
-<pre><code class="language-text">~~删除线~~
-</code></pre>
-<p>效果：</p>
-<p><s>删除线</s></p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
-<pre><code class="language-text">- 第一项
-- 第二项
-- 第三项
-</code></pre>
-<blockquote>
-<p>注: 标记后面最少有一个 空格 或 制表符。</p>
-</blockquote>
-<p>效果：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
-<pre><code class="language-text">1. 第一项   
-2. 第二项    
-3. 第三项
-</code></pre>
-<p>效果：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h3 id="任务列表">任务列表</h3>
-<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
-<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [x] Nulla lobortis egestas semper
-- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    - [x] In hac habitasse platea dictumst
-    - [x] In scelerisque nibh non dolor mollis congue sed et metus
-    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
-    - [ ] Praesent sed risus massa
-- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
-- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</code></pre>
-<p>效果：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6920441"><label class="task-list-item-label" for="task-item-6920441"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7490107"><label class="task-list-item-label" for="task-item-7490107"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8592511"><label class="task-list-item-label" for="task-item-8592511"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1783515"><label class="task-list-item-label" for="task-item-1783515"> Vestibulum convallis sit amet nisi a tincidunt</label>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5965016"><label class="task-list-item-label" for="task-item-5965016"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8963042"><label class="task-list-item-label" for="task-item-8963042"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-465603"><label class="task-list-item-label" for="task-item-465603"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8541927"><label class="task-list-item-label" for="task-item-8541927"> Praesent sed risus massa</label></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9162316"><label class="task-list-item-label" for="task-item-9162316"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1437226"><label class="task-list-item-label" for="task-item-1437226"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
-</ul>
-<h3 id="嵌套列表">嵌套列表</h3>
-<pre><code class="language-text">- aaa
-    - bbb
-</code></pre>
-<p>效果：</p>
-<ul>
-<li>aaa
-<ul>
-<li>bbb</li>
-</ul>
-</li>
-</ul>
-<h2 id="分割线">分割线</h2>
-<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
-<pre><code class="language-text">---
-</code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="链接">链接</h2>
-<h3 id="普通链接">普通链接</h3>
-<h4 id="行内式">行内式</h4>
-<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-<h4 id="参考式">参考式</h4>
-<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
-<pre><code class="language-text">[example][索引]
+#测试数据x=(0.1,0.3)
+#采用欧式距离进行计算
+print(&quot;===============================距离计算================================&quot;)
+x = [[0.1,0.3]]
 
-[索引]: http://www.example.com/ &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<blockquote>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-</blockquote>
-<h3 id="自动链接">自动链接</h3>
-<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
-<h2 id="图片">图片</h2>
-<h3 id="行内式-2">行内式</h3>
-<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
-<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h3 id="参考式-2">参考式</h3>
-<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
-<pre><code class="language-text">![alt][索引]
+distance = []
+labels_wz = []
+for i in range(len(data)):
+    d = 0
+    d = sqrt((x[0][0]-data[i][0])**2 + (x[0][1]-data[i][1])**2)
+    distance.append(d)
+    labels_wz.append(i)
+print(&quot;计算的距离为:\n&quot;,distance)
+print(&quot;现在对应的标签位置为:\n&quot;,labels_wz)
 
-[索引]: 图片地址 &quot;title&quot;
+#按照升序排序,并取距离较小的前3个
+print(&quot;===============================距离排序================================&quot;)
+for i in range(len(data)-1):
+    for j in range(i+1,len(data)):
+        if distance[i] &gt; distance[j]:
+            distance[i],distance[j] = distance[j],distance[i]
+            labels_wz[i],labels_wz[j] = labels_wz[j],labels_wz[i]
+print(&quot;排序后的距离为:\n&quot;,distance)
+print(&quot;对应的标签的位置为:\n&quot;,labels_wz)
+print(&quot;取距离最近的3个值:&quot;,distance[0:3])
+
+#进行投票表决
+print(&quot;===============================表决投票================================&quot;)
+A = 0
+B = 0
+for i in range(len(labels_wz[0:3])):
+    if labels[labels_wz[i]] == &quot;A&quot;:
+        A+=1
+    else:
+        B+=1
+print(&quot;投票为A的数量为:&quot;,A)
+print(&quot;投票为B的数量为:&quot;,B)
+print(&quot;\n对照初始图中红色点(测试点)与前两个标签为A的离的最近,所以我们的计算与图中所呈现的结果一致!&quot;)
 </code></pre>
-<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h2 id="转义">转义</h2>
-<pre><code class="language-text">\转义的内容
+<center><img src="https://i.loli.net/2019/08/15/tfAl4XID2PbFZRG.png"></center>
+<h2 id="sklearn">sklearn</h2>
+<pre><code class="language-python">import numpy as np
+import sklearn
+from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
+X_train = np.array([[1,0.9],[1,1],[0.1,0.2],[0,0.1]])  #这里是数组形式哦，要注意哦，如果输入的dataframe（因为一般我们导入文件的话都是使用csv模式，导入进来一般是形成dataframe模式，我们需要在fit()函数中使用 X_train.values,y_train.values）
+
+y_train=['A','A','B','B']
+knn=KNeighborsClassifier(n_neighbors=1)
+knn.fit(X_train,y_train)
+knn.predict([[0.1,0.3]])#要注意，预测的时候也要上使用数组形式的
 </code></pre>
+<h1 id="knn特点">KNN特点</h1>
+<h2 id="优点">优点</h2>
+<p>1）简单好用，容易理解，精度高，理论成熟，既可以用来做分类也可以用来做回归；</p>
+<p>2）可用于数值型数据和离散型数据；</p>
+<p>3）训练时间复杂度为O(n)；无数据输入假定；</p>
+<p>4）对异常值不敏感。</p>
+<h2 id="缺点">缺点</h2>
+<p>1）计算复杂性高；空间复杂性高；</p>
+<p>2）样本不平衡问题（即有些类别的样本数量很多，而其它样本的数量很少）；</p>
+<p>3）一般数值很大的时候不用这个，计算量太大。但是单个样本又不能太少，否则容易发生误分；</p>
+<p>4）最大的缺点是无法给出数据的内在含义。</p>
+<p>至于什么时候应该选择使用KNN算法，sklearn的这张图给了我们一个答案：</p>
+<center><img src="https://i.loli.net/2020/04/10/T8wEisjyY31IhVK.png" ></a></center>
+<p>英文不懂？？看中文：</p>
+<center><img src="https://i.loli.net/2020/04/10/RjKcUsGzLip86Y2.png" ></a></center>
+<p>简单的说，当需要使用分类算法且数据比较大的时候就可以尝试使用KNN算法进行分类了。</p>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -802,68 +664,23 @@ setInterval("createtime()",250);
       </div>
       <div class="post-toc-container">
         <ul class="markdownIt-TOC">
-<li><a href="#markdown%E7%AE%80%E4%BB%8B">Markdown简介</a></li>
-<li><a href="#markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">Markdown基础语法</a>
+<li><a href="#knn%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0">KNN算法概述</a></li>
+<li><a href="#knn%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D">KNN算法介绍</a>
 <ul>
-<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
-<li><a href="#%E5%BC%95%E7%94%A8">引用</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E5%BC%95%E7%94%A8">普通引用</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%BC%95%E7%94%A8">嵌套引用</a></li>
+<li><a href="#%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97">距离计算</a></li>
+<li><a href="#k%E5%80%BC%E9%80%89%E6%8B%A9">K值选择</a></li>
 </ul>
 </li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81">代码</a>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">代码实现</a>
 <ul>
-<li><a href="#%E8%A1%8C%E5%86%85">行内</a></li>
-<li><a href="#%E5%8C%BA%E5%9D%97">区块</a>
-<ul>
-<li><a href="#4%E4%B8%AA%E7%A9%BA%E6%A0%BC">4个空格</a></li>
-<li><a href="#3%E4%B8%AA">3个 `</a></li>
+<li><a href="#python">python</a></li>
+<li><a href="#sklearn">sklearn</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F">字体样式</a>
+<li><a href="#knn%E7%89%B9%E7%82%B9">KNN特点</a>
 <ul>
-<li><a href="#%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E7%B2%97%E6%96%9C%E4%BD%93">斜体,粗体,粗斜体</a></li>
-<li><a href="#%E4%B8%8A%E6%A0%87%E4%B8%8B%E6%A0%87">上标,下标</a>
-<ul>
-<li><a href="#%E4%B8%8A%E6%A0%87">上标</a></li>
-<li><a href="#%E4%B8%8B%E6%A0%87">下标</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
-<ul>
-<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E9%93%BE%E6%8E%A5">普通链接</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">自动链接</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%BE%E7%89%87">图片</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F-2">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F-2">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BD%AC%E4%B9%89">转义</a></li>
+<li><a href="#%E4%BC%98%E7%82%B9">优点</a></li>
+<li><a href="#%E7%BC%BA%E7%82%B9">缺点</a></li>
 </ul>
 </li>
 </ul>
