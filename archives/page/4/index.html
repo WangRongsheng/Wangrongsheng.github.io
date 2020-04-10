@@ -560,6 +560,28 @@ jQuery(document).ready(function($) {
 <script src="https://blog-static.cnblogs.com/files/zouwangblog/Meting.min.js"></script>
 <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="2878443703" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div-->
 
+<!--打赏-->
+<!-- 添加打赏功能按键  -->
+<script src="http://static.tctip.com/tctip-1.0.0.min.js"></script>
+<script>  
+  new tctip({
+    top: '40%',
+    button: {
+      id: 6,
+      type: 'dashang',
+    },
+    list: [
+      {
+        type: 'alipay',
+        qrImg: 'https://s1.ax1x.com/2020/04/10/GTUyRI.jpg'
+      }, 
+      {
+        type: 'wechat',
+        qrImg: 'https://s1.ax1x.com/2020/04/10/GTU6zt.jpg'
+      }
+    ]
+  }).init()
+</script>
 
 
 
