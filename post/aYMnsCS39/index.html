@@ -77,20 +77,20 @@ K-均值算法概述
           <!-- more -->
 <h1 id="k-均值算法概述">K-均值算法概述</h1>
 <p>聚类与分类算法的最大区别在于, 分类的目标类别已知(监督学习), 而聚类的目标类别是未知的(无监督学习)。K-Means算法(K-均值算法)就是无监督算法之一，主要用于样本的聚类。其思想很简单，对于给定的样本集，按照样本与聚类中心之间的距离大小，将样本集划分为K个簇。让簇内的点尽量紧密的连接在一起,让簇间的距离尽量的大。</p>
-<center>![k-means.png](https://i.loli.net/2019/08/12/ck7tmu8n4xZYEoG.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/ck7tmu8n4xZYEoG.png"></center>
 <p>上图a表达了初始的数据集，假设k=2。在图b中，我们随机选择了两个k类所对应的类别质心，即图中的红色质心和蓝色质心，然后分别求样本中所有点到这两个质心的距离，并标记每个样本的类别为和该样本距离最小的质心的类别，如图c所示，经过计算样本和红色质心和蓝色质心的距离，我们得到了所有样本点的第一轮迭代后的类别。此时我们对我们当前标记为红色和蓝色的点分别求其新的质心，如图4所示，新的红色质心和蓝色质心的位置已经发生了变动。图e和图f重复了我们在图c和图d的过程，即将所有点的类别标记为距离最近的质心的类别并求新的质心。最终我们得到的两个类别如图f。</p>
 <p>当然在实际K-Mean算法中，我们一般会多次运行图c和图d，才能达到最终的比较优的类别。</p>
 <h1 id="k-均值算法步骤">K-均值算法步骤</h1>
 <p>1）数据准备:需要数值型数据类计算距离, 也可以将标称型数据映射为二值型数据再用于距离计算。</p>
-<center>![k-means1.png](https://i.loli.net/2019/08/12/Jul9OYvtV4o1Ib7.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/Jul9OYvtV4o1Ib7.png"></center>
 <p>2）对于未聚类数据集，首先随机初始化 K 个（代表拟聚类簇个数）中心点，如图红色五角星所示。</p>
-<center>![k-means2.png](https://i.loli.net/2019/08/12/aVJ4siGm97qPYRh.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/aVJ4siGm97qPYRh.png"></center>
 <p>3）每一个样本按照距离自身最近的中心点进行聚类(<strong>计算距离</strong>)，等效于通过两中心点连线的中垂线划分区域。</p>
-<center>![k-means3.png](https://i.loli.net/2019/08/12/kmrCnEBNyIUOXtp.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/kmrCnEBNyIUOXtp.png"></center>
 <p>4）依据上次聚类结果，移动中心点到个簇的质心位置(新的质心的位置为新簇内点的x和y分别的的平均值)，并将此质心作为新的中心点。</p>
-<center>![k-means4.png](https://i.loli.net/2019/08/12/dfIKXWZmD9w3g6u.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/dfIKXWZmD9w3g6u.png"></center>
 <p>5）反复迭代，直至中心点的变化满足收敛条件（变化很小或几乎不变化），最终得到聚类结果。</p>
-<center>![k-means5.png](https://i.loli.net/2019/08/12/nRBvgSEFzorq8ZU.png)</center>
+<center><img src="https://i.loli.net/2019/08/12/nRBvgSEFzorq8ZU.png"></center>
 <h2 id="距离计算">距离计算</h2>
 <p>这里的距离指的是平面上两个点的直线距离。常用：<strong>欧氏距离</strong> 。</p>
 <blockquote>
@@ -112,8 +112,8 @@ K-均值算法概述
 <p>**注意:**此部分为扩展内容,如果你想真正的去优化你的算法,更详细的优化步骤你可以去<a href="https://www.cnblogs.com/pinard/p/6164214.html">刘建平Pinard-K-Means聚类算法原理</a> 或者是<a href="https://www.biaodianfu.com/k-means.html">聚类算法之K-Means及其变种</a> 。</p>
 <h1 id="手推实现">手推实现</h1>
 <p>下面给大家一个实例,供大家参考:</p>
-<center>![td1.png](https://i.loli.net/2019/08/15/tXhfFpxgKJUDNLC.png)</center>
-<center>![td2.png](https://i.loli.net/2019/08/15/CjBe9qRtYA4F8sz.png)</center>
+<center><img src="https://i.loli.net/2019/08/15/tXhfFpxgKJUDNLC.png"></center>
+<center><img src="https://i.loli.net/2019/08/15/CjBe9qRtYA4F8sz.png"></center>
 <h1 id="代码实现">代码实现</h1>
 <pre><code class="language-python">import numpy
 import random
@@ -221,7 +221,7 @@ if __name__ == '__main__':
         k += 1
 </code></pre>
 <p>结果展示<br>
-<img src="https://i.loli.net/2019/08/22/JCH2zdEkm8VDGw1.png" alt="kmeansjg.jpg" loading="lazy"></p>
+<img src="https://i.loli.net/2019/08/22/JCH2zdEkm8VDGw1.png"></p>
 <h1 id="k-均值特点">K-均值特点</h1>
 <h2 id="优点">优点:</h2>
 <ol>
