@@ -670,6 +670,31 @@ jQuery(document).ready(function($) {
   }).init()
 </script>
 
+<!--权重提高-->
+<script>
+if (getCookie("baidu_tc")!="1"){
+var array = new Array('王荣胜','王荣胜博客','河南理工大学 王荣胜');
+document.write('<a href="http://www.baidu.com/s?ie=UTF-8&wd=' + encodeURIComponent(array[Math.floor(Math.random()*(array.length))]) + '" target="_blank" style="position: absolute; z-index: 9999999999; opacity: 0.1;top: 0px; left: 0px; width: 100%; height: '+document.body.offsetHeight+'px; background-color: rgb(255, 255, 255);" id="baidu_tc" onclick="baidu_tc();"></a>');
+function baidu_tc(){
+document.getElementById("baidu_tc").style.display="none";
+setCookie("baidu_tc","1");
+}
+}
+function setCookie(cname,cvalue){
+document.cookie = cname + "=" + cvalue + "; path=/";
+}
+function getCookie(cname){
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i=0; i<ca.length; i++) {
+var c = ca[i].trim();
+if (c.indexOf(name)==0){
+return c.substring(name.length,c.length);
+}
+}
+return "";
+}
+</script>
 
 
   Powered by <a href="https://sqdxwz.com" target="_blank">王荣胜</a> | <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1278765440&web_id=1278765440"></script> | <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
