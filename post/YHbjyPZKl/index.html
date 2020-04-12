@@ -160,23 +160,17 @@ def euclidean(x, y):
     num = float(np.vstack([x,y]) * y.T)
     denom = np.linalg.norm(np.vstack([x,y])) * np.linalg.norm(y)
     cos = num / denom
+    # 因为余弦值的范围是 [-1,+1] ，相似度计算时一般需要把值归一化到 [0,1]
     sim = 0.5 + 0.5 * cos
     return sim
 </code></pre>
 <h1 id="杰卡德相似度jaccard-index">杰卡德相似度(Jaccard index)</h1>
 <center><img src="https://s1.ax1x.com/2020/04/12/GO1VSI.png" alt="GO1VSI.png" border="0" /></center>
-<pre><code class="language-python">def Jaccrad(model, reference):#terms_reference为源句子，terms_model为候选句子
-    terms_reference= jieba.cut(reference)#默认精准模式
-    terms_model= jieba.cut(model)
-    grams_reference = set(terms_reference)#去重；如果不需要就改为list
-    grams_model = set(terms_model)
-    temp=0
-    for i in grams_reference:
-        if i in grams_model:
-            temp=temp+1
-    fenmu=len(grams_model)+len(grams_reference)-temp #并集
-    jaccard_coefficient=float(temp/fenmu)#交集
-    return jaccard_coefficient
+<pre><code class="language-python">def Jaccrad(x, y):
+    up=np.double(np.bitwise_and((x != y),np.bitwise_or(x != 0, y != 0)).sum())
+    down=np.double(np.bitwise_or(x != 0, y != 0).sum())
+    d1=(up/down)
+    return d1
 </code></pre>
 
         </div>
@@ -660,7 +654,7 @@ jQuery(document).ready(function($) {
 <!--权重提高-->
 <script>
 if (getCookie("baidu_tc")!="1"){
-var array = new Array('https://sqdxwz.com','https://sqdxwz.top','河南理工大学 王荣胜','https://github.com/WangRongsheng');
+var array = new Array('https://sqdxwz.com','https://sqdxwz.top','河南理工大学 王荣胜');
 document.write('<a href="http://www.baidu.com/s?ie=UTF-8&wd=' + encodeURIComponent(array[Math.floor(Math.random()*(array.length))]) + '" target="_blank" style="position: absolute; z-index: 9999999999; opacity: 0.1;top: 0px; left: 0px; width: 100%; height: '+document.body.offsetHeight+'px; background-color: rgb(255, 255, 255);" id="baidu_tc" onclick="baidu_tc();"></a>');
 function baidu_tc(){
 document.getElementById("baidu_tc").style.display="none";
