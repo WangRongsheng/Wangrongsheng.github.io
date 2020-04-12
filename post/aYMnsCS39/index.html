@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>Markdown基础语法 - 王荣胜</title>
+<title>K-means - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -15,31 +15,28 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Markdown基础语法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="K-means - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
   <meta name="description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
-  <meta property="og:title" content="Markdown基础语法 - 王荣胜">
+K-均值算法概述
+聚类与分类算法的最大区别在于, 分类的目标类别已知(监督学习), 而聚类的目标类别是未知的(无监督学习)。K-Means算法(K-均值算法)就是无监督算法之一，主要用于样本的聚类。其思想很简单，对于给定的样本集，按照样本..." />
+  <meta property="og:title" content="K-means - 王荣胜">
   <meta property="og:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
+K-均值算法概述
+聚类与分类算法的最大区别在于, 分类的目标类别已知(监督学习), 而聚类的目标类别是未知的(无监督学习)。K-Means算法(K-均值算法)就是无监督算法之一，主要用于样本的聚类。其思想很简单，对于给定的样本集，按照样本..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://Wangrongsheng.github.io/post/UWPsajVaD/" />
-  <meta property="og:image" content="https://s2.ax1x.com/2020/02/19/3EhGi8.png">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/aYMnsCS39/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="Markdown基础语法 - 王荣胜">
+  <meta name="twitter:title" content="K-means - 王荣胜">
   <meta name="twitter:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静...">
+K-均值算法概述
+聚类与分类算法的最大区别在于, 分类的目标类别已知(监督学习), 而聚类的目标类别是未知的(无监督学习)。K-Means算法(K-均值算法)就是无监督算法之一，主要用于样本的聚类。其思想很简单，对于给定的样本集，按照样本...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/aYMnsCS39/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -61,17 +58,15 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          Markdown基础语法
+          K-means
         </h1>
         
-          <img src="https://s2.ax1x.com/2020/02/19/3EhGi8.png" alt="Markdown基础语法" class="block w-full mb-8">
-        
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-02-19 · 5 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-04-12 · 9 min read</div>
           
-            <a href="https://Wangrongsheng.github.io/tag/markdown/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+            <a href="https://Wangrongsheng.github.io/tag/ml/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
               <i class="ri-hashtag"></i>
-              Markdown
+              机器学习
             </a>
           
           
@@ -80,255 +75,174 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
         </div>
         <div class="markdown mb-8" v-pre>
           <!-- more -->
-<h1 id="markdown简介">Markdown简介</h1>
-<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
-<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
-<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
-<h1 id="markdown基础语法">Markdown基础语法</h1>
-<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
-<h2 id="标题">标题</h2>
-<p>使用#，表示1-6级标题。</p>
-<pre><code class="language-text"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-<h2 id="引用">引用</h2>
-<h3 id="普通引用">普通引用</h3>
-<pre><code class="language-text">&gt; 引用文本!
-</code></pre>
-<p>效果：</p>
+<h1 id="k-均值算法概述">K-均值算法概述</h1>
+<p>聚类与分类算法的最大区别在于, 分类的目标类别已知(监督学习), 而聚类的目标类别是未知的(无监督学习)。K-Means算法(K-均值算法)就是无监督算法之一，主要用于样本的聚类。其思想很简单，对于给定的样本集，按照样本与聚类中心之间的距离大小，将样本集划分为K个簇。让簇内的点尽量紧密的连接在一起,让簇间的距离尽量的大。</p>
+<center>![k-means.png](https://i.loli.net/2019/08/12/ck7tmu8n4xZYEoG.png)</center>
+<p>上图a表达了初始的数据集，假设k=2。在图b中，我们随机选择了两个k类所对应的类别质心，即图中的红色质心和蓝色质心，然后分别求样本中所有点到这两个质心的距离，并标记每个样本的类别为和该样本距离最小的质心的类别，如图c所示，经过计算样本和红色质心和蓝色质心的距离，我们得到了所有样本点的第一轮迭代后的类别。此时我们对我们当前标记为红色和蓝色的点分别求其新的质心，如图4所示，新的红色质心和蓝色质心的位置已经发生了变动。图e和图f重复了我们在图c和图d的过程，即将所有点的类别标记为距离最近的质心的类别并求新的质心。最终我们得到的两个类别如图f。</p>
+<p>当然在实际K-Mean算法中，我们一般会多次运行图c和图d，才能达到最终的比较优的类别。</p>
+<h1 id="k-均值算法步骤">K-均值算法步骤</h1>
+<p>1）数据准备:需要数值型数据类计算距离, 也可以将标称型数据映射为二值型数据再用于距离计算。</p>
+<center>![k-means1.png](https://i.loli.net/2019/08/12/Jul9OYvtV4o1Ib7.png)</center>
+<p>2）对于未聚类数据集，首先随机初始化 K 个（代表拟聚类簇个数）中心点，如图红色五角星所示。</p>
+<center>![k-means2.png](https://i.loli.net/2019/08/12/aVJ4siGm97qPYRh.png)</center>
+<p>3）每一个样本按照距离自身最近的中心点进行聚类(<strong>计算距离</strong>)，等效于通过两中心点连线的中垂线划分区域。</p>
+<center>![k-means3.png](https://i.loli.net/2019/08/12/kmrCnEBNyIUOXtp.png)</center>
+<p>4）依据上次聚类结果，移动中心点到个簇的质心位置(新的质心的位置为新簇内点的x和y分别的的平均值)，并将此质心作为新的中心点。</p>
+<center>![k-means4.png](https://i.loli.net/2019/08/12/dfIKXWZmD9w3g6u.png)</center>
+<p>5）反复迭代，直至中心点的变化满足收敛条件（变化很小或几乎不变化），最终得到聚类结果。</p>
+<center>![k-means5.png](https://i.loli.net/2019/08/12/nRBvgSEFzorq8ZU.png)</center>
+<h2 id="距离计算">距离计算</h2>
+<p>这里的距离指的是平面上两个点的直线距离。常用：<strong>欧氏距离</strong> 。</p>
 <blockquote>
-<p>引用文本！</p>
+<p><a href="https://blog.csdn.net/qq_32782339/article/details/80349378?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1">距离计算方法-聚类</a></p>
 </blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<pre><code class="language-text">&gt; 第一层
-&gt;&gt; 第二层
-</code></pre>
-<p>效果：</p>
+<h2 id="k值选择">K值选择</h2>
 <blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
+<p><a href="https://www.biaodianfu.com/k-means-choose-k.html">K-Means算法之K值的选择</a></p>
 </blockquote>
-</blockquote>
-<h2 id="表格">表格</h2>
-<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
-| :-- | :--: | --: |
-| A1 | B1 | C1 |
-| A2 | B2 | C2 |
+<h1 id="传统k-means改进">传统K-means改进</h1>
+<p>在学习了传统K-means算法的基础上,我们清楚了K-means的局限性,因此我们将要说一下K-Means的优化变体方法。这其中包括初始化优化K-Means++, 距离计算优化elkan K-Means算法和大数据情况下的优化Mini Batch K-Means算法。</p>
+<h2 id="k-means">K-means++</h2>
+<p>在学习K-means算法时我们提到，k个初始化的质心的位置选择对最后的聚类结果和运行时间都有很大的影响，因此需要选择合适的k个质心。如果仅仅是完全随机的选择，有可能导致算法收敛很慢。K-Means++算法就是对K-Means随机初始化质心的方法的优化。</p>
+<h2 id="elkan-k-means">elkan K-means</h2>
+<p>在传统的K-Means算法中，我们在每轮迭代时，要计算所有的样本点到所有的质心的距离，这样会比较的耗时。那么，对于距离的计算有没有能够简化的地方呢？elkan K-Means算法就是从这块入手加以改进。它的目标是减少不必要的距离的计算。</p>
+<h2 id="mini-batch-k-means">Mini Batch K-means</h2>
+<p>在统的K-Means算法中，要计算所有的样本点到所有的质心的距离。如果样本量非常大，比如达到10万以上，特征有100以上，此时用传统的K-Means算法非常的耗时，就算加上elkan K-Means优化也依旧。在大数据时代，这样的场景越来越多。此时Mini Batch K-Means应运而生。</p>
+<p>顾名思义，Mini Batch，也就是用样本集中的一部分的样本来做传统的K-Means，这样可以避免样本量太大时的计算难题，算法收敛速度大大加快。当然此时的代价就是我们的聚类的精确度也会有一些降低。一般来说这个降低的幅度在可以接受的范围之内。</p>
+<p>**注意:**此部分为扩展内容,如果你想真正的去优化你的算法,更详细的优化步骤你可以去<a href="https://www.cnblogs.com/pinard/p/6164214.html">刘建平Pinard-K-Means聚类算法原理</a> 或者是<a href="https://www.biaodianfu.com/k-means.html">聚类算法之K-Means及其变种</a> 。</p>
+<h1 id="手推实现">手推实现</h1>
+<p>下面给大家一个实例,供大家参考:</p>
+<center>![td1.png](https://i.loli.net/2019/08/15/tXhfFpxgKJUDNLC.png)</center>
+<center>![td2.png](https://i.loli.net/2019/08/15/CjBe9qRtYA4F8sz.png)</center>
+<h1 id="代码实现">代码实现</h1>
+<pre><code class="language-python">import numpy
+import random
+import matplotlib.pyplot as plt
+ 
+ 
+def findCentroids(data_get, k):    # 随机获取k个质心
+    return random.sample(data_get, k)
+ 
+ 
+def calculateDistance(vecA, vecB):    # 计算向量vecA和向量vecB之间的欧氏距离
+    return numpy.sqrt(numpy.sum(numpy.square(vecA - vecB)))
+ 
+ 
+def minDistance(data_get, centroidList):
+    # 计算data_get中的元素与centroidList中k个聚类中心的欧式距离，找出距离最小的
+    # 将该元素加入相应的聚类中
+    clusterDict = dict()  # 用字典存储聚类结果
+    for element in data_get:
+        vecA = numpy.array(element)  # 转换成数组形式
+        flag = 0  # 元素分类标记，记录与相应聚类距离最近的那个类
+        minDis = float(&quot;inf&quot;)  # 初始化为最大值
+ 
+        for i in range(len(centroidList)):
+            vecB = numpy.array(centroidList[i])
+            distance = calculateDistance(vecA, vecB)  # 两向量间的欧式距离
+            if distance &lt; minDis:
+                minDis = distance
+                flag = i  # 保存与当前item距离最近的那个聚类的标记
+ 
+        if flag not in clusterDict.keys():  # 簇标记不存在，进行初始化
+            clusterDict[flag] = list()
+        clusterDict[flag].append(element)  # 加入相应的类中
+ 
+    return clusterDict  # 返回新的聚类结果
+ 
+ 
+def getCentroids(clusterDict):
+    centroidList = list()
+    for key in clusterDict.keys():
+        centroid = numpy.mean(numpy.array(clusterDict[key]), axis=0)  # 求聚类中心即求解每列的均值
+        centroidList.append(centroid)
+ 
+    return numpy.array(centroidList).tolist()
+ 
+ 
+def calculate_Var(clusterDict, centroidList):
+    # 计算聚类间的均方误差
+    # 将类中各个向量与聚类中心的距离进行累加求和
+ 
+    sum = 0.0
+    for key in clusterDict.keys():
+        vecA = numpy.array(centroidList[key])
+        distance = 0.0
+        for item in clusterDict[key]:
+            vecB = numpy.array(item)
+            distance += calculateDistance(vecA, vecB)
+        sum += distance
+    return sum
+ 
+ 
+def showCluster(centroidList, clusterDict):
+    # 画聚类结果
+    colorMark = ['or', 'ob', 'og', 'ok', 'oy', 'ow']  # 元素标记
+    centroidMark = ['dr', 'db', 'dg', 'dk', 'dy', 'dw']  # 聚类中心标记
+    for key in clusterDict.keys():
+        plt.plot(centroidList[key][0], centroidList[key][1], centroidMark[key], markersize=12)  # 画聚类中心
+        for item in clusterDict[key]:
+            plt.plot(item[0], item[1], colorMark[key])  # 画类下的点
+    plt.show()
+ 
+ 
+data = [[0.0, 0.0], [3.0, 8.0], [2.0, 2.0], [1.0, 1.0], [5.0, 3.0],
+        [4.0, 8.0], [6.0, 3.0], [5.0, 4.0], [6.0, 4.0], [7.0, 5.0]]
+ 
+ 
+if __name__ == '__main__':
+ 
+    centroidList = findCentroids(data, 3)  # 随机获取3个聚类中心
+    clusterDict = minDistance(data, centroidList)  # 第一次聚类迭代
+    newVar = calculate_Var(clusterDict, centroidList)  # 计算均方误差值，通过新旧均方误差来获得迭代终止条件
+    oldVar = -0.0001  # 初始化均方误差
+ 
+    print('***** 第1次迭代 *****')
+    for key in clusterDict.keys():
+        print('聚类中心: ', centroidList[key])
+        print('对应聚类: ',clusterDict[key])
+    print('平均均方误差: ', newVar)
+    showCluster(centroidList, clusterDict)  # 展示聚类结果
+ 
+    k = 2
+    while abs(newVar - oldVar) &gt;= 0.0001:  # 当连续两次聚类结果差距小于0.0001时，迭代结束
+        centroidList = getCentroids(clusterDict)  # 获得新的聚类中心
+        clusterDict = minDistance(data, centroidList)  # 新的聚类结果
+        oldVar = newVar
+        newVar = calculate_Var(clusterDict, centroidList)
+ 
+        print('***** 第%d次迭代 *****' % k)
+ 
+        for key in clusterDict.keys():
+            print('聚类中心: ', centroidList[key])
+            print('对应聚类: ', clusterDict[key])
+        print('平均均方误差: ', newVar)
+        showCluster(centroidList, clusterDict)  # 展示聚类结果
+        k += 1
 </code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字段1</th>
-<th style="text-align:center">字段2</th>
-<th style="text-align:right">字段3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">A1</td>
-<td style="text-align:center">B1</td>
-<td style="text-align:right">C1</td>
-</tr>
-<tr>
-<td style="text-align:left">A2</td>
-<td style="text-align:center">B2</td>
-<td style="text-align:right">C2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码">代码</h2>
-<h3 id="行内">行内</h3>
-<pre><code class="language-text">AAA`BBB`CCC
-</code></pre>
-<p>效果：</p>
-<p>AAA<code>BBB</code>CCC</p>
-<h3 id="区块">区块</h3>
-<h4 id="4个空格">4个空格</h4>
-<p>在每行前面加上4个空格</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<p>效果：</p>
-<pre><code class="language-text">text = &quot;Hello, world!&quot;
-print(text)
-</code></pre>
-<h4 id="3个">3个 `</h4>
-<pre><code class="language-text">```text
-text = &quot;Hello, world!&quot;
-print(text)
-\```
-</code></pre>
-<blockquote>
-<p>上述中的“\”是转义使用的！</p>
-</blockquote>
-<p>效果：</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<h2 id="字体样式">字体样式</h2>
-<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
-<pre><code class="language-text">*text* 或 _text_ 斜体
-
-**text** 或 __text__ 粗体
-
-***text*** 或 ___text___ 粗斜体
-</code></pre>
-<p>效果</p>
-<p><em>text</em> 斜体</p>
-<p><strong>text</strong> 粗体</p>
-<p><em><strong>text</strong></em> 粗斜体</p>
-<h3 id="上标下标">上标,下标</h3>
-<h4 id="上标">上标</h4>
-<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
-</code></pre>
-<p>效果：</p>
-<p>益达<sup>TM</sup></p>
-<h4 id="下标">下标</h4>
-<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
-
-H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
-</code></pre>
-<p>效果:</p>
-<p>X<sub>i</sub></p>
-<p>H<sub>2</sub>O  CO<sub>2</sub></p>
-<h3 id="下划线">下划线</h3>
-<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre>
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h3 id="删除线">删除线</h3>
-<pre><code class="language-text">~~删除线~~
-</code></pre>
-<p>效果：</p>
-<p><s>删除线</s></p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
-<pre><code class="language-text">- 第一项
-- 第二项
-- 第三项
-</code></pre>
-<blockquote>
-<p>注: 标记后面最少有一个 空格 或 制表符。</p>
-</blockquote>
-<p>效果：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
-<pre><code class="language-text">1. 第一项   
-2. 第二项    
-3. 第三项
-</code></pre>
-<p>效果：</p>
+<p>结果展示<br>
+<img src="https://i.loli.net/2019/08/22/JCH2zdEkm8VDGw1.png" alt="kmeansjg.jpg" loading="lazy"></p>
+<h1 id="k-均值特点">K-均值特点</h1>
+<h2 id="优点">优点:</h2>
 <ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
+<li>
+<p>属于无监督学习，无须准备训练集；</p>
+</li>
+<li>
+<p>原理简单，实现起来较为容易；</p>
+</li>
+<li>
+<p>结果可解释性较好。</p>
+</li>
 </ol>
-<h3 id="任务列表">任务列表</h3>
-<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
-<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [x] Nulla lobortis egestas semper
-- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    - [x] In hac habitasse platea dictumst
-    - [x] In scelerisque nibh non dolor mollis congue sed et metus
-    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
-    - [ ] Praesent sed risus massa
-- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
-- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</code></pre>
-<p>效果：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2018340"><label class="task-list-item-label" for="task-item-2018340"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2625663"><label class="task-list-item-label" for="task-item-2625663"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4620587"><label class="task-list-item-label" for="task-item-4620587"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2861137"><label class="task-list-item-label" for="task-item-2861137"> Vestibulum convallis sit amet nisi a tincidunt</label>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3092409"><label class="task-list-item-label" for="task-item-3092409"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4311249"><label class="task-list-item-label" for="task-item-4311249"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4018210"><label class="task-list-item-label" for="task-item-4018210"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5134739"><label class="task-list-item-label" for="task-item-5134739"> Praesent sed risus massa</label></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2008157"><label class="task-list-item-label" for="task-item-2008157"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9041200"><label class="task-list-item-label" for="task-item-9041200"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
-</ul>
-<h3 id="嵌套列表">嵌套列表</h3>
-<pre><code class="language-text">- aaa
-    - bbb
-</code></pre>
-<p>效果：</p>
-<ul>
-<li>aaa
-<ul>
-<li>bbb</li>
-</ul>
-</li>
-</ul>
-<h2 id="分割线">分割线</h2>
-<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
-<pre><code class="language-text">---
-</code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="链接">链接</h2>
-<h3 id="普通链接">普通链接</h3>
-<h4 id="行内式">行内式</h4>
-<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-<h4 id="参考式">参考式</h4>
-<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
-<pre><code class="language-text">[example][索引]
-
-[索引]: http://www.example.com/ &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<blockquote>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-</blockquote>
-<h3 id="自动链接">自动链接</h3>
-<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
-<h2 id="图片">图片</h2>
-<h3 id="行内式-2">行内式</h3>
-<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
-<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h3 id="参考式-2">参考式</h3>
-<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
-<pre><code class="language-text">![alt][索引]
-
-[索引]: 图片地址 &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h2 id="转义">转义</h2>
-<pre><code class="language-text">\转义的内容
-</code></pre>
+<h2 id="缺点">缺点:</h2>
+<ol>
+<li>聚类数目k是一个输入参数。选择不恰当的k值可能会导致糟糕的聚类结果，这也是为什么要进行特征检查来决定数据集的聚类数目了；</li>
+<li>可能收敛到局部最小值, 在大规模数据集上收敛较慢；</li>
+<li>对于异常点、离群点敏感。</li>
+</ol>
+<h1 id="参考">参考</h1>
+<p>http://home.deib.polimi.it/matteucc/Clustering/tutorial_html/index.html</p>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -850,70 +764,29 @@ setInterval("createtime()",250);
       </div>
       <div class="post-toc-container">
         <ul class="markdownIt-TOC">
-<li><a href="#markdown%E7%AE%80%E4%BB%8B">Markdown简介</a></li>
-<li><a href="#markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">Markdown基础语法</a>
+<li><a href="#k-%E5%9D%87%E5%80%BC%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0">K-均值算法概述</a></li>
+<li><a href="#k-%E5%9D%87%E5%80%BC%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4">K-均值算法步骤</a>
 <ul>
-<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
-<li><a href="#%E5%BC%95%E7%94%A8">引用</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E5%BC%95%E7%94%A8">普通引用</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%BC%95%E7%94%A8">嵌套引用</a></li>
+<li><a href="#%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97">距离计算</a></li>
+<li><a href="#k%E5%80%BC%E9%80%89%E6%8B%A9">K值选择</a></li>
 </ul>
 </li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81">代码</a>
+<li><a href="#%E4%BC%A0%E7%BB%9Fk-means%E6%94%B9%E8%BF%9B">传统K-means改进</a>
 <ul>
-<li><a href="#%E8%A1%8C%E5%86%85">行内</a></li>
-<li><a href="#%E5%8C%BA%E5%9D%97">区块</a>
+<li><a href="#k-means">K-means++</a></li>
+<li><a href="#elkan-k-means">elkan K-means</a></li>
+<li><a href="#mini-batch-k-means">Mini Batch K-means</a></li>
+</ul>
+</li>
+<li><a href="#%E6%89%8B%E6%8E%A8%E5%AE%9E%E7%8E%B0">手推实现</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">代码实现</a></li>
+<li><a href="#k-%E5%9D%87%E5%80%BC%E7%89%B9%E7%82%B9">K-均值特点</a>
 <ul>
-<li><a href="#4%E4%B8%AA%E7%A9%BA%E6%A0%BC">4个空格</a></li>
-<li><a href="#3%E4%B8%AA">3个 `</a></li>
+<li><a href="#%E4%BC%98%E7%82%B9">优点:</a></li>
+<li><a href="#%E7%BC%BA%E7%82%B9">缺点:</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F">字体样式</a>
-<ul>
-<li><a href="#%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E7%B2%97%E6%96%9C%E4%BD%93">斜体,粗体,粗斜体</a></li>
-<li><a href="#%E4%B8%8A%E6%A0%87%E4%B8%8B%E6%A0%87">上标,下标</a>
-<ul>
-<li><a href="#%E4%B8%8A%E6%A0%87">上标</a></li>
-<li><a href="#%E4%B8%8B%E6%A0%87">下标</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
-<ul>
-<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E9%93%BE%E6%8E%A5">普通链接</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">自动链接</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%BE%E7%89%87">图片</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F-2">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F-2">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BD%AC%E4%B9%89">转义</a></li>
-</ul>
-</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 
       </div>
