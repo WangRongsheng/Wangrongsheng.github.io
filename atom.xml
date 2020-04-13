@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-13T15:29:11.583Z</updated>
+    <updated>2020-04-13T15:30:41.765Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -13,7 +13,7 @@
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
     <entry>
-        <title type="html"><![CDATA[:loudspeaker: 公告]]></title>
+        <title type="html"><![CDATA[公告]]></title>
         <id>https://Wangrongsheng.github.io/post/025mEtxED/</id>
         <link href="https://Wangrongsheng.github.io/post/025mEtxED/">
         </link>
