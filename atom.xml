@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-14T09:11:23.846Z</updated>
+    <updated>2020-04-15T07:21:17.713Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,20 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[深度学习图像数据标注-LabelImg]]></title>
+        <id>https://Wangrongsheng.github.io/post/iQ4CuLzbk/</id>
+        <link href="https://Wangrongsheng.github.io/post/iQ4CuLzbk/">
+        </link>
+        <updated>2020-04-15T06:39:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第十人理论]]></title>
+        <id>https://Wangrongsheng.github.io/post/7ZoTM2JnW/</id>
+        <link href="https://Wangrongsheng.github.io/post/7ZoTM2JnW/">
+        </link>
+        <updated>2020-04-15T01:03:55.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Tensorflow，CUDA，cuDNN 以及 Python 兼容版本对照表]]></title>
         <id>https://Wangrongsheng.github.io/post/koNv1mB27/</id>
@@ -67,19 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/jiD0zk0jn/">
         </link>
         <updated>2020-04-13T01:48:01.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[用Numpy手写各种距离度量]]></title>
-        <id>https://Wangrongsheng.github.io/post/YHbjyPZKl/</id>
-        <link href="https://Wangrongsheng.github.io/post/YHbjyPZKl/">
-        </link>
-        <updated>2020-04-12T12:16:55.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[K-means]]></title>
-        <id>https://Wangrongsheng.github.io/post/aYMnsCS39/</id>
-        <link href="https://Wangrongsheng.github.io/post/aYMnsCS39/">
-        </link>
-        <updated>2020-04-12T03:47:12.000Z</updated>
     </entry>
 </feed>
