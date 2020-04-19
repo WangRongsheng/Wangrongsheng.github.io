@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-19T01:05:43.593Z</updated>
+    <updated>2020-04-19T10:41:05.606Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -55,6 +55,13 @@
         <updated>2020-04-14T06:56:33.000Z</updated>
     </entry>
     <entry>
+        <title type="html"><![CDATA[AI]]></title>
+        <id>https://Wangrongsheng.github.io/post/YoYRgL09p/</id>
+        <link href="https://Wangrongsheng.github.io/post/YoYRgL09p/">
+        </link>
+        <updated>2020-04-14T06:27:50.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[博客嵌入可以自适应的b站视频]]></title>
         <id>https://Wangrongsheng.github.io/post/0tY5nYPK2/</id>
         <link href="https://Wangrongsheng.github.io/post/0tY5nYPK2/">
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/kcfk16DSF/">
         </link>
         <updated>2020-04-13T12:22:54.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[认识百度AI开发平台]]></title>
-        <id>https://Wangrongsheng.github.io/post/FkhiaswhA/</id>
-        <link href="https://Wangrongsheng.github.io/post/FkhiaswhA/">
-        </link>
-        <updated>2020-04-13T10:23:10.000Z</updated>
     </entry>
 </feed>
