@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-26T03:18:08.959Z</updated>
+    <updated>2020-04-26T04:23:56.438Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[基于百度AI开发平台的智能写诗 & 智能春联]]></title>
+        <id>https://Wangrongsheng.github.io/post/8BnJ8IzJ-/</id>
+        <link href="https://Wangrongsheng.github.io/post/8BnJ8IzJ-/">
+        </link>
+        <updated>2020-04-26T04:23:19.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linear Regression]]></title>
         <id>https://Wangrongsheng.github.io/post/Mw4WwCezN/</id>
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/xAiErfzbT/">
         </link>
         <updated>2020-04-18T07:49:11.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[深度学习之手势识别（一）环境搭建]]></title>
-        <id>https://Wangrongsheng.github.io/post/1hH_BlSx0/</id>
-        <link href="https://Wangrongsheng.github.io/post/1hH_BlSx0/">
-        </link>
-        <updated>2020-04-18T02:32:54.000Z</updated>
     </entry>
 </feed>
