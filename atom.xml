@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-28T02:06:52.400Z</updated>
+    <updated>2020-04-29T01:37:29.660Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[Git设置记住账号密码]]></title>
+        <id>https://Wangrongsheng.github.io/post/2J_BEdrl0/</id>
+        <link href="https://Wangrongsheng.github.io/post/2J_BEdrl0/">
+        </link>
+        <updated>2020-04-29T01:37:00.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[蚁群算法（Ant Colony Optimization）]]></title>
         <id>https://Wangrongsheng.github.io/post/AEHJ7fQro/</id>
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/sEyjh6ssm/">
         </link>
         <updated>2020-04-23T01:54:34.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python创建虚拟环境]]></title>
-        <id>https://Wangrongsheng.github.io/post/TVONRWeGa/</id>
-        <link href="https://Wangrongsheng.github.io/post/TVONRWeGa/">
-        </link>
-        <updated>2020-04-22T09:41:07.000Z</updated>
     </entry>
 </feed>
