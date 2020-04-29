@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-29T01:37:29.660Z</updated>
+    <updated>2020-04-29T02:06:18.404Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[爬虫的基本原理]]></title>
+        <id>https://Wangrongsheng.github.io/post/aMeAbA7UC/</id>
+        <link href="https://Wangrongsheng.github.io/post/aMeAbA7UC/">
+        </link>
+        <updated>2020-04-29T02:05:05.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Git设置记住账号密码]]></title>
         <id>https://Wangrongsheng.github.io/post/2J_BEdrl0/</id>
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/ZZuyOCXTf/">
         </link>
         <updated>2020-04-23T04:18:52.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[什么是机器学习]]></title>
-        <id>https://Wangrongsheng.github.io/post/sEyjh6ssm/</id>
-        <link href="https://Wangrongsheng.github.io/post/sEyjh6ssm/">
-        </link>
-        <updated>2020-04-23T01:54:34.000Z</updated>
     </entry>
 </feed>
