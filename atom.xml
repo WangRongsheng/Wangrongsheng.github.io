@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-04-30T14:10:24.860Z</updated>
+    <updated>2020-05-01T03:24:30.425Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[自动获取优学院课程全部答案]]></title>
+        <id>https://Wangrongsheng.github.io/post/3yBhZzzkp/</id>
+        <link href="https://Wangrongsheng.github.io/post/3yBhZzzkp/">
+        </link>
+        <updated>2020-05-01T03:20:38.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[朴素贝叶斯（Naive Bayes model）]]></title>
         <id>https://Wangrongsheng.github.io/post/qxtTazjkv/</id>
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/8BnJ8IzJ-/">
         </link>
         <updated>2020-04-26T04:23:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linear Regression]]></title>
-        <id>https://Wangrongsheng.github.io/post/Mw4WwCezN/</id>
-        <link href="https://Wangrongsheng.github.io/post/Mw4WwCezN/">
-        </link>
-        <updated>2020-04-25T11:55:43.000Z</updated>
     </entry>
 </feed>
