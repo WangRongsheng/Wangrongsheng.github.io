@@ -8,7 +8,7 @@
 <meta name="baidu_union_verify" content="cc00dc66a90de929a0433e5c9366e0b6">
 <!--google-->
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>Markdown基础语法 - 王荣胜</title>
+<title>用OpenCV和Python构建车辆检测 - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -18,31 +18,34 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Markdown基础语法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="用OpenCV和Python构建车辆检测 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
   <meta name="description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
-  <meta property="og:title" content="Markdown基础语法 - 王荣胜">
+简介
+本篇文章中实现车辆检测采用视频中无监督目标检测方法，即不使用任何标记数据的目标检测。使用帧差分技术。
+帧差分
+视频是一组按正确顺序堆叠在一起的帧。所以，当我们看到一个物体在视频中移动时，这意味着这个物体在每一个连续的帧上都处于不同的..." />
+  <meta property="og:title" content="用OpenCV和Python构建车辆检测 - 王荣胜">
   <meta property="og:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
+简介
+本篇文章中实现车辆检测采用视频中无监督目标检测方法，即不使用任何标记数据的目标检测。使用帧差分技术。
+帧差分
+视频是一组按正确顺序堆叠在一起的帧。所以，当我们看到一个物体在视频中移动时，这意味着这个物体在每一个连续的帧上都处于不同的..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://Wangrongsheng.github.io/post/UWPsajVaD/" />
-  <meta property="og:image" content="https://s2.ax1x.com/2020/02/19/3EhGi8.png">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/Z81AYL98W/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="Markdown基础语法 - 王荣胜">
+  <meta name="twitter:title" content="用OpenCV和Python构建车辆检测 - 王荣胜">
   <meta name="twitter:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静...">
+简介
+本篇文章中实现车辆检测采用视频中无监督目标检测方法，即不使用任何标记数据的目标检测。使用帧差分技术。
+帧差分
+视频是一组按正确顺序堆叠在一起的帧。所以，当我们看到一个物体在视频中移动时，这意味着这个物体在每一个连续的帧上都处于不同的...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/Z81AYL98W/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -66,17 +69,20 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          Markdown基础语法
+          用OpenCV和Python构建车辆检测
         </h1>
         
-          <img src="https://s2.ax1x.com/2020/02/19/3EhGi8.png" alt="Markdown基础语法" class="block w-full mb-8">
-        
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-02-19 · 5 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-05-15 · 12 min read</div>
           
-            <a href="https://Wangrongsheng.github.io/tag/markdown/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+            <a href="https://Wangrongsheng.github.io/tag/opencv/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
               <i class="ri-hashtag"></i>
-              Markdown
+              Opencv
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/python/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Python
             </a>
           
           
@@ -93,256 +99,378 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
         </div>
         <div class="markdown mb-8" v-pre>
           <!-- more -->
-<h1 id="markdown简介">Markdown简介</h1>
-<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
-<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
-<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
-<h1 id="markdown基础语法">Markdown基础语法</h1>
-<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
-<h2 id="标题">标题</h2>
-<p>使用#，表示1-6级标题。</p>
-<pre><code class="language-text"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+<h1 id="简介">简介</h1>
+<p>本篇文章中实现车辆检测采用<strong>视频中无监督目标检测方法，即不使用任何标记数据的目标检测。使用帧差分技术。</strong></p>
+<h2 id="帧差分">帧差分</h2>
+<p>视频是一组按正确顺序堆叠在一起的帧。所以，当我们看到一个物体在视频中移动时，这意味着这个物体在每一个连续的帧上都处于不同的位置。</p>
+<p>如果我们假设在一对连续的帧中除了该目标之外，没有其他物体移动，那么第一帧与第二帧的像素差将突出显示移动目标的像素，从而我们可以得到移动物体的像素和坐标。这就是帧差分法的工作原理。</p>
+<p>举个例子。考虑视频中的以下两个帧：</p>
+<center><img src="https://s1.ax1x.com/2020/05/15/YrwqN8.png" alt="YrwqN8.png" border="0" /></center>
+<p>你能看出这两帧的区别吗？</p>
+<p>握笔手的位置从第1帧变为第2帧。其余的物体根本没有移动。所以，正如前面提到的，为了定位移动目标，我们将执行帧差分。结果如下：</p>
+<center><img src="https://s1.ax1x.com/2020/05/15/Yr0Sun.png" alt="Yr0Sun.png" border="0" /></center>
+<p>你可以看到高亮或白色区域，这是手最初出现的地方。除此之外，记事本的边缘也会突出显示一点。这可能是由于手的移动改变了光照。建议不要对静止物体进行不必要的检测。因此，我们需要对帧执行某些图像预处理步骤。</p>
+<h1 id="构建车辆检测">构建车辆检测</h1>
+<h2 id="导入库">导入库</h2>
+<pre><code class="language-python">import os
+import re
+import cv2 # opencv library
+import numpy as np
+from os.path import isfile, join
+import matplotlib.pyplot as plt
 </code></pre>
-<h2 id="引用">引用</h2>
-<h3 id="普通引用">普通引用</h3>
-<pre><code class="language-text">&gt; 引用文本!
-</code></pre>
-<p>效果：</p>
-<blockquote>
-<p>引用文本！</p>
-</blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<pre><code class="language-text">&gt; 第一层
-&gt;&gt; 第二层
-</code></pre>
-<p>效果：</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-</blockquote>
-</blockquote>
-<h2 id="表格">表格</h2>
-<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
-| :-- | :--: | --: |
-| A1 | B1 | C1 |
-| A2 | B2 | C2 |
-</code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字段1</th>
-<th style="text-align:center">字段2</th>
-<th style="text-align:right">字段3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">A1</td>
-<td style="text-align:center">B1</td>
-<td style="text-align:right">C1</td>
-</tr>
-<tr>
-<td style="text-align:left">A2</td>
-<td style="text-align:center">B2</td>
-<td style="text-align:right">C2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码">代码</h2>
-<h3 id="行内">行内</h3>
-<pre><code class="language-text">AAA`BBB`CCC
-</code></pre>
-<p>效果：</p>
-<p>AAA<code>BBB</code>CCC</p>
-<h3 id="区块">区块</h3>
-<h4 id="4个空格">4个空格</h4>
-<p>在每行前面加上4个空格</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<p>效果：</p>
-<pre><code class="language-text">text = &quot;Hello, world!&quot;
-print(text)
-</code></pre>
-<h4 id="3个">3个 `</h4>
-<pre><code class="language-text">```text
-text = &quot;Hello, world!&quot;
-print(text)
-\```
-</code></pre>
-<blockquote>
-<p>上述中的“\”是转义使用的！</p>
-</blockquote>
-<p>效果：</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<h2 id="字体样式">字体样式</h2>
-<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
-<pre><code class="language-text">*text* 或 _text_ 斜体
+<h2 id="导入视频帧">导入视频帧</h2>
+<p>请从此链接下载<a href="https://drive.google.com/file/d/1P0yiO5KlnU8dGgB_L68KB_hjIvUec55f/view?usp=sharing">原始视频的帧</a>。</p>
+<p>将框架保存在工作目录中名为“frames”的文件夹中。从该文件夹中，我们将导入帧并将其保存在列表中：</p>
+<pre><code class="language-python"># get file names of the frames
+col_frames = os.listdir('frames/')
 
-**text** 或 __text__ 粗体
+# sort file names
+col_frames.sort(key=lambda f: int(re.sub('\D', '', f)))
 
-***text*** 或 ___text___ 粗斜体
-</code></pre>
-<p>效果</p>
-<p><em>text</em> 斜体</p>
-<p><strong>text</strong> 粗体</p>
-<p><em><strong>text</strong></em> 粗斜体</p>
-<h3 id="上标下标">上标,下标</h3>
-<h4 id="上标">上标</h4>
-<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
-</code></pre>
-<p>效果：</p>
-<p>益达<sup>TM</sup></p>
-<h4 id="下标">下标</h4>
-<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
+# empty list to store the frames
+col_images=[]
 
-H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
+for i in col_frames:
+    # read the frames
+    img = cv2.imread('frames/'+i)
+    # append the frames to the list
+    col_images.append(img)
 </code></pre>
-<p>效果:</p>
-<p>X<sub>i</sub></p>
-<p>H<sub>2</sub>O  CO<sub>2</sub></p>
-<h3 id="下划线">下划线</h3>
-<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
+<h2 id="数据探索">数据探索</h2>
+<p>让我们显示两个连续的帧：</p>
+<pre><code class="language-python"># plot 13th frame
+i = 13
+
+for frame in [i, i+1]:
+    plt.imshow(cv2.cvtColor(col_images[frame], cv2.COLOR_BGR2RGB))
+    plt.title(&quot;frame: &quot;+str(frame))
+    plt.show()
 </code></pre>
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h3 id="删除线">删除线</h3>
-<pre><code class="language-text">~~删除线~~
+<p>很难在这两个框架中找到区别，不是吗？如前所述，获取两个连续帧的像素值的差值将有助于我们观察移动目标。那么，让我们在上面两个帧上使用该技术：</p>
+<pre><code class="language-python"># convert the frames to grayscale
+grayA = cv2.cvtColor(col_images[i], cv2.COLOR_BGR2GRAY)
+grayB = cv2.cvtColor(col_images[i+1], cv2.COLOR_BGR2GRAY)
+
+# plot the image after frame differencing
+plt.imshow(cv2.absdiff(grayB, grayA), cmap = 'gray')
+plt.show()
 </code></pre>
-<p>效果：</p>
-<p><s>删除线</s></p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
-<pre><code class="language-text">- 第一项
-- 第二项
-- 第三项
+<p>现在我们可以清楚地看到第13帧和第14帧中的移动目标。其他没有移动的东西都被减去了。</p>
+<h2 id="图像预处理">图像预处理</h2>
+<p>让我们看看对上面的图像应用阈值后会发生什么：</p>
+<pre><code class="language-python">diff_image = cv2.absdiff(grayB, grayA)
+
+# perform image thresholding
+ret, thresh = cv2.threshold(diff_image, 30, 255, cv2.THRESH_BINARY)
+
+# plot image after thresholding
+plt.imshow(thresh, cmap = 'gray')
+plt.show()
 </code></pre>
-<blockquote>
-<p>注: 标记后面最少有一个 空格 或 制表符。</p>
-</blockquote>
-<p>效果：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
-<pre><code class="language-text">1. 第一项   
-2. 第二项    
-3. 第三项
+<p>现在，移动物体（车辆）看起来更像我们期望看到的那样了，大部分噪音（不希望出现的白色区域）都消失了。但是，突出显示的区域有点零碎。因此，我们可以对该图像应用图像膨胀：</p>
+<pre><code class="language-python"># apply image dilation
+kernel = np.ones((3,3),np.uint8)
+dilated = cv2.dilate(thresh,kernel,iterations = 1)
+
+# plot dilated image
+plt.imshow(dilated, cmap = 'gray')
+plt.show()
 </code></pre>
-<p>效果：</p>
+<p>移动的物体有更多的实心高亮区域。希望帧中每个目标的轮廓数不超过3。</p>
+<p>但是，我们不会使用整个框架来检测移动的车辆。我们将首先选择一个区域，如果车辆进入该区域，则仅检测到该区域。</p>
+<p>那么，我们将会使用的区域:</p>
+<pre><code class="language-python"># plot vehicle detection zone
+plt.imshow(dilated)
+cv2.line(dilated, (0, 80),(256,80),(100, 0, 0))
+plt.show()
+</code></pre>
+<p>水平线y = 80以下的区域是我们的车辆检测区域。我们将只检测在这个区域发生的任何移动。你还可以创建自己的检测区。</p>
+<p>现在让我们在上述帧的检测区域中找到轮廓：</p>
+<pre><code class="language-python"># find contours
+contours, hierarchy = cv2.findContours(thresh.copy(),cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+</code></pre>
+<p>上面的代码查找整个图像中的所有轮廓，并将它们保存在变量&quot;contours&quot;中。由于我们只需要找到检测区域中存在的轮廓，我们将对发现的轮廓进行两次检查。</p>
+<p>第一个检查是轮廓左上角的y坐标是否应大于等于80（我这里包括另一个检查，x坐标小于等于200）。另一个检查是轮廓的面积是否大于等于25。在<code>cv2.courtoArea()</code> 函数的帮助下，你可以找到轮廓区域。</p>
+<pre><code class="language-python">valid_cntrs = []
+
+for i,cntr in enumerate(contours):
+    x,y,w,h = cv2.boundingRect(cntr)
+    if (x &lt;= 200) &amp; (y &gt;= 80) &amp; (cv2.contourArea(cntr) &gt;= 25):
+        valid_cntrs.append(cntr)
+
+# count of discovered contours        
+len(valid_cntrs)
+</code></pre>
+<p>接下来，让我们绘制轮廓和原始帧:</p>
+<pre><code class="language-python">dmy = col_images[13].copy()
+
+cv2.drawContours(dmy, valid_cntrs, -1, (127,200,0), 2)
+cv2.line(dmy, (0, 80),(256,80),(100, 255, 255))
+plt.imshow(dmy)
+plt.show()
+</code></pre>
+<p>太酷了！只有位于检测区域内的车辆轮廓可见。这就是我们在整个画面中检测车辆的方法</p>
+<h1 id="视频中的车辆检测">视频中的车辆检测</h1>
+<p>现在是时候对所有帧应用相同的图像变换和预处理操作，并找到所需的轮廓。重申一下，我们将遵循以下步骤：</p>
 <ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
+<li>对每对连续帧应用帧差分</li>
+<li>对上一步的输出图像应用图像阈值</li>
+<li>对上一步的输出图像进行图像放大</li>
+<li>在上一步的输出图像中查找轮廓</li>
+<li>检测区域出现的候选轮廓</li>
+<li>保存帧与最终轮廓</li>
 </ol>
-<h3 id="任务列表">任务列表</h3>
-<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
-<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [x] Nulla lobortis egestas semper
-- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    - [x] In hac habitasse platea dictumst
-    - [x] In scelerisque nibh non dolor mollis congue sed et metus
-    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
-    - [ ] Praesent sed risus massa
-- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
-- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</code></pre>
-<p>效果：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2261715"><label class="task-list-item-label" for="task-item-2261715"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6877887"><label class="task-list-item-label" for="task-item-6877887"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1840041"><label class="task-list-item-label" for="task-item-1840041"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7298718"><label class="task-list-item-label" for="task-item-7298718"> Vestibulum convallis sit amet nisi a tincidunt</label>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2094875"><label class="task-list-item-label" for="task-item-2094875"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9888533"><label class="task-list-item-label" for="task-item-9888533"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2255191"><label class="task-list-item-label" for="task-item-2255191"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-990822"><label class="task-list-item-label" for="task-item-990822"> Praesent sed risus massa</label></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2769198"><label class="task-list-item-label" for="task-item-2769198"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-869338"><label class="task-list-item-label" for="task-item-869338"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
-</ul>
-<h3 id="嵌套列表">嵌套列表</h3>
-<pre><code class="language-text">- aaa
-    - bbb
-</code></pre>
-<p>效果：</p>
-<ul>
-<li>aaa
-<ul>
-<li>bbb</li>
-</ul>
-</li>
-</ul>
-<h2 id="分割线">分割线</h2>
-<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
-<pre><code class="language-text">---
-</code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="链接">链接</h2>
-<h3 id="普通链接">普通链接</h3>
-<h4 id="行内式">行内式</h4>
-<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-<h4 id="参考式">参考式</h4>
-<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
-<pre><code class="language-text">[example][索引]
+<pre><code class="language-python"># kernel for image dilation
+kernel = np.ones((4,4),np.uint8)
 
-[索引]: http://www.example.com/ &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<blockquote>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-</blockquote>
-<h3 id="自动链接">自动链接</h3>
-<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
-<h2 id="图片">图片</h2>
-<h3 id="行内式-2">行内式</h3>
-<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
-<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h3 id="参考式-2">参考式</h3>
-<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
-<pre><code class="language-text">![alt][索引]
+# font style
+font = cv2.FONT_HERSHEY_SIMPLEX
 
-[索引]: 图片地址 &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h2 id="转义">转义</h2>
-<pre><code class="language-text">\转义的内容
-</code></pre>
+# directory to save the ouput frames
+pathIn = &quot;contour_frames_3/&quot;
 
+for i in range(len(col_images)-1):
+
+    # frame differencing
+    grayA = cv2.cvtColor(col_images[i], cv2.COLOR_BGR2GRAY)
+    grayB = cv2.cvtColor(col_images[i+1], cv2.COLOR_BGR2GRAY)
+    diff_image = cv2.absdiff(grayB, grayA)
+
+    # image thresholding
+    ret, thresh = cv2.threshold(diff_image, 30, 255, cv2.THRESH_BINARY)
+
+    # image dilation
+    dilated = cv2.dilate(thresh,kernel,iterations = 1)
+
+    # find contours
+    contours, hierarchy = cv2.findContours(dilated.copy(), cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+
+    # shortlist contours appearing in the detection zone
+    valid_cntrs = []
+    for cntr in contours:
+        x,y,w,h = cv2.boundingRect(cntr)
+        if (x &lt;= 200) &amp; (y &gt;= 80) &amp; (cv2.contourArea(cntr) &gt;= 25):
+            if (y &gt;= 90) &amp; (cv2.contourArea(cntr) &lt; 40):
+                break
+            valid_cntrs.append(cntr)
+
+    # add contours to original frames
+    dmy = col_images[i].copy()
+    cv2.drawContours(dmy, valid_cntrs, -1, (127,200,0), 2)
+
+    cv2.putText(dmy, &quot;vehicles detected: &quot; + str(len(valid_cntrs)), (55, 15), font, 0.6, (0, 180, 0), 2)
+    cv2.line(dmy, (0, 80),(256,80),(100, 255, 255))
+    cv2.imwrite(pathIn+str(i)+'.png',dmy)
+</code></pre>
+<h2 id="准备视频">准备视频</h2>
+<p>在这里，我们为所有帧中的所有移动车辆添加了轮廓。现在是时候堆叠帧并创建视频了：</p>
+<pre><code class="language-python"># specify video name
+pathOut = 'vehicle_detection_v3.mp4'
+
+# specify frames per second
+fps = 14.0
+</code></pre>
+<p>接下来，我们将阅读列表中的最后一帧：</p>
+<pre><code class="language-python">frame_array = []
+files = [f for f in os.listdir(pathIn) if isfile(join(pathIn, f))]
+files.sort(key=lambda f: int(re.sub('\D', '', f)))
+</code></pre>
+<pre><code class="language-python">for i in range(len(files)):
+    filename=pathIn + files[i]
+
+    #read frames
+    img = cv2.imread(filename)
+    height, width, layers = img.shape
+    size = (width,height)
+
+    #inserting the frames into an image array
+    frame_array.append(img)
+</code></pre>
+<h2 id="制作目标检测视频">制作目标检测视频</h2>
+<p>最后，我们将使用以下代码制作目标检测视频：</p>
+<pre><code class="language-python">out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+
+for i in range(len(frame_array)):
+    # writing to a image array
+    out.write(frame_array[i])
+
+out.release()
+</code></pre>
+<h1 id="全代码">全代码</h1>
+<pre><code class="language-python">#导入库
+import os
+import re
+import cv2 # opencv library
+import numpy as np
+from os.path import isfile, join
+import matplotlib.pyplot as plt
+
+
+# 导入视频帧
+# get file names of the frames
+col_frames = os.listdir('frames/')
+
+# sort file names
+col_frames.sort(key=lambda f: int(re.sub('\D', '', f)))
+
+# empty list to store the frames
+col_images=[]
+
+for i in col_frames:
+    # read the frames
+    img = cv2.imread('frames/'+i)
+    # append the frames to the list
+    col_images.append(img)
+
+# 数据探索
+# plot 13th frame
+i = 13
+
+for frame in [i, i+1]:
+    plt.imshow(cv2.cvtColor(col_images[frame], cv2.COLOR_BGR2RGB))
+    plt.title(&quot;frame: &quot;+str(frame))
+    plt.show()
+
+# 像素差值展示
+# convert the frames to grayscale
+grayA = cv2.cvtColor(col_images[i], cv2.COLOR_BGR2GRAY)
+grayB = cv2.cvtColor(col_images[i+1], cv2.COLOR_BGR2GRAY)
+
+# plot the image after frame differencing
+plt.imshow(cv2.absdiff(grayB, grayA), cmap = 'gray')
+plt.show()
+
+# 图像预处理
+diff_image = cv2.absdiff(grayB, grayA)
+
+# perform image thresholding
+ret, thresh = cv2.threshold(diff_image, 30, 255, cv2.THRESH_BINARY)
+
+# plot image after thresholding
+plt.imshow(thresh, cmap = 'gray')
+plt.show()
+
+# 图像膨胀
+# apply image dilation
+kernel = np.ones((3,3),np.uint8)
+dilated = cv2.dilate(thresh,kernel,iterations = 1)
+
+# plot dilated image
+plt.imshow(dilated, cmap = 'gray')
+plt.show()
+
+# 区域选定
+# plot vehicle detection zone
+plt.imshow(dilated)
+cv2.line(dilated, (0, 80),(256,80),(100, 0, 0))
+plt.show()
+
+# find contours
+contours, hierarchy = cv2.findContours(thresh.copy(),cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+
+#
+valid_cntrs = []
+
+for i,cntr in enumerate(contours):
+    x,y,w,h = cv2.boundingRect(cntr)
+    if (x &lt;= 200) &amp; (y &gt;= 80) &amp; (cv2.contourArea(cntr) &gt;= 25):
+        valid_cntrs.append(cntr)
+
+# count of discovered contours        
+len(valid_cntrs)
+
+dmy = col_images[13].copy()
+
+cv2.drawContours(dmy, valid_cntrs, -1, (127,200,0), 2)
+cv2.line(dmy, (0, 80),(256,80),(100, 255, 255))
+plt.imshow(dmy)
+plt.show()
+
+# kernel for image dilation
+kernel = np.ones((4,4),np.uint8)
+
+# font style
+font = cv2.FONT_HERSHEY_SIMPLEX
+
+# directory to save the ouput frames
+pathIn = &quot;contour_frames_3/&quot;
+
+for i in range(len(col_images)-1):
+
+    # frame differencing
+    grayA = cv2.cvtColor(col_images[i], cv2.COLOR_BGR2GRAY)
+    grayB = cv2.cvtColor(col_images[i+1], cv2.COLOR_BGR2GRAY)
+    diff_image = cv2.absdiff(grayB, grayA)
+
+    # image thresholding
+    ret, thresh = cv2.threshold(diff_image, 30, 255, cv2.THRESH_BINARY)
+
+    # image dilation
+    dilated = cv2.dilate(thresh,kernel,iterations = 1)
+
+    # find contours
+    contours, hierarchy = cv2.findContours(dilated.copy(), cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+
+    # shortlist contours appearing in the detection zone
+    valid_cntrs = []
+    for cntr in contours:
+        x,y,w,h = cv2.boundingRect(cntr)
+        if (x &lt;= 200) &amp; (y &gt;= 80) &amp; (cv2.contourArea(cntr) &gt;= 25):
+            if (y &gt;= 90) &amp; (cv2.contourArea(cntr) &lt; 40):
+                break
+            valid_cntrs.append(cntr)
+
+    # add contours to original frames
+    dmy = col_images[i].copy()
+    cv2.drawContours(dmy, valid_cntrs, -1, (127,200,0), 2)
+
+    cv2.putText(dmy, &quot;vehicles detected: &quot; + str(len(valid_cntrs)), (55, 15), font, 0.6, (0, 180, 0), 2)
+    cv2.line(dmy, (0, 80),(256,80),(100, 255, 255))
+    cv2.imwrite(pathIn+str(i)+'.png',dmy)
+
+# 准备视频
+# specify video name
+pathOut = 'vehicle_detection_v3.mp4'
+
+# specify frames per second
+fps = 14.0
+
+frame_array = []
+files = [f for f in os.listdir(pathIn) if isfile(join(pathIn, f))]
+files.sort(key=lambda f: int(re.sub('\D', '', f)))
+
+for i in range(len(files)):
+    filename=pathIn + files[i]
+
+    #read frames
+    img = cv2.imread(filename)
+    height, width, layers = img.shape
+    size = (width,height)
+
+    #inserting the frames into an image array
+    frame_array.append(img)
+
+out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+
+for i in range(len(frame_array)):
+    # writing to a image array
+    out.write(frame_array[i])
+
+out.release()
+</code></pre>
+<h1 id="文件格式">文件格式</h1>
+<p>初始化时你的文件的格式为：</p>
+<pre><code class="language-html">.
+├── 车辆识别.py
+├── frames
+└── contour_frames_3
+</code></pre>
+<h1 id="演示视频">演示视频</h1>
+<iframe id="spkj" src="https://player.bilibili.com/player.html?aid=200673836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%> </iframe>
+<script type="text/javascript">  
+document.getElementById("spkj").style.height=document.getElementById("spkj").scrollWidth*0.76+"px";
+</script>
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
                 <div class="flex items-center">
@@ -881,70 +1009,28 @@ setInterval("createtime()",250);
       </div>
       <div class="post-toc-container">
         <ul class="markdownIt-TOC">
-<li><a href="#markdown%E7%AE%80%E4%BB%8B">Markdown简介</a></li>
-<li><a href="#markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">Markdown基础语法</a>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a>
 <ul>
-<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
-<li><a href="#%E5%BC%95%E7%94%A8">引用</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E5%BC%95%E7%94%A8">普通引用</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%BC%95%E7%94%A8">嵌套引用</a></li>
+<li><a href="#%E5%B8%A7%E5%B7%AE%E5%88%86">帧差分</a></li>
 </ul>
 </li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81">代码</a>
+<li><a href="#%E6%9E%84%E5%BB%BA%E8%BD%A6%E8%BE%86%E6%A3%80%E6%B5%8B">构建车辆检测</a>
 <ul>
-<li><a href="#%E8%A1%8C%E5%86%85">行内</a></li>
-<li><a href="#%E5%8C%BA%E5%9D%97">区块</a>
+<li><a href="#%E5%AF%BC%E5%85%A5%E5%BA%93">导入库</a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E8%A7%86%E9%A2%91%E5%B8%A7">导入视频帧</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2">数据探索</a></li>
+<li><a href="#%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86">图像预处理</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E8%BD%A6%E8%BE%86%E6%A3%80%E6%B5%8B">视频中的车辆检测</a>
 <ul>
-<li><a href="#4%E4%B8%AA%E7%A9%BA%E6%A0%BC">4个空格</a></li>
-<li><a href="#3%E4%B8%AA">3个 `</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E8%A7%86%E9%A2%91">准备视频</a></li>
+<li><a href="#%E5%88%B6%E4%BD%9C%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E8%A7%86%E9%A2%91">制作目标检测视频</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F">字体样式</a>
-<ul>
-<li><a href="#%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E7%B2%97%E6%96%9C%E4%BD%93">斜体,粗体,粗斜体</a></li>
-<li><a href="#%E4%B8%8A%E6%A0%87%E4%B8%8B%E6%A0%87">上标,下标</a>
-<ul>
-<li><a href="#%E4%B8%8A%E6%A0%87">上标</a></li>
-<li><a href="#%E4%B8%8B%E6%A0%87">下标</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
-<ul>
-<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E9%93%BE%E6%8E%A5">普通链接</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">自动链接</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%BE%E7%89%87">图片</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F-2">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F-2">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BD%AC%E4%B9%89">转义</a></li>
-</ul>
-</li>
+<li><a href="#%E5%85%A8%E4%BB%A3%E7%A0%81">全代码</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F">文件格式</a></li>
+<li><a href="#%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91">演示视频</a></li>
 </ul>
 
       </div>
