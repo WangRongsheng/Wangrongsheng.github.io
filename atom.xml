@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Wangrongsheng.github.io</id>
     <title>王荣胜</title>
-    <updated>2020-05-20T10:42:14.959Z</updated>
+    <updated>2020-05-24T02:08:25.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Wangrongsheng.github.io"/>
     <link rel="self" href="https://Wangrongsheng.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://Wangrongsheng.github.io/images/avatar.png</logo>
     <icon>https://Wangrongsheng.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 王荣胜</rights>
+    <entry>
+        <title type="html"><![CDATA[深度学习中的batch、epoch、iteration]]></title>
+        <id>https://Wangrongsheng.github.io/post/v8nO-SL05/</id>
+        <link href="https://Wangrongsheng.github.io/post/v8nO-SL05/">
+        </link>
+        <updated>2020-05-24T02:07:49.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python「剪藏」网页为 PDF]]></title>
         <id>https://Wangrongsheng.github.io/post/0CG3l2x-A/</id>
@@ -74,12 +81,5 @@
         <link href="https://Wangrongsheng.github.io/post/HkKtStsCl/">
         </link>
         <updated>2020-05-11T09:46:22.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SCI论文投稿全程模板]]></title>
-        <id>https://Wangrongsheng.github.io/post/Ouum2wVyq/</id>
-        <link href="https://Wangrongsheng.github.io/post/Ouum2wVyq/">
-        </link>
-        <updated>2020-05-10T11:19:30.000Z</updated>
     </entry>
 </feed>
