@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 <meta name="baidu_union_verify" content="cc00dc66a90de929a0433e5c9366e0b6">
 <!--google-->
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>王荣胜</title>
+<title>学生疫情期间信息管理系统（python实现） - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -17,336 +18,327 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="学生疫情期间信息管理系统（python实现） - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
-  <meta name="description" content="<font color=#E80017>可</font><font color=#D1002E>以</font><font color=#BA0045>允</font><font color=#A3005C>许</font><font
-            color=#8C0073>不</font><font color=#75008A>完</font><font color=#5E00A1>美</font><font
-            color=#4700B8>,</font><font color=#3000CF>但</font><font color=#1900E6>不</font><font color=#0200FD>能</font><font color=#1900E6>不</font><font color=#0200FD>做</font>" />
-  <script data-ad-client="ca-pub-2332352552075666" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="description" content="
+import time
+
+def meun():
+    menu_info = &#39;&#39;&#39;＋－－－－－－－－－－－－－－－－－－－－－－＋
+｜ １）添加学生信息                           ｜
+｜ ２）显示所有学生的..." />
+  <meta property="og:title" content="学生疫情期间信息管理系统（python实现） - 王荣胜">
+  <meta property="og:description" content="
+import time
+
+def meun():
+    menu_info = &#39;&#39;&#39;＋－－－－－－－－－－－－－－－－－－－－－－＋
+｜ １）添加学生信息                           ｜
+｜ ２）显示所有学生的..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/XKyLFg5bR/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="学生疫情期间信息管理系统（python实现） - 王荣胜">
+  <meta name="twitter:description" content="
+import time
+
+def meun():
+    menu_info = &#39;&#39;&#39;＋－－－－－－－－－－－－－－－－－－－－－－＋
+｜ １）添加学生信息                           ｜
+｜ ２）显示所有学生的...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/XKyLFg5bR/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
 </head>
+
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          学生疫情期间信息管理系统（python实现）
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-05-31 · 6 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/python/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Python
+            </a>
+          
+          
 
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
-    </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/links" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        友链
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-      <a href="https://travellings.now.sh/" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        Travellings
-      </a>
-    
-    
-    <!--搜索-->
-    <!--form id="gridea-search-form" data-update="1590890186748" action="/search/">
-    <input name="q" placeholder="搜一下..."/>
-    </form-->
-    
-    <!--a href="https://Wangrongsheng.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a-->
-    
-    
-    
-  </nav>
-</div>
+          <div class="share" style="margin-left: auto;margin-right: 20px;cursor: pointer;" onclick="share(this)">
+          <a class="text-gray-400"><i class="ri-qr-code-line" style="position:relative; top:2px"></i><a href="https://s1.ax1x.com/2020/04/13/Gjp7IU.png" target="_blank">手机阅读</a></a>
+          </div>
+          
+          
+          
+        
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<pre><code class="language-python">import time
+
+def meun():
+    menu_info = '''＋－－－－－－－－－－－－－－－－－－－－－－＋
+｜ １）添加学生信息                           ｜
+｜ ２）显示所有学生的信息                     ｜
+｜ ３）删除学生信息                           ｜
+｜ ４）修改学生信息                           ｜
+｜ ５）按学生外出次数高－低显示学生信息       ｜
+｜ ６）按学生外出次数低－高显示学生信息       ｜
+｜ ７）按学生所在地确诊人数高－低显示学生信息 ｜
+｜ ８）按学生所在地确诊人数低－高显示学生信息 ｜
+｜ ９）保存学生信息到文件（students.txt)      ｜
+｜ １０）从文件中读取数据（students.txt)      ｜
+｜ 退出：其他任意按键＜回车＞                 ｜
+＋－－－－－－－－－－－－－－－－－－－－－－＋
+'''
+    print(menu_info)
+
+def get_outgotimes(*a):
+    for i in a:
+        return i.get(&quot;outgotimes&quot;)
+def get_people(*a):
+    for i in a:
+        return i.get(&quot;people&quot;)
+# 1)添加学生信息
+def add_student_info():
+    L = []
+    while True:
+        sid = input(&quot;请输入学号:&quot;)
+        if not sid: #学号为空跳出循环
+            break
+        n = input(&quot;请输入姓名:&quot;)
+        if not n: #名字为空，跳出循环
+            break
+        try:
+            a = int(input(&quot;请输入外出次数:&quot;))
+            s = int(input(&quot;请输入所在地确诊人数:&quot;))
+        except:
+            print(&quot;输入无效，请输入整数....重新录入信息&quot;)
+            continue
+        t = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime())
+        info = {&quot;id&quot;:sid,&quot;name&quot;:n,&quot;outgotimes&quot;:a,&quot;people&quot;:s,&quot;intimes&quot;:t}
+        L.append(info)
+    print(&quot;学生信息录入完毕！！！&quot;)
+    return L
+
+# 2)显示所有学生的信息
+def show_student_info(student_info):
+    if not student_info:
+        print(&quot;无数据信息......&quot;)
+        return
+    print(&quot;学号&quot;.center(12),&quot;姓名&quot;.center(8),&quot;外出次数&quot;.center(8),&quot;确诊人数&quot;.center(8),&quot;录入时间&quot;.center(30))
+    for info in student_info:
+        print(info.get(&quot;id&quot;).center(12),info.get(&quot;name&quot;).center(8),str(info.get(&quot;outgotimes&quot;)).center(8),str(info.get(&quot;people&quot;)).center(8),info.get(&quot;intimes&quot;).center(30))
+
+# 3) 删除学生信息
+def del_student_info(student_info,del_name = ''):
+    if not del_name:
+        del_name = input(&quot;请输入删除的学生姓名：&quot;)
+    for info in student_info:
+        if del_name == info.get(&quot;name&quot;):
+            print(&quot;学生信息即将被删除或更新&quot;)
+            return info
+    raise IndexError(&quot;学生信息不匹配,没有找到%s&quot; %del_name)
+
+# 4) 修改学生信息
+def mod_student_info(student_info):
+    mod_name = input(&quot;请输入修改的学生姓名:&quot;)
+    for info in student_info:
+        if mod_name == info.get(&quot;name&quot;):
+            m = input(&quot;请输入学号:&quot;)
+            if not m:
+                break
+            a = int(input(&quot;请输入外出次数:&quot;))
+            s = int(input(&quot;请输入所在地确诊人数:&quot;))
+            t = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime())
+            info = {&quot;id&quot;:m,&quot;name&quot;:mod_name,&quot;outgotimes&quot;:a,&quot;people&quot;:s,&quot;intimes&quot;:t}
+            return info
+    raise IndexError(&quot;学生信息不匹配，没有找到%s&quot;%mod_name)
+
+# 5) 按学生外出次数高—低显示学生信息
+def outgotimes_reduce(student_info):
+    print(&quot;按学生外出次数高—低显示:&quot;)
+    mit = sorted(student_info,key = get_outgotimes,reverse = True)
+    show_student_info(mit)
+
+# 6) 按学生外出次数低—高显示学生信息
+def outgotimes_rise(student_info):
+    print(&quot;按学生外出次数低—高显示:&quot;)
+    mit = sorted(student_info,key = get_outgotimes)
+    show_student_info(mit)
+
+# 7) 按照学生所在地确诊人数高—低显示学生信息
+def people_reduce(student_info):   
+    print(&quot;按学生所在地确诊人数高－低显示学生信息：&quot;)
+    mit = sorted(student_info ,key = get_people,reverse = True)
+    show_student_info(mit)
+
+# ８）按学生所在地确诊人数低—高显示学生信息
+def people_rise(student_info): 
+    print(&quot;按学生所在地确诊人数低—高显示学生信息&quot;)
+    mit = sorted(student_info ,key = get_people)
+    show_student_info(mit)
+
+# ９）保存学生信息到文件（students.txt)
+def save_info(student_info):
+    try:
+        students_txt = open(&quot;students.txt&quot;,&quot;w&quot;)     # 以写模式打开，并清空文件内容
+    except Exception as e:
+        students_txt = open(&quot;students.txt&quot;, &quot;x&quot;)    # 文件不存在，创建文件并打开
+    for info in student_info:
+        students_txt.write(str(info)+&quot;\n&quot;)          # 按行存储，添加换行符
+    students_txt.close()
+
+# １０）从文件中读取数据（students.txt) 
+def read_info():
+    old_info = []
+    try:
+        students_txt = open(&quot;students.txt&quot;)
+    except:
+        print(&quot;暂未保存数据信息&quot;)                       # 打开失败，文件不存在说明没有数据保存
+        return
+    while True:
+        info = students_txt.readline()
+        if not info:
+            break
+        #print(info)
+        info = info.rstrip()    #　去掉换行符
+        # print(info)
+        info = info[1:-1]       # 去掉｛｝
+        # print(info)
+        student_dict = {}       # 单个学生字典信息
+        for x in info.split(&quot;,&quot;):   # 以，为间隔拆分
+            # print(x)
+            key_value = []      # 开辟空间，key_value[0]存key,key_value[0]存value
+            for k in x.split(&quot;:&quot;):  # 以：为间隔拆分
+                k = k.strip()       #　去掉首尾空字符
+                # print(k)
+                if k[0] == k[-1] and len(k) &gt; 2:        # 判断是字符串还是整数
+                    key_value.append(k[1:-1])           # 去掉　首尾的＇
+                else:
+                    key_value.append(str(k))
+                # print(key_value)
+            student_dict[key_value[0]] = key_value[1]   # 学生信息添加
+        # print(student_dict)
+        old_info.append(student_dict)   # 所有学生信息汇总
+    students_txt.close()  
+    return old_info   
+
+    
+def main():
+    student_info = []
+    while True:
+        # print(student_info)
+        meun()
+        number = input(&quot;请输入选项：&quot;)
+        if number == '1':
+            student_info = add_student_info()
+        elif number == '2':
+            show_student_info(student_info)
+        elif number == '3':
+            try:
+                student_info.remove(del_student_info(student_info))
+            except Exception as e:
+                # 学生学号不匹配
+                print(e)            
+        elif number == '4':
+            try:                
+                student = mod_student_info(student_info)
+            except Exception as e:
+                # 学生学号不匹配
+                print(e)
+            else:
+                # 首先按照根据输入信息的名字，从列表中删除该生信息，然后重新添加该学生最新信息
+                student_info.remove(del_student_info(student_info,del_name = student.get(&quot;name&quot;)))  
+                student_info.append(student)
+        elif number == '5':
+            outgotimes_reduce(student_info)
+        elif number == '6':
+            outgotimes_rise(student_info)
+        elif number == '7':
+            people_reduce(student_info)
+        elif number == '8':
+            people_rise(student_info)
+        elif number == '9':
+            save_info(student_info)
+        elif number == '10':
+            student_info = read_info()
+        else:
+            break
+        input(&quot;回车显示菜单&quot;)
+
+main()
+</code></pre>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+                <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('https://qzone.qq.com/')">
+            <i class="ri-qq-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-green-500 hover:bg-green-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('其实并没有用|。|')">
+            <i class="ri-wechat-line"></i>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-10 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <blockquote>
+        <div class="author">
+        <div style="float:left;margin-right:5px;">
+        <img src="https://q.qlogo.cn/g?b=qq&nk=603329354&s=100" alt="小白" width="70" height="70" /></div>
+        <strong>本文作者：</strong><a target="_blank" href="https://me.sqdxwz.com">王荣胜</a>
+        ｜「<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=603329354@qq.com" target="_blank" title="联系邮箱">邮箱</a> 」| 「<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=603329354&site=qq&menu=yes">QQ</a>」 | 「<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=916d52073f0d4a4ab75c94f19b0d64b10d95f70d0621c833bb632ac1936e3256">QQ群</a>」 <br>
+        <strong>文章出处：</strong><a href="https://sqdxwz.top">https://sqdxwz.top/</a></br>
+        <strong>版权声明：</strong>本文章采用「<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">知识共享署名-相同方式共享 4.0 国际许可协议</a>」许可。
+        </blockquote>
+
+      </div>
+      
       
 
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/zRZIKlpZ8/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Github利用码云加速下载
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-08</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-简介
-众所周知，GitHub是一个巨大的开源宝库，以及程序员和编程爱好者的聚集地，包括我之前推荐的诸多优秀的开源项目全部都是位于GitHub上。
-但是每当我们看到优秀的开源项目，准备去 下（bai）载（piao） 时，会发现 git cl...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/zRZIKlpZ8/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/lj6l5vjd8/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Vim基本使用方法
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-07</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-Vim简介
-Vim 是什么？
-Vim是一个高度可配置的文本编辑器，用于创建和更改任何类型的文本非常高效。与大多数UNIX系统和Apple OS X一起，它被包含为“vi”。Vim是稳定的，并且不断发展，变得更好。其特点是：持久的多级撤消树...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/lj6l5vjd8/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/fqNMmScvt/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Github库名命名规范
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-05</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-必要性说明
-由于迁移到Github上的项目越来越多，对项目的管理越来越困难。由于各项目命名具有随意性，用之代表git仓库名后就很难快速回忆起这个项目的相关细节，通常需要不断打开某个库才能有所了解。因此，十分必要对git库名命名方式进行规范...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/fqNMmScvt/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/8i8GQdZHK/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          HTML基础语法
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-03</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-HTML简介
-HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/8i8GQdZHK/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/03/03/34vr7Q.png" alt="HTML基础语法">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/CfvIECRBg/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          关于论文作者
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-03</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        对于论文想必大家可能都有过耳闻,今天做一下一些相关知识的普及~
-基础问题
-首先,第一作者和通讯作者之间一直是缠缠绵绵到天涯的关系，很多人对这两者并不陌生，但是在一些细节上的问题又感觉比较绕，我今天特意收集了平时大家提到的关于两者之间的一些问...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/CfvIECRBg/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/03/03/3hYnqf.png" alt="关于论文作者">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/t2IHH5nWE/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          加速国内Github访问速度
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-01</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-介绍
-由于某些原因，国内访问 Github 会异常缓慢，在 clone 仓库时甚至只有 10kb/s 以下的速度，下载半天有时还会失败需要从头再来，甚是让人恼火。 本文介绍通过修改系统 hosts 文件的办法，绕过国内 DNS 解析，直接...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/t2IHH5nWE/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/QFPLAZbSg/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Git基本命令使用
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-29</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-
-文章于2020年4月3日进行了更新！
-
-简介
-Git是一种代码管理工具。
-使用Git出于以下3种原因：
-
-代码管理；
-版本控制；
-团队协作；
-
-基本命令
-
-git clone
-
-复制远程仓库/仓库中的项目到本地的电脑，同时完成初始化
-
-...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/QFPLAZbSg/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/fCh63akOu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          利用Word宏功能生成手写体文字报告
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-28</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-简介
-小学、中学有没有因为一个知识点犯错了多次被罚抄呢？有没有每次都是心里爆炸？本以为上了大学就再也不会有罚写，可是每次几千字的小论文是不是也是崩溃的？但是还好有时候可以使用电子文档，去百度CV就好了，但是你的老师有没有告诉你：同学们务必...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/fCh63akOu/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/02/28/3DHrgU.png" alt="利用Word宏功能生成手写体文字报告">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/YuQg-AeUx/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          垃圾代码书写准则
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-27</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-准则
-💩 以一种代码已经被混淆的方式命名变量
-如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。
-Good 👍🏻
-let a = 42;
-
-Bad 👎🏻
-let age = 42;
-
-💩 变量/函数混合命名风格
-...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/YuQg-AeUx/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/02/27/3w3smD.png" alt="垃圾代码书写准则">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/Z417lawsC/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          基于docsify+Github建立自己的项目文档
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-27</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-docsify简介
-docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 .md 转成 .html 文件，所有转换工作都是在运行时进行。
-这将非常实用，如果只是需要快速的搭建一个小型的文档网...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/Z417lawsC/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/02/27/3dsfJK.png" alt="基于docsify+Github建立自己的项目文档">
-    
-  </div>
-  
-      </div>
+      
 
       
-  <div class="my-4 flex justify-between px-4 md:px-0">
-    
-      <a href="https://Wangrongsheng.github.io/page/9/" class="btn btn-white">
-        <i class="ri-arrow-left-line mr-4"></i>
-        上一页
-      </a>
-    
-    
-      <a href="https://Wangrongsheng.github.io/page/11/" class="btn btn-white">
-        下一页
-        <i class="ri-arrow-right-line ml-4"></i>
-      </a>
-    
-  </div>
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
 
@@ -827,14 +819,180 @@ setInterval("createtime()",250);
 <center><span id="jinrishici-sentence">正在加载今日诗词....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></center>
 </footer>
+    </div>
 
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
     </div>
   </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
   
-  <!--预缓存-->
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
 </body>
 
 </html>
