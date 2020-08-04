@@ -23,14 +23,16 @@
     
 
   <meta name="description" content="
-备用学习地址
-Github
-..." />
+导入Google Colab目录
+from google.colab import drive
+drive.flush_and_unmount()
+drive.mount(&#39;/content/gdrive&#39;, force_remount=..." />
   <meta property="og:title" content="用Google计算机视觉API进行猫狗图片识别 - 王荣胜">
   <meta property="og:description" content="
-备用学习地址
-Github
-..." />
+导入Google Colab目录
+from google.colab import drive
+drive.flush_and_unmount()
+drive.mount(&#39;/content/gdrive&#39;, force_remount=..." />
   <meta property="og:type" content="articles">
   <meta property="og:url" content="https://Wangrongsheng.github.io/post/_OZhzOC--/" />
   <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
@@ -38,9 +40,10 @@ Github
   <meta property="og:image:width" content="1200">
   <meta name="twitter:title" content="用Google计算机视觉API进行猫狗图片识别 - 王荣胜">
   <meta name="twitter:description" content="
-备用学习地址
-Github
-...">
+导入Google Colab目录
+from google.colab import drive
+drive.flush_and_unmount()
+drive.mount(&#39;/content/gdrive&#39;, force_remount=...">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://Wangrongsheng.github.io/post/_OZhzOC--/">
 
@@ -70,7 +73,17 @@ Github
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-08-04 · 1 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-08-04 · 5 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/bqM1BYnbM/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Google Colab
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/uI9KIj7O_e/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              猫狗识别
+            </a>
           
           
 
@@ -88,9 +101,356 @@ Github
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <iframe src="https://demo.sqdxwz.com/colab_catanddog/" frameborder="0" width="100%" height="44800" allowtransparency="yes" style="overflow:hidden;margin: 0; border: none;"></iframe>
+          <!-- more -->
+<h2 id="导入google-colab目录">导入Google Colab目录</h2>
+<pre><code class="language-python">from google.colab import drive
+drive.flush_and_unmount()
+drive.mount('/content/gdrive', force_remount=True)
+root_dir = &quot;/content/gdrive/My Drive/&quot;
+</code></pre>
+<pre><code>Mounted at /content/gdrive
+</code></pre>
+<h2 id="创建文件夹">创建文件夹</h2>
+<p>创建两个文件夹，一个cat，一个dog。</p>
+<pre><code class="language-python">from fastai.vision import *
+path = Path(root_dir + 'DeepLearning/Datasets2/')
+ 
+dest1 = path/'cat'
+dest1.mkdir(parents=True, exist_ok=True)
+dest2 = path/'dog'
+dest2.mkdir(parents=True, exist_ok=True)
+</code></pre>
+<h2 id="构建数据集">构建数据集</h2>
+<p>在<code>Google图片</code>上搜<code>cat</code>，浏览一会儿，按<code>F12</code>，再点<code>console</code>，或者<code>Ctrl+Shift+J</code>打开控制台，直接粘贴以下五段代码：</p>
+<pre><code class="language-javascript">function simulateRightClick( element ) {
+    var event1 = new MouseEvent( 'mousedown', {
+        bubbles: true,
+        cancelable: false,
+        view: window,
+        button: 2,
+        buttons: 2,
+        clientX: element.getBoundingClientRect().x,
+        clientY: element.getBoundingClientRect().y
+    } );
+    element.dispatchEvent( event1 );
+    var event2 = new MouseEvent( 'mouseup', {
+        bubbles: true,
+        cancelable: false,
+        view: window,
+        button: 2,
+        buttons: 0,
+        clientX: element.getBoundingClientRect().x,
+        clientY: element.getBoundingClientRect().y
+    } );
+    element.dispatchEvent( event2 );
+    var event3 = new MouseEvent( 'contextmenu', {
+        bubbles: true,
+        cancelable: false,
+        view: window,
+        button: 2,
+        buttons: 0,
+        clientX: element.getBoundingClientRect().x,
+        clientY: element.getBoundingClientRect().y
+    } );
+    element.dispatchEvent( event3 );
+}
+ 
+ 
+ 
+ 
+ 
+ 
+function getURLParam( queryString, key ) {
+    var vars = queryString.replace( /^\?/, '' ).split( '&amp;' );
+    for ( let i = 0; i &lt; vars.length; i++ ) {
+        let pair = vars[ i ].split( '=' );
+        if ( pair[0] == key ) {
+            return pair[1];
+        }
+    }
+    return false;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+function createDownload( contents ) {
+    var hiddenElement = document.createElement( 'a' );
+    hiddenElement.href = 'data:attachment/text,' + encodeURI( contents );
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'urls.txt';
+    hiddenElement.click();
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+function grabUrls() {
+    var urls = [];
+    return new Promise( function( resolve, reject ) {
+        var count = document.querySelectorAll(
+        	'.isv-r a:first-of-type' ).length,
+            index = 0;
+        Array.prototype.forEach.call( document.querySelectorAll(
+        	'.isv-r a:first-of-type' ), function( element ) {
+            // using the right click menu Google will generate the
+            // full-size URL; won't work in Internet Explorer
+            // (http://pyimg.co/byukr)
+            simulateRightClick( element.querySelector( ':scope img' ) );
+            // Wait for it to appear on the &lt;a&gt; element
+            var interval = setInterval( function() {
+                if ( element.href.trim() !== '' ) {
+                    clearInterval( interval );
+                    // extract the full-size version of the image
+                    let googleUrl = element.href.replace( /.*(\?)/, '$1' ),
+                        fullImageUrl = decodeURIComponent(
+                        	getURLParam( googleUrl, 'imgurl' ) );
+                    if ( fullImageUrl !== 'false' ) {
+                        urls.push( fullImageUrl );
+                    }
+                    // sometimes the URL returns a &quot;false&quot; string and
+                    // we still want to count those so our Promise
+                    // resolves
+                    index++;
+                    if ( index == ( count - 1 ) ) {
+                        resolve( urls );
+                    }
+                }
+            }, 10 );
+        } );
+    } );
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+grabUrls().then( function( urls ) {
+    urls = urls.join( '\n' );
+    createDownload( urls );
+} );
+</code></pre>
+<p>同样的操作搜索<code>dog</code>。</p>
+<p>把下载的txt改名分别为：cat.txt、dog.txt，为后续工作做准备</p>
+<h2 id="下载数据集">下载数据集</h2>
+<p>将<code>cat.txt</code>和<code>dog.txt</code>文件上传于<code>path</code>目录下，执行如下命令：</p>
+<pre><code class="language-python">download_images(path/'cat.txt', dest1, max_pics=120)
+download_images(path/'dog.txt', dest2, max_pics=120)
+</code></pre>
+<blockquote>
+<p>其中使用了<code>fast.ai.vision.data</code>的<code>download_images</code>,指定txt文件的位置，存放图片的目的文件夹，最大的图片数目，最大处理线程数目</p>
+</blockquote>
+<h2 id="数据清理">数据清理</h2>
+<p>下载下来的图片格式（<code>jpeg</code>、<code>png</code>、<code>gift</code>等）大小都不一致，需要进行清理，<code>fast.ai</code>提供了一个<code>verify_images</code>的工具，可以对图像进行基本的清理操作：</p>
+<pre><code class="language-python">classes = ['cat','dog']
+for c in classes:
+    print(c)
+    verify_images(path/c, delete=True, max_size=500)
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/08/04/a0Qp8A.png" alt="output_16_1.png" loading="lazy"></figure>
+<h2 id="训练模型">训练模型</h2>
+<p>使用预训练模型<code>resnet34</code>进行迁移学习：</p>
+<pre><code class="language-python">learn = cnn_learner(data, models.resnet34, metrics=error_rate)
+learn.fit_one_cycle(4)
+</code></pre>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>error_rate</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1.172639</td>
+      <td>0.687638</td>
+      <td>0.276596</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.715001</td>
+      <td>0.246741</td>
+      <td>0.106383</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.524886</td>
+      <td>0.033620</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.408488</td>
+      <td>0.008482</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+  </tbody>
+</table>
+<p>解冻模型，修改学习率，再训练几轮：</p>
+<pre><code class="language-python">learn = cnn_learner(data, models.resnet34, metrics=error_rate)
+learn.fit_one_cycle(4)
+</code></pre>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>error_rate</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1.137841</td>
+      <td>0.362603</td>
+      <td>0.148936</td>
+      <td>00:48</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.717203</td>
+      <td>0.497480</td>
+      <td>0.127660</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.532314</td>
+      <td>0.338967</td>
+      <td>0.085106</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.407410</td>
+      <td>0.189146</td>
+      <td>0.063830</td>
+      <td>00:46</td>
+    </tr>
+  </tbody>
+</table>
+<p>调整学习率继续学习</p>
+<pre><code class="language-python">learn.fit_one_cycle(10,max_lr=slice(1e-4,3e-4))
+learn.save('stage-2')
+</code></pre>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>error_rate</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.115359</td>
+      <td>0.114586</td>
+      <td>0.042553</td>
+      <td>00:45</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.062113</td>
+      <td>0.068654</td>
+      <td>0.042553</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.061450</td>
+      <td>0.041762</td>
+      <td>0.021277</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.051107</td>
+      <td>0.029947</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.046757</td>
+      <td>0.019579</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0.066720</td>
+      <td>0.015556</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0.063555</td>
+      <td>0.011138</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0.056562</td>
+      <td>0.009309</td>
+      <td>0.000000</td>
+      <td>00:47</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>0.053216</td>
+      <td>0.008640</td>
+      <td>0.000000</td>
+      <td>00:46</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.053072</td>
+      <td>0.009092</td>
+      <td>0.000000</td>
+      <td>00:47</td>
+    </tr>
+  </tbody>
+</table>
+<p><code>fast.ai</code>提供了<code>ClassificationInterpretation</code>能够从结果中高效的进行分析</p>
+<pre><code class="language-python">interp = ClassificationInterpretation.from_learner(learn)
+interp.plot_confusion_matrix(figsize=(12,12), dpi=60)
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/08/04/a0QVUg.png" alt="output_24_2.png" loading="lazy"></figure>
+<pre><code class="language-python">interp.plot_top_losses(9, figsize=(15,11))
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/08/04/a0QGaF.png" alt="output_25_0.png" loading="lazy"></figure>
 <h2 id="备用学习地址">备用学习地址</h2>
-<p><a href="https://github.com/WangRongsheng/Blog-backup/blob/master/post-sqdxwz.top-gridea/%E7%94%A8Google%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89API%E8%BF%9B%E8%A1%8C%E7%8C%AB%E7%8B%97%E5%9B%BE%E7%89%87%E8%AF%86%E5%88%AB.ipynb">Github</a></p>
+<ol>
+<li><a href="https://github.com/WangRongsheng/Blog-backup/blob/master/post-sqdxwz.top-gridea/%E7%94%A8Google%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89API%E8%BF%9B%E8%A1%8C%E7%8C%AB%E7%8B%97%E5%9B%BE%E7%89%87%E8%AF%86%E5%88%AB.ipynb">Github</a></li>
+<li><a href="https://demo.sqdxwz.com/colab_catanddog/">查看jupyter notebook</a></li>
+</ol>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -638,6 +998,12 @@ setInterval("createtime()",250);
         <ul class="markdownIt-TOC">
 <li>
 <ul>
+<li><a href="#%E5%AF%BC%E5%85%A5google-colab%E7%9B%AE%E5%BD%95">导入Google Colab目录</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9">创建文件夹</a></li>
+<li><a href="#%E6%9E%84%E5%BB%BA%E6%95%B0%E6%8D%AE%E9%9B%86">构建数据集</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86">下载数据集</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86">数据清理</a></li>
+<li><a href="#%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B">训练模型</a></li>
 <li><a href="#%E5%A4%87%E7%94%A8%E5%AD%A6%E4%B9%A0%E5%9C%B0%E5%9D%80">备用学习地址</a></li>
 </ul>
 </li>
