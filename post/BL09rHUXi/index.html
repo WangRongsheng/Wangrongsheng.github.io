@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 <meta name="baidu_union_verify" content="cc00dc66a90de929a0433e5c9366e0b6">
 <!--google-->
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>王荣胜</title>
+<title>教书先生API - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -17,224 +18,300 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="教书先生API - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
-  <meta name="description" content="<font color=#E80017>可</font><font color=#D1002E>以</font><font color=#BA0045>允</font><font color=#A3005C>许</font><font
-            color=#8C0073>不</font><font color=#75008A>完</font><font color=#5E00A1>美</font><font
-            color=#4700B8>,</font><font color=#3000CF>但</font><font color=#1900E6>不</font><font color=#0200FD>能</font><font color=#1900E6>不</font><font color=#0200FD>做</font>" />
+  <meta name="description" content="
+
+教书先生博客：https://blog.oioweb.cn/
+api网址：https://api.oioweb.cn/
+
+api
+
+
+QQ信息获取：解析QQ昵称,邮箱,头像
+
+
+备案查询：查询域名备案信息
+
+
+短网址生成：可生成搜狐,腾..." />
+  <meta property="og:title" content="教书先生API - 王荣胜">
+  <meta property="og:description" content="
+
+教书先生博客：https://blog.oioweb.cn/
+api网址：https://api.oioweb.cn/
+
+api
+
+
+QQ信息获取：解析QQ昵称,邮箱,头像
+
+
+备案查询：查询域名备案信息
+
+
+短网址生成：可生成搜狐,腾..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/BL09rHUXi/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="教书先生API - 王荣胜">
+  <meta name="twitter:description" content="
+
+教书先生博客：https://blog.oioweb.cn/
+api网址：https://api.oioweb.cn/
+
+api
+
+
+QQ信息获取：解析QQ昵称,邮箱,头像
+
+
+备案查询：查询域名备案信息
+
+
+短网址生成：可生成搜狐,腾...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/BL09rHUXi/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
 </head>
+
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
-    </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/links" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        友链
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/NFEeXH-Qx" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        说说
-      </a>
-    
-    
-    <!--搜索-->
-    <!--form id="gridea-search-form" data-update="1596506688956" action="/search/">
-    <input name="q" placeholder="搜一下..."/>
-    </form-->
-    
-    <!--a href="https://Wangrongsheng.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a-->
-    
-    
-    
-  </nav>
-</div>
-
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        生活
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          教书先生API
+        </h1>
         
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/A--fuLKM8/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          可可爱爱的向女朋友道歉
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-05-01</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-08-04 · 3 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/_c_crI9HK/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              api
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/source/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              资源
+            </a>
+          
+          
+
+                  
+
+
+          <div class="share" style="margin-left: auto;margin-right: 20px;cursor: pointer;" onclick="share(this)">
+          <a class="text-gray-400"><i class="ri-qr-code-line" style="position:relative; top:2px"></i><a href="https://s1.ax1x.com/2020/04/13/Gjp7IU.png" target="_blank">手机阅读</a></a>
+          </div>
+          
+          
+          
         
 
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<blockquote>
+<p>教书先生博客：https://blog.oioweb.cn/<br>
+api网址：https://api.oioweb.cn/</p>
+</blockquote>
+<h2 id="api">api</h2>
+<ul>
+<li>
+<p>QQ信息获取：解析QQ昵称,邮箱,头像</p>
+</li>
+<li>
+<p>备案查询：查询域名备案信息</p>
+</li>
+<li>
+<p>短网址生成：可生成搜狐,腾讯,suo等短网址</p>
+</li>
+<li>
+<p>超级Ping：支持移动、电信、联通、香港延迟检测！</p>
+</li>
+<li>
+<p>网站随机背景图：随机返回一张网站随机背景图</p>
+</li>
+<li>
+<p>域名报红检测：检测在微信QQ是否报红</p>
+</li>
+<li>
+<p>污话&amp;情话：不试试怎么知道你不行？</p>
+</li>
+<li>
+<p>简易版天气：获取当前地区的天气信息</p>
+</li>
+<li>
+<p>随机毒汤：随机输出一句扎心的话</p>
+</li>
+<li>
+<p>随机一言：随机输出一句话</p>
+</li>
+<li>
+<p>快递查询：查询快递物流信息</p>
+</li>
+<li>
+<p>精神语录：My name is 精神小伙</p>
+</li>
+<li>
+<p>扫码取QQSkey：获取QQskey 做你自己想做的事情</p>
+</li>
+<li>
+<p>网易云热评墙：你的故事在这里</p>
+</li>
+<li>
+<p>二维码生成：可选很多参数进行生成</p>
+</li>
+<li>
+<p>短网址还原：还原任何短网址的真实URL</p>
+</li>
+<li>
+<p>搜索引擎收录量查询：查询百度，搜狗，360收录量</p>
+</li>
+<li>
+<p>域名注册查询：查询域名是否被注册</p>
+</li>
+<li>
+<p>历史上的今天：今天发生在历史的那些事！</p>
+</li>
+<li>
+<p>AI垃圾分类：使用AI对垃圾进行分类</p>
+</li>
+<li>
+<p>IP归属地查询：查询IP详细信息</p>
+</li>
+<li>
+<p>QQ会员信息：查看QQ等级和成长值信息</p>
+</li>
+<li>
+<p>菜谱：还不会做菜的你快来试试吧！</p>
+</li>
+<li>
+<p>图片鉴黄识别：对图片进行鉴黄检测</p>
+</li>
+<li>
+<p>垃圾分类：你是什么垃圾?</p>
+</li>
+<li>
+<p>文字转语音：把一段文字转换为音乐输出</p>
+</li>
+<li>
+<p>必应每日一图：返回必应最近的7张图</p>
+</li>
+<li>
+<p>中通快递：中通快递物流查询接口</p>
+</li>
+<li>
+<p>QQ业务开通查询：查询QQ开通的业务</p>
+</li>
+<li>
+<p>天气接口：支持三种方式调用哦</p>
+</li>
+<li>
+<p>圆通快递：查询圆通快递物流信息</p>
+</li>
+<li>
+<p>图片文字识别：识别图片上的文字信息</p>
+</li>
+<li>
+<p>QQ名片配图：支持七种类型</p>
+</li>
+<li>
+<p>QQ收藏解析：解析QQ收藏里面的内容</p>
+</li>
+<li>
+<p>自动仿站API：输入网址即可一键扒站</p>
+</li>
+<li>
+<p>二维码解析：解析二维码内容</p>
+</li>
+<li>
+<p>全民k歌：解析全民k歌歌曲链接</p>
+</li>
+<li>
+<p>同IP站查询：查询相同IP的网站</p>
+</li>
+<li>
+<p>网站信息查询：可以获取网站标题，关键字，描述信息</p>
+</li>
+</ul>
+<p>更多api接口正在更新...</p>
+<h2 id="use">use</h2>
+<ol>
+<li>转到<a href="https://api.oioweb.cn/">API接口网址</a></li>
+<li>查看文档调用</li>
+</ol>
+<p>如果你打算使用<code>Python</code>来调用接口，你可以看<a href="https://sqdxwz.top/post/ot2W3uFd-/">Python处理JSON格式的数据接口</a> 这篇文章</p>
 
-
-
-
-
-...
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+                <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('https://qzone.qq.com/')">
+            <i class="ri-qq-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-green-500 hover:bg-green-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('其实并没有用|。|')">
+            <i class="ri-wechat-line"></i>
+          </div>
+        </div>
       </div>
-      <a href="https://Wangrongsheng.github.io/post/A--fuLKM8/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s1.ax1x.com/2020/05/01/JXsMZR.jpg" alt="可可爱爱的向女朋友道歉">
-    
-  </div>
+      
+      
+      
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-10 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <blockquote>
+        <div class="author">
+        <div style="float:left;margin-right:5px;">
+        <img src="https://q.qlogo.cn/g?b=qq&nk=603329354&s=100" alt="小白" width="70" height="70" /></div>
+        <strong>本文作者：</strong><a target="_blank" href="https://me.sqdxwz.com">王荣胜</a>
+        ｜「<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=603329354@qq.com" target="_blank" title="联系邮箱">邮箱</a> 」| 「<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=603329354&site=qq&menu=yes">QQ</a>」 | 「<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=916d52073f0d4a4ab75c94f19b0d64b10d95f70d0621c833bb632ac1936e3256">QQ群</a>」 <br>
+        <strong>文章出处：</strong><a href="https://sqdxwz.top">https://sqdxwz.top/</a></br>
+        <strong>版权声明：</strong>本文章采用「<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">知识共享署名-相同方式共享 4.0 国际许可协议</a>」许可。
+        </blockquote>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/NY0YYKWdu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          男生恋爱建议
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-04-21</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-
-别出轨。
-别打女人。
-女人可以宠爱但不要溺爱。
-如果不想承担女孩的下半生就管好自己的下半身。
-别把讲荤段子当成是幽默。
-男女的强弱并不特指经济方面，好的感情是两个人能互为依靠，不是谁赚的多这么简单。
-男生也可以哭可以软弱可以有做不到的事...
       </div>
-      <a href="https://Wangrongsheng.github.io/post/NY0YYKWdu/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/7ZoTM2JnW/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          第十人理论
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-04-15</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-
-“在犹太人的社会中，为了使讨论深化，总有一位成员敢于提出反驳意见，被称为“恶魔拥护者”。他在对讨论的方向与大体的结论表示赞成的同时，敢于提出反面意见，对于解决方法的可行性进行验证，指出其中存在的矛盾与不合理之处。为了发现更好的解决方法，...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/7ZoTM2JnW/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/FCQ9SIXQF/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          家国清明
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-04-04</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-唯愿山河无恙,人间皆安.
-
-
-...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/FCQ9SIXQF/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s1.ax1x.com/2020/04/04/GwFVSg.jpg" alt="家国清明">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/lpnQUc2Bj/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          北京智源大会之旅
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-19</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-一、引言
-这篇总结我早就想写了，但一直搁置，现在正在准备大二上学期的期末考试，晚上也不是很爱复习，就记个流水账吧！
-
-首先说一下我是如何知道的这个会议，我本来就是一个收集癖，平时没事就喜欢水水群啦，逛逛网站了，偶然间看到了2019年10....
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/lpnQUc2Bj/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/FaE9wIDmO/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          如果你将要面临地震...
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-10</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-地震前预兆
-
-发生大的地震前几天或者几小时前一般都会有很多小地震，而且非常频繁，这种地震我们称之为前震。所以，发生一系列前震时大家一定要有警觉意识啦！
-地震来前有些动物会有异常表现，例如：老鼠会疯了似的满街乱跑；蜻蜓会一群群的飞到其它地方...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/FaE9wIDmO/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/03/10/8FAIXV.png" alt="如果你将要面临地震...">
-    
-  </div>
-  
+      
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-10 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+      <iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php" height="500" frameborder="no" border="0" width="100%"> 
+      </iframe>
       </div>
 
       
+
+      
+
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
 
 <!--彩带-->
@@ -716,10 +793,190 @@ setInterval("createtime()",250);
 <center><span id="jinrishici-sentence">正在加载今日诗词....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></center>
 </footer>
+    </div>
 
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#api">api</a></li>
+<li><a href="#use">use</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
     </div>
   </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
 </body>
+
 </html>
