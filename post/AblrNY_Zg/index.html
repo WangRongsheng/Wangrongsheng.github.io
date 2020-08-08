@@ -8,7 +8,7 @@
 <meta name="baidu_union_verify" content="cc00dc66a90de929a0433e5c9366e0b6">
 <!--google-->
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>Markdown基础语法 - 王荣胜</title>
+<title>PyTorch实现TPU版本CNN模型 - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -18,31 +18,31 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Markdown基础语法 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="PyTorch实现TPU版本CNN模型 - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
   <meta name="description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
-  <meta property="og:title" content="Markdown基础语法 - 王荣胜">
+我们将在Google Colab中实现执行，因为它提供免费的云TPU（张量处理单元）。
+在继续下一步之前，在Colab笔记本中，转到“编辑”，然后选择“设置”，从下面屏幕截图中的列表中选择“TPU”作为“硬件加速器”。
+验证TPU下面的代..." />
+  <meta property="og:title" content="PyTorch实现TPU版本CNN模型 - 王荣胜">
   <meta property="og:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静..." />
+我们将在Google Colab中实现执行，因为它提供免费的云TPU（张量处理单元）。
+在继续下一步之前，在Colab笔记本中，转到“编辑”，然后选择“设置”，从下面屏幕截图中的列表中选择“TPU”作为“硬件加速器”。
+验证TPU下面的代..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://Wangrongsheng.github.io/post/UWPsajVaD/" />
-  <meta property="og:image" content="https://s2.ax1x.com/2020/02/19/3EhGi8.png">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/AblrNY_Zg/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="Markdown基础语法 - 王荣胜">
+  <meta name="twitter:title" content="PyTorch实现TPU版本CNN模型 - 王荣胜">
   <meta name="twitter:description" content="
-Markdown简介
-Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。
-由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静...">
+我们将在Google Colab中实现执行，因为它提供免费的云TPU（张量处理单元）。
+在继续下一步之前，在Colab笔记本中，转到“编辑”，然后选择“设置”，从下面屏幕截图中的列表中选择“TPU”作为“硬件加速器”。
+验证TPU下面的代...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://Wangrongsheng.github.io/post/UWPsajVaD/">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/AblrNY_Zg/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -66,17 +66,25 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          Markdown基础语法
+          PyTorch实现TPU版本CNN模型
         </h1>
         
-          <img src="https://s2.ax1x.com/2020/02/19/3EhGi8.png" alt="Markdown基础语法" class="block w-full mb-8">
-        
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-02-19 · 5 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-08-09 · 7 min read</div>
           
-            <a href="https://Wangrongsheng.github.io/tag/markdown/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+            <a href="https://Wangrongsheng.github.io/tag/3BzBE2RwF/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
               <i class="ri-hashtag"></i>
-              Markdown
+              CNN
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/bqM1BYnbM/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Google Colab
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/pytorch/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Pytorch
             </a>
           
           
@@ -96,255 +104,239 @@ Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文
         </div>
         <div class="markdown mb-8" v-pre>
           <!-- more -->
-<h1 id="markdown简介">Markdown简介</h1>
-<p>Markdown是一种轻量级的标记语言，它允许人们通过简单的纯文本来编写文档，并且转换为HTML、Word、PDF等多种格式。</p>
-<p>由于其易读易写的特性，许多网站都用其来编写文档或博客，如Github、CSDN等，很多静态博客生成器，如Hexo、Jekyll也是用其来作为博客的格式。</p>
-<p>Markdown文件实际上是一个纯文本文件，一般以.md或者.markdown为后缀名。</p>
-<h1 id="markdown基础语法">Markdown基础语法</h1>
-<p>作为一个轻量级的标记语言，Markdown最大的特点就是简单易用，其语法并不是很复杂，但可以满足日常非专业性的排版需求。</p>
-<h2 id="标题">标题</h2>
-<p>使用#，表示1-6级标题。</p>
-<pre><code class="language-text"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+<p>我们将在<code>Google Colab</code>中实现执行，因为它提供免费的云<code>TPU</code>（张量处理单元）。</p>
+<p>在继续下一步之前，在Colab笔记本中，转到“编辑”，然后选择“设置”，从下面屏幕截图中的列表中选择“TPU”作为“硬件加速器”。</p>
+<p>验证<code>TPU</code>下面的代码是否正常运行。</p>
+<pre><code class="language-python">import os
+assert os.environ['COLAB_TPU_ADDR']
 </code></pre>
-<h2 id="引用">引用</h2>
-<h3 id="普通引用">普通引用</h3>
-<pre><code class="language-text">&gt; 引用文本!
+<p>如果启用了<code>TPU</code>，它将成功执行，否则它将返回‘KeyError: ‘COLAB_TPU_ADDR’’。你也可以通过打印<code>TPU</code>地址来检查<code>TPU</code>。</p>
+<pre><code class="language-python">TPU_Path = 'grpc://'+os.environ['COLAB_TPU_ADDR']
+print('TPU Address:', TPU_Path)
 </code></pre>
-<p>效果：</p>
-<blockquote>
-<p>引用文本！</p>
-</blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<pre><code class="language-text">&gt; 第一层
-&gt;&gt; 第二层
+<p>启用<code>TPU</code>后，我们将安装兼容的控制盘和依赖项，以使用以下代码设置<code>XLA</code>环境。</p>
+<pre><code class="language-python">VERSION = &quot;20200516&quot; 
+!curl https://raw.githubusercontent.com/pytorch/xla/master/contrib/scripts/env-setup.py -o pytorch-xla-env-setup.py
+!python pytorch-xla-env-setup.py --version $VERSION
 </code></pre>
-<p>效果：</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-</blockquote>
-</blockquote>
-<h2 id="表格">表格</h2>
-<pre><code class="language-text">| 字段1 | 字段2 | 字段3 |
-| :-- | :--: | --: |
-| A1 | B1 | C1 |
-| A2 | B2 | C2 |
+<p>一旦安装成功，我们将继续定义加载数据集、初始化<code>CNN</code>模型、训练和测试的方法。首先，我们将导入所需的库。</p>
+<pre><code class="language-python">import numpy as np
+import os
+import time
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import torch_xla
+import torch_xla.core.xla_model as xm
+import torch_xla.debug.metrics as met
+import torch_xla.distributed.parallel_loader as pl
+import torch_xla.distributed.xla_multiprocessing as xmp
+import torch_xla.utils.utils as xu
+from torchvision import datasets, transforms
 </code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字段1</th>
-<th style="text-align:center">字段2</th>
-<th style="text-align:right">字段3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">A1</td>
-<td style="text-align:center">B1</td>
-<td style="text-align:right">C1</td>
-</tr>
-<tr>
-<td style="text-align:left">A2</td>
-<td style="text-align:center">B2</td>
-<td style="text-align:right">C2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码">代码</h2>
-<h3 id="行内">行内</h3>
-<pre><code class="language-text">AAA`BBB`CCC
+<p>之后，我们将进一步定义需要的超参数。</p>
+<pre><code class="language-python"># 定义参数
+FLAGS = {}
+FLAGS['datadir'] = &quot;/tmp/mnist&quot;
+FLAGS['batch_size'] = 128
+FLAGS['num_workers'] = 4
+FLAGS['learning_rate'] = 0.01
+FLAGS['momentum'] = 0.5
+FLAGS['num_epochs'] = 50
+FLAGS['num_cores'] = 8
+FLAGS['log_steps'] = 20
+FLAGS['metrics_debug'] = False
 </code></pre>
-<p>效果：</p>
-<p>AAA<code>BBB</code>CCC</p>
-<h3 id="区块">区块</h3>
-<h4 id="4个空格">4个空格</h4>
-<p>在每行前面加上4个空格</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<p>效果：</p>
-<pre><code class="language-text">text = &quot;Hello, world!&quot;
-print(text)
-</code></pre>
-<h4 id="3个">3个 `</h4>
-<pre><code class="language-text">```text
-text = &quot;Hello, world!&quot;
-print(text)
-\```
-</code></pre>
-<blockquote>
-<p>上述中的“\”是转义使用的！</p>
-</blockquote>
-<p>效果：</p>
-<pre><code class="language-text">    text = &quot;Hello, world!&quot;
-    print(text)
-</code></pre>
-<h2 id="字体样式">字体样式</h2>
-<h3 id="斜体粗体粗斜体">斜体,粗体,粗斜体</h3>
-<pre><code class="language-text">*text* 或 _text_ 斜体
+<p>下面的代码片段将把<code>CNN</code>模型定义为<code>PyTorch</code>实例，以及用于加载数据、训练模型和测试模型的函数。</p>
+<pre><code class="language-python">SERIAL_EXEC = xmp.MpSerialExecutor()
 
-**text** 或 __text__ 粗体
+class FashionMNIST(nn.Module):
 
-***text*** 或 ___text___ 粗斜体
-</code></pre>
-<p>效果</p>
-<p><em>text</em> 斜体</p>
-<p><strong>text</strong> 粗体</p>
-<p><em><strong>text</strong></em> 粗斜体</p>
-<h3 id="上标下标">上标,下标</h3>
-<h4 id="上标">上标</h4>
-<pre><code class="language-text">益达&lt;sup&gt;TM&lt;/sup&gt;
-</code></pre>
-<p>效果：</p>
-<p>益达<sup>TM</sup></p>
-<h4 id="下标">下标</h4>
-<pre><code class="language-text">X&lt;sub&gt;i&lt;/sub&gt;
+  def __init__(self):
+    super(FashionMNIST, self).__init__()
+    self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
+    self.bn1 = nn.BatchNorm2d(10)
+    self.conv2 = nn.Conv2d(10, 20, kernel_size=5)
+    self.bn2 = nn.BatchNorm2d(20)
+    self.fc1 = nn.Linear(320, 50)
+    self.fc2 = nn.Linear(50, 10)
 
-H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
-</code></pre>
-<p>效果:</p>
-<p>X<sub>i</sub></p>
-<p>H<sub>2</sub>O  CO<sub>2</sub></p>
-<h3 id="下划线">下划线</h3>
-<pre><code class="language-text、">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre>
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h3 id="删除线">删除线</h3>
-<pre><code class="language-text">~~删除线~~
-</code></pre>
-<p>效果：</p>
-<p><s>删除线</s></p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>使用*、+、或-标记无序列表，下面仅以-作为示例，</p>
-<pre><code class="language-text">- 第一项
-- 第二项
-- 第三项
-</code></pre>
-<blockquote>
-<p>注: 标记后面最少有一个 空格 或 制表符。</p>
-</blockquote>
-<p>效果：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code></p>
-<pre><code class="language-text">1. 第一项   
-2. 第二项    
-3. 第三项
-</code></pre>
-<p>效果：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h3 id="任务列表">任务列表</h3>
-<p>用法: - [ ] 或 - [x]，其中[ ]表示不打勾，[x]表示打勾，-可以用+或*替代</p>
-<pre><code class="language-text">- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [x] Nulla lobortis egestas semper
-- [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    - [x] In hac habitasse platea dictumst
-    - [x] In scelerisque nibh non dolor mollis congue sed et metus
-    - [x] Sed egestas felis quis elit dapibus, ac aliquet turpis mattis
-    - [ ] Praesent sed risus massa
-- [x] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
-- [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</code></pre>
-<p>效果：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2368521"><label class="task-list-item-label" for="task-item-2368521"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2505964"><label class="task-list-item-label" for="task-item-2505964"> Nulla lobortis egestas semper</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9526569"><label class="task-list-item-label" for="task-item-9526569"> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-306912"><label class="task-list-item-label" for="task-item-306912"> Vestibulum convallis sit amet nisi a tincidunt</label>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6393963"><label class="task-list-item-label" for="task-item-6393963"> In hac habitasse platea dictumst</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8403970"><label class="task-list-item-label" for="task-item-8403970"> In scelerisque nibh non dolor mollis congue sed et metus</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2272845"><label class="task-list-item-label" for="task-item-2272845"> Sed egestas felis quis elit dapibus, ac aliquet turpis mattis</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9279582"><label class="task-list-item-label" for="task-item-9279582"> Praesent sed risus massa</label></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1673427"><label class="task-list-item-label" for="task-item-1673427"> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1861554"><label class="task-list-item-label" for="task-item-1861554"> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</label></li>
-</ul>
-<h3 id="嵌套列表">嵌套列表</h3>
-<pre><code class="language-text">- aaa
-    - bbb
-</code></pre>
-<p>效果：</p>
-<ul>
-<li>aaa
-<ul>
-<li>bbb</li>
-</ul>
-</li>
-</ul>
-<h2 id="分割线">分割线</h2>
-<p>分割线使用三个或以上*，也可以使用-和_，下面仅以-作为示例</p>
-<pre><code class="language-text">---
-</code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="链接">链接</h2>
-<h3 id="普通链接">普通链接</h3>
-<h4 id="行内式">行内式</h4>
-<pre><code class="language-text">[example](http://www.example.com/ &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-<h4 id="参考式">参考式</h4>
-<p>当一个页面里多次调用相同链接时，这种方法更适用:</p>
-<pre><code class="language-text">[example][索引]
+  def forward(self, x):
+    x = F.relu(F.max_pool2d(self.conv1(x), 2))
+    x = self.bn1(x)
+    x = F.relu(F.max_pool2d(self.conv2(x), 2))
+    x = self.bn2(x)
+    x = torch.flatten(x, 1)
+    x = F.relu(self.fc1(x))
+    x = self.fc2(x)
+    return F.log_softmax(x, dim=1)
 
-[索引]: http://www.example.com/ &quot;title&quot;
-</code></pre>
-<p>注意: <code>[索引]: http://www.example.com/ &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<p><a href="http://www.example.com/" title="title">example</a></p>
-<blockquote>
-<p>鼠标悬停在链接上可以看到&quot;title&quot;字样</p>
-</blockquote>
-<h3 id="自动链接">自动链接</h3>
-<p>当识别到HTML、FTP、Email地址时候会自动转为超链接</p>
-<h2 id="图片">图片</h2>
-<h3 id="行内式-2">行内式</h3>
-<p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>!</code></p>
-<pre><code class="language-text">![alt](图片地址 &quot;title&quot;)
-</code></pre>
-<p>效果：</p>
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="hello" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h3 id="参考式-2">参考式</h3>
-<p>当一个页面里多次调用相同图片时，这种方法更适用:</p>
-<pre><code class="language-text">![alt][索引]
+# 只在内存中实例化一次模型权重。
+WRAPPED_MODEL = xmp.MpModelWrapper(FashionMNIST())
 
-[索引]: 图片地址 &quot;title&quot;
+def train_mnist():
+  torch.manual_seed(1)
+ 
+  def get_dataset():
+    norm = transforms.Normalize((0.1307,), (0.3081,))
+    train_dataset = datasets.FashionMNIST(
+        FLAGS['datadir'],
+        train=True,
+        download=True,
+        transform=transforms.Compose(
+            [transforms.ToTensor(), norm]))
+    test_dataset = datasets.FashionMNIST(
+        FLAGS['datadir'],
+        train=False,
+        download=True,
+        transform=transforms.Compose(
+            [transforms.ToTensor(), norm]))
+
+  
+    return train_dataset, test_dataset
+
+
+  #使用串行执行器可以避免多个进程下载相同的数据
+  train_dataset, test_dataset = SERIAL_EXEC.run(get_dataset)
+
+  train_sampler = torch.utils.data.distributed.DistributedSampler(
+    train_dataset,
+    num_replicas=xm.xrt_world_size(),
+    rank=xm.get_ordinal(),
+    shuffle=True)
+
+  train_loader = torch.utils.data.DataLoader(
+      train_dataset,
+      batch_size=FLAGS['batch_size'],
+      sampler=train_sampler,
+      num_workers=FLAGS['num_workers'],
+      drop_last=True)
+
+  test_loader = torch.utils.data.DataLoader(
+      test_dataset,
+      batch_size=FLAGS['batch_size'],
+      shuffle=False,
+      num_workers=FLAGS['num_workers'],
+      drop_last=True)
+
+  # 调整学习率
+  lr = FLAGS['learning_rate'] * xm.xrt_world_size()
+
+  # 获取损失函数、优化器和模型
+  device = xm.xla_device()
+  model = WRAPPED_MODEL.to(device)
+  optimizer = optim.SGD(model.parameters(), lr=lr, momentum=FLAGS['momentum'])
+  loss_fn = nn.NLLLoss()
+
+  def train_fun(loader):
+    tracker = xm.RateTracker()
+    model.train()
+    for x, (data, target) in enumerate(loader):
+      optimizer.zero_grad()
+      output = model(data)
+      loss = loss_fn(output, target)
+      loss.backward()
+      xm.optimizer_step(optimizer)
+      tracker.add(FLAGS['batch_size'])
+      if x % FLAGS['log_steps'] == 0:
+        print('[xla:{}]({}) Loss={:.5f}'.format(
+            xm.get_ordinal(), x, loss.item(), time.asctime()), flush=True)
+
+  def test_fun(loader):
+    total_samples = 0
+    correct = 0
+    model.eval()
+    data, pred, target = None, None, None
+    for data, target in loader:
+      output = model(data)
+      pred = output.max(1, keepdim=True)[1]
+      correct += pred.eq(target.view_as(pred)).sum().item()
+      total_samples += data.size()[0]
+
+    accuracy = 100.0 * correct / total_samples
+    print('[xla:{}] Accuracy={:.2f}%'.format(
+        xm.get_ordinal(), accuracy), flush=True)
+    return accuracy, data, pred, target
+
+  # 训练和评估循环
+  accuracy = 0.0
+  data, pred, target = None, None, None
+  for epoch in range(1, FLAGS['num_epochs'] + 1):
+    para_loader = pl.ParallelLoader(train_loader, [device])
+    train_fun(para_loader.per_device_loader(device))
+    xm.master_print(&quot;Finished training epoch {}&quot;.format(epoch))
+
+    para_loader = pl.ParallelLoader(test_loader, [device])
+    accuracy, data, pred, target  = test_fun(para_loader.per_device_loader(device))
+    if FLAGS['metrics_debug']:
+      xm.master_print(met.metrics_report(), flush=True)
+
+  return accuracy, data, pred, target
 </code></pre>
-<p>注意: <code>[索引]: 图片地址 &quot;title&quot;</code>可以写在任意地方，通常习惯于放在markdown本页文档最下方</p>
-<p>效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/02/19/3E2SBV.th.jpg" alt="alt" title="我的博客头像" loading="lazy"></figure>
-<blockquote>
-<p>鼠标悬停在图标上可以看到&quot;我的博客头像&quot;字样</p>
-</blockquote>
-<h2 id="转义">转义</h2>
-<pre><code class="language-text">\转义的内容
+<p>现在，要将结果绘制为测试图像的预测标签和实际标签，将使用以下功能模块。</p>
+<pre><code class="language-python"># 结果可视化
+import math
+from matplotlib import pyplot as plt
+
+M, N = 5, 5
+RESULT_IMG_PATH = '/tmp/test_result.png'
+
+def plot_results(images, labels, preds):
+  images, labels, preds = images[:M*N], labels[:M*N], preds[:M*N]
+  inv_norm = transforms.Normalize((-0.1307/0.3081,), (1/0.3081,))
+
+  num_images = images.shape[0]
+  fig, axes = plt.subplots(M, N, figsize=(12, 12))
+  fig.suptitle('Predicted Lables')
+
+  for i, ax in enumerate(fig.axes):
+    ax.axis('off')
+    if i &gt;= num_images:
+      continue
+    img, label, prediction = images[i], labels[i], preds[i]
+    img = inv_norm(img)
+    img = img.squeeze() # [1,Y,X] -&gt; [Y,X]
+    label, prediction = label.item(), prediction.item()
+    if label == prediction:
+      ax.set_title(u'Actual {}/ Predicted {}'.format(label, prediction), color='blue')
+    else:
+      ax.set_title(
+          'Actual {}/ Predicted {}'.format(label, prediction), color='red')
+    ax.imshow(img)
+  plt.savefig(RESULT_IMG_PATH, transparent=True)
 </code></pre>
+<p>现在，我们都准备好在<code>MNIST</code>数据集上训练模型。训练开始前，我们将记录开始时间，训练结束后，我们将记录结束时间并打印50个<code>epoch</code>的总训练时间。</p>
+<pre><code class="language-python"># 启动训练流程
+def train_cnn(rank, flags):
+  global FLAGS
+  FLAGS = flags
+  torch.set_default_tensor_type('torch.FloatTensor')
+  accuracy, data, pred, target = train_mnist()
+  if rank == 0:
+    # 检索TPU核心0上的张量并绘制。
+    plot_results(data.cpu(), pred.cpu(), target.cpu())
+
+xmp.spawn(train_cnn, args=(FLAGS,), nprocs=FLAGS['num_cores'],
+          start_method='fork')
+</code></pre>
+<p>一旦训练成功结束，我们将打印训练所用的总时间。</p>
+<pre><code class="language-python"># 如果想查看时间也可以打印下，不过前面代码并未添加strat_time()，记得添加一下~
+# end_time = time.time()
+# print('Total Training time = ',end_time-start_time )
+</code></pre>
+<p>利用<code>TPU</code>这种方法花费了大约4.5分钟，这意味着50个epoch训练<code>PyTorch</code>模型不到5分钟。最后，我们将通过训练的模型来可视化预测。</p>
+<pre><code class="language-python">from google.colab.patches import cv2_imshow
+import cv2
+img = cv2.imread(RESULT_IMG_PATH, cv2.IMREAD_UNCHANGED)
+cv2_imshow(img)
+</code></pre>
+<center><img src="https://s1.ax1x.com/2020/08/09/aoZjhj.png" alt="aoZjhj.png" border="0" /></center>
+<p>因此，我们可以得出这样的结论：使用<code>TPU</code>实现深度学习模型可以实现快速的训练，正如我们前面所看到的那样。</p>
+<p>在不到5分钟的时间内，对50个epoch的40000张训练图像进行了<code>CNN</code>模型的训练。我们在训练中也获得了89%以上的准确率。</p>
+<p>因此，在<code>TPU</code>上训练深度学习模型在时间和准确性方面总是有好处的。</p>
+<h2 id="备用学习地址">备用学习地址</h2>
+<p><a href="https://demo.sqdxwz.com/pytorch-TPU-CNN/">查看在线jupyter notebook</a></p>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -890,68 +882,9 @@ setInterval("createtime()",250);
       </div>
       <div class="post-toc-container">
         <ul class="markdownIt-TOC">
-<li><a href="#markdown%E7%AE%80%E4%BB%8B">Markdown简介</a></li>
-<li><a href="#markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">Markdown基础语法</a>
+<li>
 <ul>
-<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
-<li><a href="#%E5%BC%95%E7%94%A8">引用</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E5%BC%95%E7%94%A8">普通引用</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%BC%95%E7%94%A8">嵌套引用</a></li>
-</ul>
-</li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81">代码</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85">行内</a></li>
-<li><a href="#%E5%8C%BA%E5%9D%97">区块</a>
-<ul>
-<li><a href="#4%E4%B8%AA%E7%A9%BA%E6%A0%BC">4个空格</a></li>
-<li><a href="#3%E4%B8%AA">3个 `</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F">字体样式</a>
-<ul>
-<li><a href="#%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E7%B2%97%E6%96%9C%E4%BD%93">斜体,粗体,粗斜体</a></li>
-<li><a href="#%E4%B8%8A%E6%A0%87%E4%B8%8B%E6%A0%87">上标,下标</a>
-<ul>
-<li><a href="#%E4%B8%8A%E6%A0%87">上标</a></li>
-<li><a href="#%E4%B8%8B%E6%A0%87">下标</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
-<ul>
-<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
-<li><a href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
-<ul>
-<li><a href="#%E6%99%AE%E9%80%9A%E9%93%BE%E6%8E%A5">普通链接</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">自动链接</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%BE%E7%89%87">图片</a>
-<ul>
-<li><a href="#%E8%A1%8C%E5%86%85%E5%BC%8F-2">行内式</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%BC%8F-2">参考式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BD%AC%E4%B9%89">转义</a></li>
+<li><a href="#%E5%A4%87%E7%94%A8%E5%AD%A6%E4%B9%A0%E5%9C%B0%E5%9D%80">备用学习地址</a></li>
 </ul>
 </li>
 </ul>
