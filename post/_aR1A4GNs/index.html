@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 <meta name="baidu_union_verify" content="cc00dc66a90de929a0433e5c9366e0b6">
 <!--google-->
 <meta name="google-site-verification" content="8NDiYXaPEGf-aNpXjDZyC8-blGG8-Al4E6EFq3BsyZo" />
-<title>王荣胜</title>
+<title>开源多系统启动工具-ventoy - 王荣胜</title>
 <link rel="shortcut icon" href="https://Wangrongsheng.github.io/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
@@ -17,284 +18,226 @@
 
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/tailwind.css">
 <link rel="stylesheet" href="https://Wangrongsheng.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="开源多系统启动工具-ventoy - 王荣胜 - Atom Feed" href="https://Wangrongsheng.github.io/atom.xml">
 
     
 
-  <meta name="description" content="<font color=#E80017>可</font><font color=#D1002E>以</font><font color=#BA0045>允</font><font color=#A3005C>许</font><font
-            color=#8C0073>不</font><font color=#75008A>完</font><font color=#5E00A1>美</font><font
-            color=#4700B8>,</font><font color=#3000CF>但</font><font color=#1900E6>不</font><font color=#0200FD>能</font><font color=#1900E6>不</font><font color=#0200FD>做</font>" />
+  <meta name="description" content="
+简介
+Ventoy是一个制作可启动U盘的开源工具。有了Ventoy你就无需反复地格式化U盘，你只需要把ISO文件拷贝到U盘里面就可以启动了，无需其他操作。 你可以一次性拷贝很多个不同类型的ISO文件，在启动时Ventoy会显示一个菜单来选..." />
+  <meta property="og:title" content="开源多系统启动工具-ventoy - 王荣胜">
+  <meta property="og:description" content="
+简介
+Ventoy是一个制作可启动U盘的开源工具。有了Ventoy你就无需反复地格式化U盘，你只需要把ISO文件拷贝到U盘里面就可以启动了，无需其他操作。 你可以一次性拷贝很多个不同类型的ISO文件，在启动时Ventoy会显示一个菜单来选..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://Wangrongsheng.github.io/post/_aR1A4GNs/" />
+  <meta property="og:image" content="https://Wangrongsheng.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="开源多系统启动工具-ventoy - 王荣胜">
+  <meta name="twitter:description" content="
+简介
+Ventoy是一个制作可启动U盘的开源工具。有了Ventoy你就无需反复地格式化U盘，你只需要把ISO文件拷贝到U盘里面就可以启动了，无需其他操作。 你可以一次性拷贝很多个不同类型的ISO文件，在启动时Ventoy会显示一个菜单来选...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://Wangrongsheng.github.io/post/_aR1A4GNs/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+ 
+  
+    <link rel="stylesheet" href="https://Wangrongsheng.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
 </head>
+
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
-    </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/series" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        系列
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/links" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        友链
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-      <a href="https://Wangrongsheng.github.io/post/NFEeXH-Qx" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        说说
-      </a>
-    
-    
-    <!--搜索-->
-    <!--form id="gridea-search-form" data-update="1598752025818" action="/search/">
-    <input name="q" placeholder="搜一下..."/>
-    </form-->
-    
-    <!--a href="https://Wangrongsheng.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a-->
-    
-    
-    
-  </nav>
-</div>
-
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        Windows10
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/_aR1A4GNs/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+    <a href="https://Wangrongsheng.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      王荣胜
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
           开源多系统启动工具-ventoy
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-08-30</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        </h1>
         
-简介
-Ventoy是一个制作可启动U盘的开源工具。有了Ventoy你就无需反复地格式化U盘，你只需要把ISO文件拷贝到U盘里面就可以启动了，无需其他操作。 你可以一次性拷贝很多个不同类型的ISO文件，在启动时Ventoy会显示一个菜单来选...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/_aR1A4GNs/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-08-30 · 4 min read</div>
+          
+            <a href="https://Wangrongsheng.github.io/tag/MqnB6xJQ8/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              ventoy
+            </a>
+          
+            <a href="https://Wangrongsheng.github.io/tag/win/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Windows10
+            </a>
+          
+          
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/kWiQ6g9xm/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Win10配置Maven环境
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-08-05</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+                  
+
+
+          <div class="share" style="margin-left: auto;margin-right: 20px;cursor: pointer;" onclick="share(this)">
+          <a class="text-gray-400"><i class="ri-qr-code-line" style="position:relative; top:2px"></i><a href="https://s1.ax1x.com/2020/04/13/Gjp7IU.png" target="_blank">手机阅读</a></a>
+          </div>
+          
+          
+          
         
-安装
 
-百度一下Maven 进入官网安装:Welcome to Apache Maven
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <!-- more -->
+<h1 id="简介">简介</h1>
+<p><code>Ventoy</code>是一个制作可启动U盘的开源工具。有了<code>Ventoy</code>你就无需反复地格式化U盘，你只需要把<code>ISO</code>文件拷贝到U盘里面就可以启动了，无需其他操作。 你可以一次性拷贝很多个不同类型的<code>ISO</code>文件，在启动时<code>Ventoy</code>会显示一个菜单来选择(截图)。 无差异支持<code>Legacy BIOS</code>和<code>UEFI</code>模式。目前已经测试了各类超过260+ 个ISO文件(列表). 同时提出了&quot;<code>Ventoy Compatible</code>&quot;的概念，若被支持则理论上可以启动任何<code>ISO</code>文件. <a href="https://www.ventoy.net/cn/index.html">官网</a></p>
+<ul>
+<li>体积小巧</li>
+<li>开源免费</li>
+<li>自定义方便</li>
+<li>支持在线升级（无害）</li>
+</ul>
+<center><img src="https://s1.ax1x.com/2020/08/30/dbPQNq.jpg" alt="dbPQNq.jpg" border="0" /></center>
+<h1 id="安装">安装</h1>
+<blockquote>
+<p>此处以Windows为例，Linux请参考官方文档</p>
+</blockquote>
+<ol>
+<li>去官网下载最新版本，支持 <code>Windows</code>、<code>Linux</code>下安装到 <code>U盘</code> 操作；</li>
+<li>解压文件，直接运行可执行文件 <code>Ventoy2Disk.exe</code>，选择需要安装的 <code>U盘</code>等待几秒即可；</li>
+<li>创建必要目录（博主创建了 <code>systemISO</code>、<code>driver</code>、<code>tools</code>、<code>ventoy</code>)，整体来讲，博主还是喜欢创建目录，方便管理；</li>
+<li>按需复制系统镜像及软件工具到对应目录下；</li>
+<li>在<code>U盘</code> 根目录创建 <code>ventoy</code> 目录（大小写敏感），用来存放自定义配置文件，不建议增加无用的文件；</li>
+</ol>
+<blockquote>
+<p><code>systemISO</code>放系统镜像；<code>tools</code>可以放一些激活工具等；<code>ventoy</code>可以更深层次的配置ventoy启动（美化等）；</p>
+</blockquote>
+<img src="https://s1.ax1x.com/2020/08/30/dbPJvF.gif" alt="dbPJvF.gif" border="0" />
+<h1 id="美化">美化</h1>
+<h2 id="启动菜单别名化">启动菜单别名化</h2>
+<p>在 <code>ventoy</code> 目录下创建 <code>ventoy.json</code> 文件，内容要求如下，必须是 <code>UTF-8</code> 格式：</p>
+<pre><code class="language-json">{
+    &quot;menu_alias&quot; : [
+        {
+            &quot;image&quot;: &quot;/systemISO/wepe.iso&quot;,  // 镜像路径（绝对路径）
+            &quot;alias&quot;: &quot;WEPE&quot;   // 镜像别名
+        },
+        {
+            &quot;image&quot;: &quot;/systemISO/cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso&quot;,
+            &quot;alias&quot;: &quot;MS_Windows 7_x64&quot;
+        },
+        {
+            &quot;image&quot;: &quot;/systemISO/cn_windows_10_business_editions_version_2004_updated_may_2020_x64_dvd_c2acd212.iso&quot;,
+            &quot;alias&quot;: &quot;MS_Windows_10_x64&quot;
+        },        
+        {
+            &quot;image&quot;: &quot;/systemISO/CentOS-8.2.2004-x86_64-dvd.iso&quot;,
+            &quot;alias&quot;: &quot;Linux_Centos_8.2_x64&quot;
+        }
+    ]
+}
+</code></pre>
+<h2 id="菜单主题化">菜单主题化</h2>
+<p>去<a href="https://www.gnome-look.org/browse/cat/109/order/latest/">主题</a> 里面选择自己喜欢的下载，并且放到<code>ventoy</code>文件夹内，在<code>ventoy.json</code> 文件下，增加如下内容：</p>
+<pre><code class="language-json">    &quot;theme&quot;: {
+        &quot;file&quot;: &quot;/ventoy/theme/theme.txt&quot;,
+        &quot;gfxmode&quot;: &quot;1920x1080&quot;,
+        &quot;ventoy_left&quot;: &quot;45%&quot;,
+        &quot;ventoy_top&quot;: &quot;100%&quot;,
+        &quot;ventoy_color&quot;: &quot;#000000&quot;
+    },
+</code></pre>
+<p>如果你不确定自己的<code>json</code>文件是否写的正确，可以使用<a href="https://www.json.cn">json语法正确与否测试</a> 、<a href="http://json.parser.online.fr/">json语法正确与否测试</a> 进行测试。</p>
+<p>全部配置代码：</p>
+<pre><code class="language-json">{
+    &quot;theme&quot;: {
+        &quot;file&quot;: &quot;/ventoy/theme/theme.txt&quot;,
+        &quot;gfxmode&quot;: &quot;1920x1080&quot;,
+        &quot;ventoy_left&quot;: &quot;45%&quot;,
+        &quot;ventoy_top&quot;: &quot;100%&quot;,
+        &quot;ventoy_color&quot;: &quot;#000000&quot;
+    },
+    
+    &quot;menu_alias&quot; : [
+        {
+            &quot;image&quot;: &quot;/systemISO/wepe.iso&quot;,
+            &quot;alias&quot;: &quot;WEPE&quot;
+        },
+        {
+            &quot;image&quot;: &quot;/systemISO/cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso&quot;,
+            &quot;alias&quot;: &quot;MS_Windows 7_x64&quot;
+        },
+        {
+            &quot;image&quot;: &quot;/systemISO/cn_windows_10_business_editions_version_2004_updated_may_2020_x64_dvd_c2acd212.iso&quot;,
+            &quot;alias&quot;: &quot;MS_Windows_10_x64&quot;
+        },        
+        {
+            &quot;image&quot;: &quot;/systemISO/CentOS-8.2.2004-x86_64-dvd.iso&quot;,
+            &quot;alias&quot;: &quot;Linux_Centos_8.2_x64&quot;
+        }
+    ]
+}
+</code></pre>
+<p><strong>提示</strong>：镜像排序处理</p>
+<pre><code class="language-html">// ventoy 默认以镜像名称第一个字母排序
+// 所以，如果要排序，需在镜像名称前增加 [ A - Z ] 进行排序
+</code></pre>
 
-
-注：在这个页面下请看System Requirements一栏下面说到：Maven 3.3或之后的版本是需要JDK 1.7或者更新版本的支持！
-...
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+                <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('https://qzone.qq.com/')">
+            <i class="ri-qq-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-green-500 hover:bg-green-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('其实并没有用|。|')">
+            <i class="ri-wechat-line"></i>
+          </div>
+        </div>
       </div>
-      <a href="https://Wangrongsheng.github.io/post/kWiQ6g9xm/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
+      
+      
+      
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-10 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <blockquote>
+        <div class="author">
+        <div style="float:left;margin-right:5px;">
+        <img src="https://q.qlogo.cn/g?b=qq&nk=603329354&s=100" alt="小白" width="70" height="70" /></div>
+        <strong>本文作者：</strong><a target="_blank" href="https://me.sqdxwz.com">王荣胜</a>
+        ｜「<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=603329354@qq.com" target="_blank" title="联系邮箱">邮箱</a> 」| 「<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=603329354&site=qq&menu=yes">QQ</a>」 | 「<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=916d52073f0d4a4ab75c94f19b0d64b10d95f70d0621c833bb632ac1936e3256">QQ群</a>」 <br>
+        <strong>文章出处：</strong><a href="https://sqdxwz.top">https://sqdxwz.top/</a></br>
+        <strong>版权声明：</strong>本文章采用「<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">知识共享署名-相同方式共享 4.0 国际许可协议</a>」许可。
+        </blockquote>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/c4JACV5eo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          win10安装anaconda3并且配置tf、pytorch、keras环境
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-07-31</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-Anaconda3
-
-Win10环境下进行安装和配置！
-
-下载
-
-进入Anaconda的官网进行下载 ；
-选择你想下载的Python版本；
-选择你的操作系统和位数，这里我们选择的是Windows64位；
-然后点击Download按钮就开始...
       </div>
-      <a href="https://Wangrongsheng.github.io/post/c4JACV5eo/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/8b986l-is/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          好玩的ping命令
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-05-12</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-ping 基本使用详解
-在网络中 ping 是一个十分强大的 TCP/IP 工具。它的作用主要为：
-1、用来检测网络的连通情况和分析网络速度
-2、根据域名得到服务器 IP
-3、根据 ping 返回的 TTL 值来判断对方所使用的操作系统及...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/8b986l-is/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/5eRRX4YpI/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Win10开启沙盒功能和使用
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-04-13</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-简介
-什么是沙盒？
-
-在计算机安全领域，沙盒（英语：sandbox，又译为沙箱 ）是一种安全机制，为运行中的程序提供的隔离环境。通常是作为一些来源不可信、具破坏力或无法判定程序意图的程序提供实验之用。沙盒通常严格控制其中的程序所能访问的资...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/5eRRX4YpI/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/xhSGxgIMT/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Win10设置定时程序运行任务
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-22</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-最近写了一个简单的Python程序，想让这个小程序每天上午7点定时运行一次。由于其他原因，直接使用Windows定时任务：
-
-
-搜索打开【任务计划程序】 ：
-
-
-
-之后点击右侧的【创建基本任务】：
-
-
-
-输入任务名称以及可选的任务描述：
-...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/xhSGxgIMT/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/ACUm1Inji/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Windows10下Linux子系统安装docker
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-记录自己安装docker 的过程
-​安装完子系统后，按win键加R键， 输入cmd-&gt;回车
-
-Windows 10安装Linux子系统方法
-
-​打开cmd 后输入 bash.exe 回车就进入了子系统 接下来正式开始 docker ...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/ACUm1Inji/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://Wangrongsheng.github.io/post/HLzk_8i9x/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Win10配置Java开发环境
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-24</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-前言
-软件开发环境，是一个程序的运行的支撑，Java作为近年来最热门的编程语言之一，越来越多的新人程序员选择Java来学习，它的开发环境搭建也是学习和使用这一编程语言的基础。今天我们将在Windows上配置Java的开发环境。
-安装使用
-...
-      </div>
-      <a href="https://Wangrongsheng.github.io/post/HLzk_8i9x/" class="btn">
-        阅读更多
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://s2.ax1x.com/2020/02/24/3JPcCT.png" alt="Win10配置Java开发环境">
-    
-  </div>
-  
-      </div>
+      
+      <!--div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-10 px-4 md:px-8 pb-8 animated fadeIn mb-8"-->
+      <!--iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php" height="500" frameborder="no" border="0" width="100%"--> 
+      <!--/iframe-->
+      <!--/div-->
 
       
+
+      
+
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
 
 <!--彩带-->
@@ -776,10 +719,192 @@ setInterval("createtime()",250);
 <center><span id="jinrishici-sentence">正在加载今日诗词....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></center>
 </footer>
+    </div>
 
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E7%BE%8E%E5%8C%96">美化</a>
+<ul>
+<li><a href="#%E5%90%AF%E5%8A%A8%E8%8F%9C%E5%8D%95%E5%88%AB%E5%90%8D%E5%8C%96">启动菜单别名化</a></li>
+<li><a href="#%E8%8F%9C%E5%8D%95%E4%B8%BB%E9%A2%98%E5%8C%96">菜单主题化</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
     </div>
   </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://Wangrongsheng.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://Wangrongsheng.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
 </body>
+
 </html>
